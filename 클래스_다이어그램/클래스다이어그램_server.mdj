@@ -16060,9 +16060,9 @@
 													"font": "Arial;13;1",
 													"left": 565,
 													"top": 47,
-													"width": 198.53173828125,
+													"width": 199.97900390625,
 													"height": 13,
-													"text": "Lifeline2: UserController"
+													"text": "UserController"
 												},
 												{
 													"_type": "LabelView",
@@ -16093,7 +16093,7 @@
 											"font": "Arial;13;0",
 											"left": 560,
 											"top": 40,
-											"width": 208.53173828125,
+											"width": 209.97900390625,
 											"height": 40,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAGA9SDXra2BXbQ="
@@ -16118,7 +16118,7 @@
 												"$ref": "AAAAAAGA9SDXra1+9NQ="
 											},
 											"font": "Arial;13;0",
-											"left": 664,
+											"left": 665,
 											"top": 80,
 											"width": 1,
 											"height": 1199
@@ -16127,7 +16127,7 @@
 									"font": "Arial;13;0",
 									"left": 560,
 									"top": 40,
-									"width": 208.53173828125,
+									"width": 209.97900390625,
 									"height": 1239,
 									"nameCompartment": {
 										"$ref": "AAAAAAGA9SDXra2ASGo="
@@ -16280,7 +16280,7 @@
 													"top": 47,
 													"width": 152.3271484375,
 													"height": 13,
-													"text": "Lifeline4: UserService"
+													"text": "UserService"
 												},
 												{
 													"_type": "LabelView",
@@ -16396,7 +16396,7 @@
 													"top": 47,
 													"width": 167.4853515625,
 													"height": 13,
-													"text": "Lifeline6: UserRepository"
+													"text": "UserRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -16614,7 +16614,7 @@
 													"top": 47,
 													"width": 152.3271484375,
 													"height": 13,
-													"text": "Lifeline5: UserProvider"
+													"text": "UserProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -16874,7 +16874,7 @@
 												"$ref": "AAAAAAGA//KwsgZapKk="
 											},
 											"font": "Arial;13;0",
-											"left": 657,
+											"left": 658,
 											"top": 144,
 											"width": 14,
 											"height": 1121
@@ -16887,7 +16887,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA//KNwgZBSOg="
 									},
-									"points": "351:144;657:144",
+									"points": "351:144;658:144",
 									"nameLabel": {
 										"$ref": "AAAAAAGA//KwsgZcD8Y="
 									},
@@ -16999,7 +16999,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "657:216;351:216",
+									"points": "658:216;351:216",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAA0h6wkcPvY="
 									},
@@ -17110,7 +17110,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "670:256;916:256",
+									"points": "671:256;916:256",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAw4ybtKefnM="
 									},
@@ -17268,7 +17268,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -17363,9 +17363,9 @@
 												"$ref": "AAAAAAGBAw6IV9Kzhy0="
 											},
 											"font": "Arial;13;0",
-											"left": 725,
+											"left": 720,
 											"top": 300,
-											"width": 140.89892578125,
+											"width": 153.91162109375,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -17373,7 +17373,7 @@
 												"$ref": "AAAAAAGBAw6IWNK01xY="
 											},
 											"edgePosition": 1,
-											"text": "4 : if valid id, return true"
+											"text": "4 : return true if id vaildate"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -17386,7 +17386,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 795,
+											"left": 796,
 											"top": 315,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -17407,7 +17407,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 796,
+											"left": 797,
 											"top": 280,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -17428,7 +17428,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 657,
+											"left": 658,
 											"top": 296,
 											"width": 14,
 											"height": 25
@@ -17441,7 +17441,7 @@
 									"tail": {
 										"$ref": "AAAAAAGBAwrVa9I3iBg="
 									},
-									"points": "923:296;670:296",
+									"points": "923:296;671:296",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAw6IWNK1oxk="
 									},
@@ -17553,7 +17553,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "657:400;351:400",
+									"points": "658:400;351:400",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAAR3eAildp4="
 									},
@@ -17664,7 +17664,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "670:448;916:448",
+									"points": "671:448;916:448",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAyWNHV7TBG8="
 									},
@@ -17698,9 +17698,9 @@
 												"$ref": "AAAAAAGBAyXg2V7ndpg="
 											},
 											"font": "Arial;13;0",
-											"left": 725,
+											"left": 718,
 											"top": 492,
-											"width": 141.62255859375,
+											"width": 156.7998046875,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -17708,7 +17708,7 @@
 												"$ref": "AAAAAAGBAyXg2V7o4cI="
 											},
 											"edgePosition": 1,
-											"text": "7 : if valid pw, return true"
+											"text": "7 : return true if pw vaildate"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -17721,7 +17721,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 795,
+											"left": 796,
 											"top": 507,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -17742,7 +17742,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 796,
+											"left": 797,
 											"top": 472,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -17763,7 +17763,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 657,
+											"left": 658,
 											"top": 488,
 											"width": 14,
 											"height": 25
@@ -17776,7 +17776,7 @@
 									"tail": {
 										"$ref": "AAAAAAGBAwrVa9I3iBg="
 									},
-									"points": "923:488;670:488",
+									"points": "923:488;671:488",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAyXg2V7pjOY="
 									},
@@ -17888,7 +17888,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "657:608;351:608",
+									"points": "658:608;351:608",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAAd/qAi8OUw="
 									},
@@ -18000,7 +18000,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "657:728;351:728",
+									"points": "658:728;351:728",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAAo9VgjoEWY="
 									},
@@ -18315,7 +18315,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "670:792;1122:792",
+									"points": "671:792;1122:792",
 									"nameLabel": {
 										"$ref": "AAAAAAGA9SlrH68ElSc="
 									},
@@ -18482,7 +18482,7 @@
 													"top": 47,
 													"width": 171.814453125,
 													"height": 13,
-													"text": "Lifeline3: ValidationRegex"
+													"text": "ValidationRegex"
 												},
 												{
 													"_type": "LabelView",
@@ -19212,7 +19212,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA9SDXra2FHSw="
 									},
-									"points": "657:1240;351:1240",
+									"points": "658:1240;351:1240",
 									"nameLabel": {
 										"$ref": "AAAAAAGBABk2bCDa90s="
 									},
@@ -19285,7 +19285,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "if valid id, return true",
+							"name": "return true if id vaildate",
 							"source": {
 								"$ref": "AAAAAAGBAwrVa9IwHl0="
 							},
@@ -19332,7 +19332,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "if valid pw, return true",
+							"name": "return true if pw vaildate",
 							"source": {
 								"$ref": "AAAAAAGBAwrVa9IwHl0="
 							},
@@ -19507,7 +19507,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "Lifeline2",
+							"name": "UserController",
 							"represent": {
 								"$ref": "AAAAAAGA9SDXra19JHQ="
 							},
@@ -19519,7 +19519,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "Lifeline4",
+							"name": "UserService",
 							"represent": {
 								"$ref": "AAAAAAGA9Sh2da68lCE="
 							},
@@ -19531,7 +19531,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "Lifeline6",
+							"name": "UserRepository",
 							"represent": {
 								"$ref": "AAAAAAGA9Sjfdq7dkOw="
 							},
@@ -19543,7 +19543,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "Lifeline5",
+							"name": "UserProvider",
 							"represent": {
 								"$ref": "AAAAAAGA9SuFs683AgQ="
 							},
@@ -19555,7 +19555,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//KNwgY5gUE="
 							},
@@ -19567,7 +19567,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2h9tSx1e4rY="
 							},
-							"name": "Lifeline3",
+							"name": "ValidationRegex",
 							"represent": {
 								"$ref": "AAAAAAGBAwrVa9Ivr38="
 							},
@@ -19804,7 +19804,7 @@
 													"top": 47,
 													"width": 161.6962890625,
 													"height": 13,
-													"text": "Lifeline2: UserController"
+													"text": "UserController"
 												},
 												{
 													"_type": "LabelView",
@@ -19920,7 +19920,7 @@
 													"top": 47,
 													"width": 152.3271484375,
 													"height": 13,
-													"text": "Lifeline3: UserProvider"
+													"text": "UserProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -20036,7 +20036,7 @@
 													"top": 47,
 													"width": 167.4853515625,
 													"height": 13,
-													"text": "Lifeline4: UserRepository"
+													"text": "UserRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -20697,7 +20697,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -21588,7 +21588,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2m/JAeyOJqY="
 							},
-							"name": "Lifeline2",
+							"name": "UserController",
 							"represent": {
 								"$ref": "AAAAAAGA9TcN0bBQ6u4="
 							},
@@ -21600,7 +21600,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2m/JAeyOJqY="
 							},
-							"name": "Lifeline3",
+							"name": "UserProvider",
 							"represent": {
 								"$ref": "AAAAAAGA9TdVC7Bwrt0="
 							},
@@ -21612,7 +21612,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2m/JAeyOJqY="
 							},
-							"name": "Lifeline4",
+							"name": "UserRepository",
 							"represent": {
 								"$ref": "AAAAAAGA9Td74LCQLSY="
 							},
@@ -21624,7 +21624,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA2m/JAeyOJqY="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//NTawaA8C8="
 							},
@@ -21781,7 +21781,7 @@
 													"top": 47,
 													"width": 167,
 													"height": 13,
-													"text": "Lifeline1: UserController"
+													"text": "UserController"
 												},
 												{
 													"_type": "LabelView",
@@ -21897,7 +21897,7 @@
 													"top": 47,
 													"width": 152.3271484375,
 													"height": 13,
-													"text": "Lifeline2: UserProvider"
+													"text": "UserProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -22013,7 +22013,7 @@
 													"top": 47,
 													"width": 167.4853515625,
 													"height": 13,
-													"text": "Lifeline3: UserRepository"
+													"text": "UserRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -22675,7 +22675,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline4: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -23568,7 +23568,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA9WBfoKlCIfM="
 							},
-							"name": "Lifeline1",
+							"name": "UserController",
 							"represent": {
 								"$ref": "AAAAAAGA9Wt11qqRwmA="
 							},
@@ -23580,7 +23580,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA9WBfoKlCIfM="
 							},
-							"name": "Lifeline2",
+							"name": "UserProvider",
 							"represent": {
 								"$ref": "AAAAAAGA9Wt/wKqwlo8="
 							},
@@ -23592,7 +23592,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA9WBfoKlCIfM="
 							},
-							"name": "Lifeline3",
+							"name": "UserRepository",
 							"represent": {
 								"$ref": "AAAAAAGA9WuFbarPZbI="
 							},
@@ -23604,7 +23604,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA9WBfoKlCIfM="
 							},
-							"name": "Lifeline4",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//RwGgbLvXg="
 							},
@@ -23747,10 +23747,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role9",
-					"type": {
-						"$ref": "AAAAAAGA2bjdXRk5rlU="
-					}
+					"name": "Role9"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23767,10 +23764,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role11",
-					"type": {
-						"$ref": "AAAAAAGA2cfhEhn9P3E="
-					}
+					"name": "Role11"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23778,10 +23772,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role12",
-					"type": {
-						"$ref": "AAAAAAGA2dbPLxpbMpE="
-					}
+					"name": "Role12"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23789,10 +23780,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role13",
-					"type": {
-						"$ref": "AAAAAAGA2cGrJxmrvN8="
-					}
+					"name": "Role13"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23800,10 +23788,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role14",
-					"type": {
-						"$ref": "AAAAAAGA2bjdXRk5rlU="
-					}
+					"name": "Role14"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23811,10 +23796,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role15",
-					"type": {
-						"$ref": "AAAAAAGA2cGrJxmrvN8="
-					}
+					"name": "Role15"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23822,10 +23804,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role16",
-					"type": {
-						"$ref": "AAAAAAGA2dbPLxpbMpE="
-					}
+					"name": "Role16"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23864,10 +23843,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role20",
-					"type": {
-						"$ref": "AAAAAAGA2bjdXRk5rlU="
-					}
+					"name": "Role20"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23875,10 +23851,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role21",
-					"type": {
-						"$ref": "AAAAAAGA2cGrJxmrvN8="
-					}
+					"name": "Role21"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23886,10 +23859,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role22",
-					"type": {
-						"$ref": "AAAAAAGA2dbPLxpbMpE="
-					}
+					"name": "Role22"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -23930,10 +23900,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA2h9tSh1dpfk="
 					},
-					"name": "Role26",
-					"type": {
-						"$ref": "AAAAAAGBAwM5TFi+e1c="
-					}
+					"name": "Role26"
 				}
 			]
 		},
@@ -23978,7 +23945,7 @@
 												"$ref": "AAAAAAGA+6WRhUQcf4s="
 											},
 											"font": "Arial;13;0",
-											"left": 136.72998046875,
+											"left": 48.72998046875,
 											"top": 141,
 											"width": 102.83544921875,
 											"height": 13,
@@ -23991,7 +23958,7 @@
 												"$ref": "AAAAAAGA+6WRhUQcf4s="
 											},
 											"font": "Arial;13;1",
-											"left": 117,
+											"left": 29,
 											"top": 141,
 											"width": 14.72998046875,
 											"height": 13,
@@ -23999,9 +23966,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 112,
+									"left": 24,
 									"top": 136,
-									"width": 1049,
+									"width": 1129,
 									"height": 433,
 									"nameLabel": {
 										"$ref": "AAAAAAGA+6WRhUQdMI8="
@@ -24038,7 +24005,6 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": -48,
 													"top": -16,
 													"height": 13
 												},
@@ -24049,11 +24015,11 @@
 														"$ref": "AAAAAAGA+6WRhUQgOUY="
 													},
 													"font": "Arial;13;1",
-													"left": 229,
+													"left": 253,
 													"top": 47,
 													"width": 255,
 													"height": 13,
-													"text": "clthController: ClthController"
+													"text": "ClthController"
 												},
 												{
 													"_type": "LabelView",
@@ -24063,7 +24029,6 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": -48,
 													"top": -16,
 													"width": 110.24609375,
 													"height": 13,
@@ -24077,14 +24042,13 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": -48,
 													"top": -16,
 													"height": 13,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 224,
+											"left": 248,
 											"top": 40,
 											"width": 265,
 											"height": 40,
@@ -24111,14 +24075,14 @@
 												"$ref": "AAAAAAGA+6WRhURruRg="
 											},
 											"font": "Arial;13;0",
-											"left": 357,
+											"left": 381,
 											"top": 80,
 											"width": 1,
 											"height": 441
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 224,
+									"left": 248,
 									"top": 40,
 									"width": 265,
 									"height": 481,
@@ -24172,7 +24136,7 @@
 													"top": 47,
 													"width": 222.736328125,
 													"height": 13,
-													"text": "clthProvider: ClthProvider"
+													"text": "ClthProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -24291,7 +24255,7 @@
 													"top": 47,
 													"width": 202.12451171875,
 													"height": 13,
-													"text": "clthRepository: ClthRepository"
+													"text": "ClthRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -24387,7 +24351,7 @@
 												"$ref": "AAAAAAGA//UUTgczJ04="
 											},
 											"font": "Arial;13;0",
-											"left": 103,
+											"left": 115,
 											"top": 161,
 											"width": 354.06591796875,
 											"height": 13,
@@ -24410,7 +24374,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 280,
+											"left": 292,
 											"top": 146,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -24431,7 +24395,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 280,
+											"left": 292,
 											"top": 181,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -24451,7 +24415,7 @@
 												"$ref": "AAAAAAGA//UUTgczJ04="
 											},
 											"font": "Arial;13;0",
-											"left": 350,
+											"left": 374,
 											"top": 177,
 											"width": 14,
 											"height": 312
@@ -24464,7 +24428,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA//T2gQcbDUs="
 									},
-									"points": "211:177;350:177",
+									"points": "211:177;374:177",
 									"nameLabel": {
 										"$ref": "AAAAAAGA//UUTwc1jE4="
 									},
@@ -24498,7 +24462,7 @@
 												"$ref": "AAAAAAGA+6WRhURkQKs="
 											},
 											"font": "Arial;13;0",
-											"left": 387,
+											"left": 399,
 											"top": 208,
 											"width": 275.98974609375,
 											"height": 13,
@@ -24521,7 +24485,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 524,
+											"left": 536,
 											"top": 193,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -24542,7 +24506,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 524,
+											"left": 536,
 											"top": 228,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -24575,7 +24539,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA+6WRhUQlPzg="
 									},
-									"points": "363:224;685:224",
+									"points": "387:224;685:224",
 									"nameLabel": {
 										"$ref": "AAAAAAGA+6WRhUQ71TI="
 									},
@@ -24741,7 +24705,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -25048,7 +25012,7 @@
 												"$ref": "AAAAAAGBAQZi5BmQv/8="
 											},
 											"font": "Arial;13;0",
-											"left": 171,
+											"left": 183,
 											"top": 472,
 											"width": 214.6142578125,
 											"height": 13,
@@ -25071,7 +25035,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 279,
+											"left": 291,
 											"top": 475,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -25092,7 +25056,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 280,
+											"left": 292,
 											"top": 440,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -25126,7 +25090,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA+6WRhUQlPzg="
 									},
-									"points": "350:456;211:456",
+									"points": "374:456;211:456",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAQZi5BmSLME="
 									},
@@ -25233,7 +25197,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6WRhUQaVwg="
 							},
-							"name": "clthController",
+							"name": "ClthController",
 							"represent": {
 								"$ref": "AAAAAAGA+6WRhUR0ZwI="
 							},
@@ -25245,7 +25209,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6WRhUQaVwg="
 							},
-							"name": "clthProvider",
+							"name": "ClthProvider",
 							"represent": {
 								"$ref": "AAAAAAGA+6WRhUR1WNs="
 							},
@@ -25257,7 +25221,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6WRhUQaVwg="
 							},
-							"name": "clthRepository",
+							"name": "ClthRepository",
 							"represent": {
 								"$ref": "AAAAAAGA+6WRhUR2hVc="
 							},
@@ -25269,7 +25233,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6WRhUQaVwg="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//T2gQcTHZs="
 							},
@@ -25334,10 +25298,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6WRhEQZdko="
 					},
-					"name": "Role4",
-					"type": {
-						"$ref": "AAAAAAGA2e2myhuMi7E="
-					}
+					"name": "Role4"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25345,10 +25306,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6WRhEQZdko="
 					},
-					"name": "Role5",
-					"type": {
-						"$ref": "AAAAAAGA2fwEehxpOfE="
-					}
+					"name": "Role5"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25356,10 +25314,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6WRhEQZdko="
 					},
-					"name": "Role6",
-					"type": {
-						"$ref": "AAAAAAGA2gw0qBzEKNQ="
-					}
+					"name": "Role6"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -25489,7 +25444,7 @@
 													"top": 47,
 													"width": 231,
 													"height": 13,
-													"text": "clthController: ClthController"
+													"text": "ClthController"
 												},
 												{
 													"_type": "LabelView",
@@ -25605,7 +25560,7 @@
 													"top": 47,
 													"width": 207,
 													"height": 13,
-													"text": "clthService: ClthService"
+													"text": "ClthService"
 												},
 												{
 													"_type": "LabelView",
@@ -25721,7 +25676,7 @@
 													"top": 47,
 													"width": 239,
 													"height": 13,
-													"text": "clthRepository: ClthRepository"
+													"text": "ClthRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -26383,7 +26338,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -27017,7 +26972,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XiIEhgQwE="
 							},
-							"name": "clthController",
+							"name": "ClthController",
 							"represent": {
 								"$ref": "AAAAAAGA+6XiIUilnZs="
 							},
@@ -27029,7 +26984,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XiIEhgQwE="
 							},
-							"name": "clthService",
+							"name": "ClthService",
 							"represent": {
 								"$ref": "AAAAAAGA+6XiIUim8t4="
 							},
@@ -27041,7 +26996,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XiIEhgQwE="
 							},
-							"name": "clthRepository",
+							"name": "ClthRepository",
 							"represent": {
 								"$ref": "AAAAAAGA+6XiIUinN3M="
 							},
@@ -27053,7 +27008,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XiIEhgQwE="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//jDfgfgyYk="
 							},
@@ -27110,10 +27065,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6XiIEhfF80="
 					},
-					"name": "Role1",
-					"type": {
-						"$ref": "AAAAAAGA2e2myhuMi7E="
-					}
+					"name": "Role1"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -27121,10 +27073,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6XiIEhfF80="
 					},
-					"name": "Role2",
-					"type": {
-						"$ref": "AAAAAAGA2fhpaxwLY5s="
-					}
+					"name": "Role2"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -27132,10 +27081,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6XiIEhfF80="
 					},
-					"name": "Role3",
-					"type": {
-						"$ref": "AAAAAAGA2gw0qBzEKNQ="
-					}
+					"name": "Role3"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -27265,7 +27211,7 @@
 													"top": 47,
 													"width": 199,
 													"height": 13,
-													"text": "clthController: ClthController"
+													"text": "ClthController"
 												},
 												{
 													"_type": "LabelView",
@@ -27381,7 +27327,7 @@
 													"top": 47,
 													"width": 175,
 													"height": 13,
-													"text": "clthService: ClthService"
+													"text": "ClthService"
 												},
 												{
 													"_type": "LabelView",
@@ -27497,7 +27443,7 @@
 													"top": 47,
 													"width": 175,
 													"height": 13,
-													"text": "clthProvider: ClthProvider"
+													"text": "ClthProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -27946,7 +27892,7 @@
 													"top": 47,
 													"width": 207,
 													"height": 13,
-													"text": "clthRepository: ClthRepository"
+													"text": "ClthRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -28275,7 +28221,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -29168,7 +29114,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YRDkqkxlc="
 							},
-							"name": "clthController",
+							"name": "ClthController",
 							"represent": {
 								"$ref": "AAAAAAGA+6YRD0sJnMc="
 							},
@@ -29180,7 +29126,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YRDkqkxlc="
 							},
-							"name": "clthService",
+							"name": "ClthService",
 							"represent": {
 								"$ref": "AAAAAAGA+6YRD0sKx4Q="
 							},
@@ -29192,7 +29138,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YRDkqkxlc="
 							},
-							"name": "clthProvider",
+							"name": "ClthProvider",
 							"represent": {
 								"$ref": "AAAAAAGA+6YRD0sLHFw="
 							},
@@ -29204,7 +29150,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YRDkqkxlc="
 							},
-							"name": "clthRepository",
+							"name": "ClthRepository",
 							"represent": {
 								"$ref": "AAAAAAGA+6YRD0sM9lA="
 							},
@@ -29216,7 +29162,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YRDkqkxlc="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//ojGwglHZE="
 							},
@@ -29274,10 +29220,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YRDkqjz7k="
 					},
-					"name": "Role1",
-					"type": {
-						"$ref": "AAAAAAGA2e2myhuMi7E="
-					}
+					"name": "Role1"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -29285,10 +29228,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YRDkqjz7k="
 					},
-					"name": "Role2",
-					"type": {
-						"$ref": "AAAAAAGA2fhpaxwLY5s="
-					}
+					"name": "Role2"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -29296,10 +29236,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YRDkqjz7k="
 					},
-					"name": "Role3",
-					"type": {
-						"$ref": "AAAAAAGA2fwEehxpOfE="
-					}
+					"name": "Role3"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -29307,10 +29244,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YRDkqjz7k="
 					},
-					"name": "Role4",
-					"type": {
-						"$ref": "AAAAAAGA2gw0qBzEKNQ="
-					}
+					"name": "Role4"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -29439,7 +29373,7 @@
 													"top": 47,
 													"width": 190.54638671875,
 													"height": 13,
-													"text": "clthController: ClthController"
+													"text": "ClthController"
 												},
 												{
 													"_type": "LabelView",
@@ -29553,7 +29487,7 @@
 													"top": 47,
 													"width": 158.84619140625,
 													"height": 13,
-													"text": "clthService: ClthService"
+													"text": "ClthService"
 												},
 												{
 													"_type": "LabelView",
@@ -29669,7 +29603,7 @@
 													"top": 47,
 													"width": 171.80810546875,
 													"height": 13,
-													"text": "clthProvider: ClthProvider"
+													"text": "ClthProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -29785,7 +29719,7 @@
 													"top": 47,
 													"width": 202.12451171875,
 													"height": 13,
-													"text": "clthRepository: ClthRepository"
+													"text": "ClthRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -30550,7 +30484,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -31569,7 +31503,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YeCk1EseU="
 							},
-							"name": "clthController",
+							"name": "ClthController",
 							"represent": {
 								"$ref": "AAAAAAGA+6YeCk2paBo="
 							},
@@ -31581,7 +31515,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YeCk1EseU="
 							},
-							"name": "clthService",
+							"name": "ClthService",
 							"represent": {
 								"$ref": "AAAAAAGA+6YeCk2qC84="
 							},
@@ -31593,7 +31527,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YeCk1EseU="
 							},
-							"name": "clthProvider",
+							"name": "ClthProvider",
 							"represent": {
 								"$ref": "AAAAAAGA+6YeCk2rx+4="
 							},
@@ -31605,7 +31539,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YeCk1EseU="
 							},
-							"name": "clthRepository",
+							"name": "ClthRepository",
 							"represent": {
 								"$ref": "AAAAAAGA+6YeCk2sKSg="
 							},
@@ -31617,7 +31551,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YeCk1EseU="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//qHUghnDhk="
 							},
@@ -31694,10 +31628,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YeCk1DfV4="
 					},
-					"name": "Role1",
-					"type": {
-						"$ref": "AAAAAAGA2e2myhuMi7E="
-					}
+					"name": "Role1"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -31705,10 +31636,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YeCk1DfV4="
 					},
-					"name": "Role2",
-					"type": {
-						"$ref": "AAAAAAGA2fhpaxwLY5s="
-					}
+					"name": "Role2"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -31716,10 +31644,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YeCk1DfV4="
 					},
-					"name": "Role3",
-					"type": {
-						"$ref": "AAAAAAGA2fwEehxpOfE="
-					}
+					"name": "Role3"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -31727,10 +31652,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YeCk1DfV4="
 					},
-					"name": "Role4",
-					"type": {
-						"$ref": "AAAAAAGA2gw0qBzEKNQ="
-					}
+					"name": "Role4"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -31860,7 +31782,7 @@
 													"top": 47,
 													"width": 190.54638671875,
 													"height": 13,
-													"text": "clthController: ClthController"
+													"text": "ClthController"
 												},
 												{
 													"_type": "LabelView",
@@ -31976,7 +31898,7 @@
 													"top": 47,
 													"width": 171.80810546875,
 													"height": 13,
-													"text": "clthProvider: ClthProvider"
+													"text": "ClthProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -32092,7 +32014,7 @@
 													"top": 47,
 													"width": 202.12451171875,
 													"height": 13,
-													"text": "clthRepository: ClthRepository"
+													"text": "ClthRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -32540,7 +32462,7 @@
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -33032,7 +32954,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YvI09YjQs="
 							},
-							"name": "clthController",
+							"name": "ClthController",
 							"represent": {
 								"$ref": "AAAAAAGA+6YvJE+V4Qs="
 							},
@@ -33044,7 +32966,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YvI09YjQs="
 							},
-							"name": "clthProvider",
+							"name": "ClthProvider",
 							"represent": {
 								"$ref": "AAAAAAGA+6YvJE+WrWk="
 							},
@@ -33056,7 +32978,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YvI09YjQs="
 							},
-							"name": "clthRepository",
+							"name": "ClthRepository",
 							"represent": {
 								"$ref": "AAAAAAGA+6YvJE+XMko="
 							},
@@ -33068,7 +32990,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6YvI09YjQs="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//XQHgebHYk="
 							},
@@ -33106,10 +33028,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YvI09X+Gc="
 					},
-					"name": "Role1",
-					"type": {
-						"$ref": "AAAAAAGA2e2myhuMi7E="
-					}
+					"name": "Role1"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -33117,10 +33036,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YvI09X+Gc="
 					},
-					"name": "Role2",
-					"type": {
-						"$ref": "AAAAAAGA2fwEehxpOfE="
-					}
+					"name": "Role2"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -33128,10 +33044,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6YvI09X+Gc="
 					},
-					"name": "Role3",
-					"type": {
-						"$ref": "AAAAAAGA2gw0qBzEKNQ="
-					}
+					"name": "Role3"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -33196,7 +33109,7 @@
 												"$ref": "AAAAAAGA+6XBEkZgX+8="
 											},
 											"font": "Arial;13;0",
-											"left": 248.72998046875,
+											"left": 112.72998046875,
 											"top": 125,
 											"width": 102.83544921875,
 											"height": 13,
@@ -33209,7 +33122,7 @@
 												"$ref": "AAAAAAGA+6XBEkZgX+8="
 											},
 											"font": "Arial;13;1",
-											"left": 229,
+											"left": 93,
 											"top": 125,
 											"width": 14.72998046875,
 											"height": 13,
@@ -33217,9 +33130,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 224,
+									"left": 88,
 									"top": 120,
-									"width": 1033,
+									"width": 1257,
 									"height": 657,
 									"nameLabel": {
 										"$ref": "AAAAAAGA+6XBEkZhK3w="
@@ -33270,7 +33183,7 @@
 													"top": 47,
 													"width": 247,
 													"height": 13,
-													"text": "clthController: ClthController"
+													"text": "ClthController"
 												},
 												{
 													"_type": "LabelView",
@@ -33386,7 +33299,7 @@
 													"top": 47,
 													"width": 175,
 													"height": 13,
-													"text": "clthProvider: ClthProvider"
+													"text": "ClthProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -33502,7 +33415,7 @@
 													"top": 47,
 													"width": 202.12451171875,
 													"height": 13,
-													"text": "clthRepository: ClthRepository"
+													"text": "ClthRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -33596,7 +33509,7 @@
 												"$ref": "AAAAAAGA//VvxQd32OY="
 											},
 											"font": "Arial;13;0",
-											"left": 230,
+											"left": 224,
 											"top": 138,
 											"width": 417.03466796875,
 											"height": 13,
@@ -33619,7 +33532,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 438,
+											"left": 432,
 											"top": 123,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -33640,7 +33553,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 438,
+											"left": 432,
 											"top": 158,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -33673,7 +33586,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA//VWvgdfwso="
 									},
-									"points": "363:154;514:154",
+									"points": "351:154;514:154",
 									"nameLabel": {
 										"$ref": "AAAAAAGA//VvxQd5ZNM="
 									},
@@ -34150,6 +34063,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
+													"left": -24,
 													"height": 13
 												},
 												{
@@ -34159,11 +34073,11 @@
 														"$ref": "AAAAAAGA//VWvgdaHzA="
 													},
 													"font": "Arial;13;1",
-													"left": 313,
+													"left": 301,
 													"top": 87,
 													"width": 99.67724609375,
 													"height": 13,
-													"text": "Lifeline1: 사용자"
+													"text": "User: 사용자"
 												},
 												{
 													"_type": "LabelView",
@@ -34173,6 +34087,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
+													"left": -24,
 													"width": 110.24609375,
 													"height": 13,
 													"text": "(from Interaction1)"
@@ -34185,12 +34100,13 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
+													"left": -24,
 													"height": 13,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Arial;13;0",
-											"left": 308,
+											"left": 296,
 											"top": 80,
 											"width": 109.67724609375,
 											"height": 25,
@@ -34217,14 +34133,14 @@
 												"$ref": "AAAAAAGA//VWvgdYkoo="
 											},
 											"font": "Arial;13;0",
-											"left": 363,
+											"left": 351,
 											"top": 105,
 											"width": 1,
 											"height": 640
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 308,
+									"left": 296,
 									"top": 40,
 									"width": 109.67724609375,
 									"height": 705,
@@ -34368,7 +34284,7 @@
 												"$ref": "AAAAAAGBAQgb8xm+nMo="
 											},
 											"font": "Arial;13;0",
-											"left": 509,
+											"left": 503,
 											"top": 428,
 											"width": 132.28515625,
 											"height": 13,
@@ -34391,7 +34307,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 575,
+											"left": 569,
 											"top": 443,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -34412,7 +34328,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 576,
+											"left": 570,
 											"top": 408,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -34433,7 +34349,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 363,
+											"left": 351,
 											"top": 424,
 											"width": 14,
 											"height": 25
@@ -34446,7 +34362,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA+6XBEkZw6Cs="
 									},
-									"points": "790:424;363:424",
+									"points": "790:424;351:424",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAQgb8xnARZY="
 									},
@@ -34693,7 +34609,7 @@
 												"$ref": "AAAAAAGBAQlFfxn2b/8="
 											},
 											"font": "Arial;13;0",
-											"left": 512,
+											"left": 506,
 											"top": 572,
 											"width": 127.71484375,
 											"height": 13,
@@ -34716,7 +34632,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 575,
+											"left": 569,
 											"top": 587,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -34737,7 +34653,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 576,
+											"left": 570,
 											"top": 552,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -34758,7 +34674,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 363,
+											"left": 351,
 											"top": 568,
 											"width": 14,
 											"height": 25
@@ -34771,7 +34687,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA+6XBEkZw6Cs="
 									},
-									"points": "790:568;363:568",
+									"points": "790:568;351:568",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAQlFfxn4rvY="
 									},
@@ -34805,7 +34721,7 @@
 												"$ref": "AAAAAAGBAQlu/BoMDlg="
 											},
 											"font": "Arial;13;0",
-											"left": 295,
+											"left": 289,
 											"top": 656,
 											"width": 202.337890625,
 											"height": 13,
@@ -34828,7 +34744,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 437,
+											"left": 431,
 											"top": 668,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -34849,7 +34765,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 438,
+											"left": 432,
 											"top": 633,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -34870,7 +34786,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 363,
+											"left": 351,
 											"top": 649,
 											"width": 14,
 											"height": 25
@@ -34883,7 +34799,7 @@
 									"tail": {
 										"$ref": "AAAAAAGA+6XBEkZpvsc="
 									},
-									"points": "514:649;363:649",
+									"points": "514:649;351:649",
 									"nameLabel": {
 										"$ref": "AAAAAAGBAQlu/BoOPt4="
 									},
@@ -35054,7 +34970,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XBEkZedA0="
 							},
-							"name": "clthController",
+							"name": "ClthController",
 							"represent": {
 								"$ref": "AAAAAAGA+6XBE0a1nJA="
 							},
@@ -35066,7 +34982,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XBEkZedA0="
 							},
-							"name": "clthProvider",
+							"name": "ClthProvider",
 							"represent": {
 								"$ref": "AAAAAAGA+6XBE0a2emc="
 							},
@@ -35078,7 +34994,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XBEkZedA0="
 							},
-							"name": "clthRepository",
+							"name": "ClthRepository",
 							"represent": {
 								"$ref": "AAAAAAGA+6XBE0a3ZY0="
 							},
@@ -35090,7 +35006,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA+6XBEkZedA0="
 							},
-							"name": "Lifeline1",
+							"name": "User",
 							"represent": {
 								"$ref": "AAAAAAGA//VWvgdXbPw="
 							},
@@ -35148,10 +35064,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6XBEkZd7v4="
 					},
-					"name": "Role1",
-					"type": {
-						"$ref": "AAAAAAGA2e2myhuMi7E="
-					}
+					"name": "Role1"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -35159,10 +35072,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6XBEkZd7v4="
 					},
-					"name": "Role2",
-					"type": {
-						"$ref": "AAAAAAGA2fwEehxpOfE="
-					}
+					"name": "Role2"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -35170,10 +35080,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA+6XBEkZd7v4="
 					},
-					"name": "Role3",
-					"type": {
-						"$ref": "AAAAAAGA2gw0qBzEKNQ="
-					}
+					"name": "Role3"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -35323,7 +35230,7 @@
 													"top": 47,
 													"width": 152.3271484375,
 													"height": 13,
-													"text": "Lifeline1: UserProvider"
+													"text": "UserProvider"
 												},
 												{
 													"_type": "LabelView",
@@ -35438,7 +35345,7 @@
 													"top": 47,
 													"width": 167.4853515625,
 													"height": 13,
-													"text": "Lifeline2: UserRepository"
+													"text": "UserRepository"
 												},
 												{
 													"_type": "LabelView",
@@ -35793,7 +35700,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA++eVlWnU70w="
 							},
-							"name": "Lifeline1",
+							"name": "UserProvider",
 							"represent": {
 								"$ref": "AAAAAAGA++hChWokyGE="
 							},
@@ -35805,7 +35712,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGA++eVlWnU70w="
 							},
-							"name": "Lifeline2",
+							"name": "UserRepository",
 							"represent": {
 								"$ref": "AAAAAAGA++hyd2pEK+Q="
 							},
@@ -35829,10 +35736,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA++eVlWnTLZ4="
 					},
-					"name": "Role1",
-					"type": {
-						"$ref": "AAAAAAGA2cGrJxmrvN8="
-					}
+					"name": "Role1"
 				},
 				{
 					"_type": "UMLAttribute",
@@ -35840,10 +35744,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGA++eVlWnTLZ4="
 					},
-					"name": "Role2",
-					"type": {
-						"$ref": "AAAAAAGA2dbPLxpbMpE="
-					}
+					"name": "Role2"
 				},
 				{
 					"_type": "UMLAttribute",
