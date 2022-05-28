@@ -41,11 +41,10 @@ public class UserController {
     @ResponseBody
     @PostMapping("/signUp")
     public BaseResponse<String> createUser(@RequestBody PostSignUpReq postSignUpReq){
-
         //빈칸 있나 확인
         if(postSignUpReq.getId()==null || postSignUpReq.getPwForCheck() ==null || postSignUpReq.getName() == null
                 || postSignUpReq.getPassword() == null) {
-            return new BaseResponse<>(POST_USERS_EMPTY);
+            return new BaseResponse<>(POST_USERS_EMPTY);//status수정
         }
         //아이디 비번 형식 확인
         if(!isRegexId(postSignUpReq.getId())){

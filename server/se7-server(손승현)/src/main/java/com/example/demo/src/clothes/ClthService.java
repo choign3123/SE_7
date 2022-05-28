@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 public class ClthService {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    private final ClthDao clthDao;
+    private final ClthRepository clthRepository;
     private final ClthProvider clthProvider;
 
 
     @Autowired
-    public ClthService(ClthDao clthDao, ClthProvider clthProvider) {
-        this.clthDao = clthDao;
+    public ClthService(ClthRepository clthRepository, ClthProvider clthProvider) {
+        this.clthRepository = clthRepository;
         this.clthProvider = clthProvider;
 
     }

@@ -41,6 +41,7 @@ public class UserProvider {
     }
     //로그인시 회원조회
     public GetLoginRes retrieveUser(GetLoginReq getLoginReq) throws BaseException{
+
         if(!checkIdAndPw(getLoginReq))
             throw new BaseException(CHECK_ID_PW);
         try
@@ -53,6 +54,7 @@ public class UserProvider {
     //로그인시 아이디 비번 체크 함수
     public boolean checkIdAndPw(GetLoginReq getLoginReq){
         if(userRepository.checkIdAndPw(getLoginReq)==0) {
+            System.out.println(userRepository.checkIdAndPw(getLoginReq));
             return false;
         }
         else {
@@ -68,10 +70,6 @@ public class UserProvider {
         }catch (Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }
-    }
-
-    public boolean checkUserExist(int userIdx){
-        return false;
     }
 
 

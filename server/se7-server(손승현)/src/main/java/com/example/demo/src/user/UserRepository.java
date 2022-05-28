@@ -68,9 +68,6 @@ public class UserRepository {
 
     }
 
-    public int checkUserExist(int userIdx){
-        return 0;
-    }
 
 
 }
