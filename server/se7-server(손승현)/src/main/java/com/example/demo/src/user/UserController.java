@@ -42,15 +42,10 @@ public class UserController {
     @PostMapping("/signUp")
     public BaseResponse<String> createUser(@RequestBody PostSignUpReq postSignUpReq){
 
-//        System.out.println(postSignUpReq.getName());
-//        System.out.println(postSignUpReq.getId());
-//        System.out.println(postSignUpReq.getPassword());
-//        System.out.println(postSignUpReq.getPwForCheck());
-
         //빈칸 있나 확인
         if(postSignUpReq.getId()==null || postSignUpReq.getPwForCheck() ==null || postSignUpReq.getName() == null
                 || postSignUpReq.getPassword() == null) {
-            return new BaseResponse<>(POST_USERS_EMPTY);//status수정
+            return new BaseResponse<>(POST_USERS_EMPTY);
         }
         //아이디 비번 형식 확인
         if(!isRegexId(postSignUpReq.getId())){
