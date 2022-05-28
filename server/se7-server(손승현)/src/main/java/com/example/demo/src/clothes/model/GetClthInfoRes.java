@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class GetClthInfoRes {
-    private int clthIdx;
+//    private int clthIdx;   //clthidx확인 필요
     private String clthImgUrl;
     private boolean bookmark;
     private String category;

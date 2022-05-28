@@ -45,9 +45,20 @@ public class ClthController {
         }catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }
-
-
     }
 
+
+    //개별 옷 조회
+    @ResponseBody
+    @GetMapping("/info/{userIdx}")
+    public BaseResponse<GetClthInfoRes> getClthInfo(@PathVariable("userIdx") int userIdx,@RequestParam("clthIdx") int clthIdx)
+    {
+        try{
+            GetClthInfoRes getClthInfoRes = clthProvider.retrieveClthInfo(userIdx,clthIdx);
+            return new BaseResponse<>(getClthInfoRes);
+        }catch(BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
+        }
+    }
 
 }

@@ -1,0 +1,16 @@
+의논거리
+개별 옷 조회 메소드 짤 때의 문제
+일단 clthIdx가 개별 옷 조회할 때 들어가야하는가?
+GetClthInfoRes에  clthIdx가 있는데 이걸 빼도 되는가? =>결국 개별 옷 조회 시 clthIdx가 안들어가는가?
+
+and
+
+checkClthExist할 때 userIdx도 같이 받아서 비교하는 것이 더 안전성 있어보임
+그러지 않으면 userIdx와 clthIdx가 맞지 않아도 clthIdx만 맞으면 결과가 전달됨
+userIdx =1 clthIdx =5
+userIdx =4  clthIdx =5
+이렇게 전달되어도 결과는 같음
+
+
+현재 위 상태로 수정되어있음
+시퀀스 다이어그램 클래스 다이어그램 수정 필요할 듯
