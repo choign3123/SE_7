@@ -29,7 +29,7 @@ public class ClthProvider {
     }
 
 
-    public List<GetClthsRes> retrieveClths(int userIdx){
+    public List<GetClthsRes> retrieveClths(int userIdx) throws BaseException{
 
         try{
             return clthRepository.selectClths(userIdx);

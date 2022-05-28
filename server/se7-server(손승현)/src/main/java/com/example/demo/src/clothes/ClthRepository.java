@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -23,7 +24,18 @@ public class ClthRepository {
     }
 
     public List<GetClthsRes> selectClths(int userIdx) {
+        String selectClthIdxImg ="select clthIdx,clthImgUrl from clothes where userIdx = ?";
+        int clthUserIdx= userIdx;
+        List<GetClthsRes> list = this.jdbcTemplate.query(selectClthIdxImg,
+                (rs,rowNum) -> {
+            GetClthsRes getClthsRes = new GetClthsRes();
+            getClthsRes.setClthIdx((rs.getInt("clthIdx")));
+            getClthsRes.setClthImgUrl(rs.getString("clthImgUrl"));
+            return getClthsRes;
+        }
+        ,clthUserIdx);
 
-
+        return list;
     }
+
 }
