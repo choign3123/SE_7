@@ -8,3 +8,10 @@
 /dataSources.local.xml
 server/se7-server/src/main/resources/application.yml
 server/se7-server-(손승현)/src/main/resources/application.yml
+
+#idle과 gradel
+server/se7-server/.gradel/
+server/se7-server/.idle/
+
+server/se7-server-(손승현)/.gradel/
+server/se7-server-(손승현)/.idle/
