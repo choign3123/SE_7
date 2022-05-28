@@ -6,5 +6,5 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
-server/se7-server/src/main/resources/application.yml
+se7-server(손승현)/src/main/resources/application.yml
 server/se7-server-(손승현)/src/main/resources/application.yml
