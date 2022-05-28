@@ -39,7 +39,7 @@ public class UserController {
 
     //회원가입
     @ResponseBody
-    @PostMapping("/create")
+    @PostMapping("/signUp")
     public BaseResponse<String> createUser(@RequestBody PostSignUpReq postSignUpReq){
 
 //        System.out.println(postSignUpReq.getName());
@@ -75,7 +75,7 @@ public class UserController {
     }
     //로그인
     @ResponseBody
-    @PostMapping("")
+    @PostMapping("/login")
     public BaseResponse<GetLoginRes> loginUser(@RequestBody GetLoginReq getLoginReq){
 
         try
