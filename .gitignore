@@ -9,9 +9,9 @@
 server/se7-server/src/main/resources/application.yml
 server/se7-server-(손승현)/src/main/resources/application.yml
 
-#idle과 gradel
-server/se7-server/.gradel/
-server/se7-server/.idle/
+#idea과 gradle
+server/se7-server/.gradle/
+server/se7-server/.idea/
 
-server/se7-server-(손승현)/.gradel/
-server/se7-server-(손승현)/.idle/
+server/se7-server-(손승현)/.gradle/
+server/se7-server-(손승현)/.idea/
