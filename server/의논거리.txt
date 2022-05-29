@@ -1,43 +1,22 @@
 의논거리
 *개별 옷 조회 메소드 짤 때의 문제
 일단 clthIdx가 개별 옷 조회할 때 들어가야하는가?
-GetClthInfoRes에  clthIdx가 있는데 이걸 빼도 되는가? =>결국 개별 옷 조회 시 clthIdx가 안들어가는가?
+GetClthInfoRes에  clthIdx가 있는데 이걸 빼도 되는가? =>결국 개별 옷 조회 시 clthIdx가 안들어가는가? =>코드만 수정
 
-and
-
-checkClthExist할 때 userIdx도 같이 받아서 비교하는 것이 더 안전성 있어보임
-그러지 않으면 userIdx와 clthIdx가 맞지 않아도 clthIdx만 맞으면 결과가 전달됨
-userIdx =1 clthIdx =5
-userIdx =4  clthIdx =5
-이렇게 전달되어도 결과는 같음
-현재 위 상태로 수정되어있음
-시퀀스 다이어그램 클래스 다이어그램 수정 필요할 듯
-
-
-*옷 등록할 때
-시퀀스다이어그램 int userIdx를 빼도 되지 않을까 어차피 PostClthReq에 들어있는 userIdx//지워도될듯
-
-
-*회원가입할때나 옷 등록할때나 옷 삭제,옷수정 마찬가지 
-새로생긴 userIdx clthIdx를 int로 중간까지 반환해준다. 하지만 사용되지 않음
-int로 반환하는 것을 구현은 해놓았다. 하지만 프론트쪽으로 현재 전달은 되지 않는 상태 의논후 수정
-BaseResponse<String>->BaseResponse<int>후 반환
-현재 옷등록 회원가입 둘다 
-    "message": "요청에 성공하였습니다.",
-    "result": "회원가입에 성공하였습니다."
-or
-    "message": "요청에 성공하였습니다.",
-    "result": "옷 등록에 성공하였습니다."   로 나오는 상태
-
-
-*옷 등록시 controller if문 fail이 두개로 나뉨 그거에대한 시퀀스다이어그램 수정 필요
 *옷 수정시 userIdx patchClthReq.getClthIdx필요없을ㄷㅅ 아니면 clthIdx를 requsetparam으로 받고
-patchClthReq에서 clthIdx를 뺀다면?
-*CheckClthExist는 필요변수 2개임 확인 후 수정 필요
+patchClthReq에서 clthIdx를 뺀다면? => 빼자
+
+시퀀스다이어그램 수정 옷등록 contoller
+시퀀스다이어그램 옷수정 제가 수정 clthindex 
+checkClthExist 두개로 클래스다이어그램 시퀀스다이어그램 둘다
+
+옷줄때 order by 전체옷조회할때문
+		즐겨찾기된 옷들조회
+옷이 여러개면 옷이 만들어진 순서대로
 
 
+계절이랑 카테고리 줄 때 받는거 목록 맞는지 List로 확인
+요구사항명세서 확인
 
-프론트 진척이 얼마나됏는지
-구현능력이 얼마나되는지
-만드는 데드라인 어디까지설정할지
-레트로핏쪽 코드 가나님이 
+
+hana-umc.shop/tesㄴt/log
