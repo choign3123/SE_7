@@ -43,8 +43,6 @@ public class ClthRepository {
 
     //개별옷 조회 옷 확인
     public int checkClthExist(int userIdx,int clthIdx) {
-//        String checkClthExist = "select exists(select userIdx from clothes where userIdx=? and clthIdx=?)";
-//        int clothIdx = clthIdx;
         String checkClthExist = "select exists(select userIdx from clothes where userIdx=? and clthIdx=?)";
         Object[] clothIdx = new Object[]{userIdx,clthIdx};
         return this.jdbcTemplate.queryForObject(checkClthExist,Integer.class,clothIdx);

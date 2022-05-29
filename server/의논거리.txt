@@ -15,12 +15,11 @@ userIdx =4  clthIdx =5
 
 
 *옷 등록할 때
-시퀀스다이어그램 int userIdx를 빼도 되지 않을까 어차피 PostClthReq에 들어있는 userIdx
+시퀀스다이어그램 int userIdx를 빼도 되지 않을까 어차피 PostClthReq에 들어있는 userIdx//지워도될듯
 
 
-*회원가입할때나 옷 등록할때나 
-새로생긴 userIdx clthIdx를 int로 중간까지 반환해준다.
-이게 필요한가? 보내는 것으로 바꿀 수는 있으며 
+*회원가입할때나 옷 등록할때나 옷 삭제,옷수정 마찬가지 (옷 삭제는 반환값이 있나..?)
+새로생긴 userIdx clthIdx를 int로 중간까지 반환해준다. 하지만 사용되지 않음
 int로 반환하는 것을 구현은 해놓았다. 하지만 프론트쪽으로 현재 전달은 되지 않는 상태 의논후 수정
 BaseResponse<String>->BaseResponse<int>후 반환
 현재 옷등록 회원가입 둘다 
@@ -30,5 +29,6 @@ or
     "message": "요청에 성공하였습니다.",
     "result": "옷 등록에 성공하였습니다."   로 나오는 상태
 
-fail이 두개로 나뉨 그거에대한 시퀀스다이어그램 수정 필요
+
+*옷 등록시 controller if문 fail이 두개로 나뉨 그거에대한 시퀀스다이어그램 수정 필요
 

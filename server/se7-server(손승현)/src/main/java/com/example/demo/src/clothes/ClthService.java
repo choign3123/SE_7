@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import static com.example.demo.config.BaseResponseStatus.DATABASE_ERROR;
+import static com.example.demo.config.BaseResponseStatus.FAILED_TO_FIND_CLOTH;
 
 @Service
 public class ClthService {
@@ -36,5 +37,15 @@ public class ClthService {
             throw new BaseException(DATABASE_ERROR);
         }
 
+    }
+
+    public void deleteClth(int userIdx, int clthIdx) throws BaseException {
+        if(!clthProvider.checkClthExist(userIdx,clthIdx))
+            throw new BaseException(FAILED_TO_FIND_CLOTH);
+        try{
+            int deleteclthIdx = clthRepository.deleteClth(userIdx,clthIdx);
+        }catch (Exception exception) {
+            throw new BaseException(DATABASE_ERROR);
+        }
     }
 }
