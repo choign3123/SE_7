@@ -10,8 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import static com.example.demo.config.BaseResponseStatus.CHECK_ID_PW;
-import static com.example.demo.config.BaseResponseStatus.DATABASE_ERROR;
+import static com.example.demo.config.BaseResponseStatus.*;
 
 //Provider : Read의 비즈니스 로직 처리
 @Service
@@ -41,7 +40,6 @@ public class UserProvider {
     }
     //로그인시 회원조회
     public GetLoginRes retrieveUser(GetLoginReq getLoginReq) throws BaseException{
-
         if(!checkIdAndPw(getLoginReq))
             throw new BaseException(CHECK_ID_PW);
         try
@@ -64,12 +62,22 @@ public class UserProvider {
 
     //회원정보조회 회원조회
     public GetUserInfoRes retrieveUserInfo(int userIdx) throws BaseException{
+        if(!checkUserExist(userIdx))
+            throw new BaseException(RESPONSE_ERROR);
         try
         {
             return userRepository.selectUserInfo(userIdx);
         }catch (Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }
+    }
+    //회원정보조회시 userIdx있는지 확인
+    public boolean checkUserExist(int userIdx) {
+        if(userRepository.checkUserExist(userIdx) == 1)
+            return true;
+        else
+            return false;
+
     }
 
 

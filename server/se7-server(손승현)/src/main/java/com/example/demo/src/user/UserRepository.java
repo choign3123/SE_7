@@ -23,18 +23,6 @@ public class UserRepository {
         return this.jdbcTemplate.queryForObject(meg, int.class);
     }
 
-    //회원정보조회
-    public GetUserInfoRes selectUserInfo(int userIdx){
-        String getUserInfoResQuery = "select id,name, (select count(*) from clothes where userIdx=? group by userIdx) as numOfClth from user where userIdx = ?";
-        Object[] getUserInfoParams = new Object[]{userIdx, userIdx};
-        return this.jdbcTemplate.queryForObject(getUserInfoResQuery,
-                (rs, rowNum) -> new GetUserInfoRes(
-                        rs.getString("id"),
-                        rs.getString("name"),
-                        rs.getInt("numOfClth")
-                ),
-                getUserInfoParams);
-    }
     //회원가입
     public int insertUser(PostSignUpReq postSignUpReq){
         String insertUserQuery = "insert into user(id, name, password) values (?, ?, ?)";
@@ -67,8 +55,23 @@ public class UserRepository {
         return new GetLoginRes(userIdx);
 
     }
-
-
+    //회원정보조회
+    public GetUserInfoRes selectUserInfo(int userIdx){
+        String getUserInfoResQuery = "select id,name, (select count(*) from clothes where userIdx=? group by userIdx) as numOfClth from user where userIdx = ?";
+        Object[] getUserInfoParams = new Object[]{userIdx, userIdx};
+        return this.jdbcTemplate.queryForObject(getUserInfoResQuery,
+                (rs, rowNum) -> new GetUserInfoRes(
+                        rs.getString("id"),
+                        rs.getString("name"),
+                        rs.getInt("numOfClth")
+                ),
+                getUserInfoParams);
+    }
+    //회원정보조회시 userIdx있는지 Exist 확인
+    public int checkUserExist(int userIdx){
+        String checkUserExist = "select exists(select userIdx from user where userIdx = ?)";
+        return this.jdbcTemplate.queryForObject(checkUserExist,int.class,userIdx);
+    }
 
 }
 

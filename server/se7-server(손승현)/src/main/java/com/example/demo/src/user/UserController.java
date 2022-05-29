@@ -89,8 +89,8 @@ public class UserController {
             GetUserInfoRes getUserInfoRes = userProvider.retrieveUserInfo(userIdx);
             return new BaseResponse<>(getUserInfoRes);
 
-        } catch (BaseException exception) {
-            throw new RuntimeException(exception);
+        }catch(BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
         }
     }
 

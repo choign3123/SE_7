@@ -14,3 +14,9 @@
     "password" : "sdkljwl3243",
     "pwForCheck" : "sdkljwl3243"
 }
+
+로그인 jason
+{
+    "id" : "difkf24",
+    "password" : "sdkljwl3243"
+}

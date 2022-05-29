@@ -50,7 +50,7 @@ public enum BaseResponseStatus {
      * 3000 : Response 오류
      */
     // Common
-    RESPONSE_ERROR(false, 3000, "값을 불러오는데 실패하였습니다."),
+    RESPONSE_ERROR(false, 3000, "정보를 불러오는데 실패하였습니다."),
 
     // [POST] /users
     DUPLICATED_EMAIL(false, 3013, "중복된 이메일입니다."),
