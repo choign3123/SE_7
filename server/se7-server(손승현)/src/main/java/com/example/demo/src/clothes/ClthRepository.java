@@ -1,9 +1,6 @@
 package com.example.demo.src.clothes;
 
-import com.example.demo.src.clothes.model.GetClthBMRes;
-import com.example.demo.src.clothes.model.GetClthInfoRes;
-import com.example.demo.src.clothes.model.GetClthsRes;
-import com.example.demo.src.clothes.model.PostClthReq;
+import com.example.demo.src.clothes.model.*;
 import com.example.demo.src.user.model.GetUserInfoRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -95,6 +92,11 @@ public class ClthRepository {
         return this.jdbcTemplate.queryForObject(selectDelteClth,Integer.class,clothIdx2);
     }
 
+
+    public int updateClthInfo(int userIdx, PatchClthReq patchClthReq) {
+
+        return 0;
+    }
 
 
 }

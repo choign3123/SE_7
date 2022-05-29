@@ -50,6 +50,16 @@ public class ClthService {
         }
     }
 
-    public void modifyClthInfo(int userIdx, PatchClthReq patchClthReq) {
+    public void modifyClthInfo(int userIdx, PatchClthReq patchClthReq) throws BaseException {
+        if(!clthProvider.checkClthExist(userIdx,patchClthReq.getClthIdx()))
+            throw new BaseException(MODIFY_FAIL_POST);
+        try{
+            int modifyClth =clthRepository.updateClthInfo(userIdx,patchClthReq);
+
+        }catch (Exception exception) {
+            throw new BaseException(DATABASE_ERROR);
+        }
+
+
     }
 }

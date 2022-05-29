@@ -18,7 +18,7 @@ userIdx =4  clthIdx =5
 시퀀스다이어그램 int userIdx를 빼도 되지 않을까 어차피 PostClthReq에 들어있는 userIdx//지워도될듯
 
 
-*회원가입할때나 옷 등록할때나 옷 삭제,옷수정 마찬가지 (옷 삭제는 반환값이 있나..?)
+*회원가입할때나 옷 등록할때나 옷 삭제,옷수정 마찬가지 
 새로생긴 userIdx clthIdx를 int로 중간까지 반환해준다. 하지만 사용되지 않음
 int로 반환하는 것을 구현은 해놓았다. 하지만 프론트쪽으로 현재 전달은 되지 않는 상태 의논후 수정
 BaseResponse<String>->BaseResponse<int>후 반환
@@ -33,6 +33,7 @@ or
 *옷 등록시 controller if문 fail이 두개로 나뉨 그거에대한 시퀀스다이어그램 수정 필요
 *옷 수정시 userIdx patchClthReq.getClthIdx필요없을ㄷㅅ 아니면 clthIdx를 requsetparam으로 받고
 patchClthReq에서 clthIdx를 뺀다면?
+*CheckClthExist는 필요변수 2개임 확인 후 수정 필요
 
 
 
