@@ -44,6 +44,7 @@ public enum BaseResponseStatus {
     POST_USERS_INVALID_ID(false, 2026, "아이디 형식을 확인해주세요."),
     POST_USERS_INVALID_PW(false, 2027, "비밀번호 형식을 확인해주세요."),
     POST_USERS_DIFF_PW_PWCHECK(false,2030,"비밀번호와 비밀번호 확인이 다릅니다."),
+    NULL_PHOTO_FAIL(false,2031,"사진을 등록하지 않았습니다."),
 
     /**
      * 3000 : Response 오류

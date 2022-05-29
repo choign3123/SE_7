@@ -3,6 +3,7 @@ package com.example.demo.src.clothes;
 import com.example.demo.src.clothes.model.GetClthBMRes;
 import com.example.demo.src.clothes.model.GetClthInfoRes;
 import com.example.demo.src.clothes.model.GetClthsRes;
+import com.example.demo.src.clothes.model.PostClthReq;
 import com.example.demo.src.user.model.GetUserInfoRes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -73,5 +74,16 @@ public class ClthRepository {
                     getClthBMRes.setClthImgUrl(rs.getString("clthImgUrl"));
                     return getClthBMRes;
                 },clthBookmarkIdx);
+    }
+
+    //옷 등록
+    public int insertClth(PostClthReq postClthReq) {
+        String insertClth = "insert into clothes(userIdx, clthImgUrl, bookmark, category, season) values (?,?,?,?,?)";
+        Object[] createClth = new Object[]{postClthReq.getUserIdx(),postClthReq.getClthImgUrl(),postClthReq.isBookmark(),
+        postClthReq.getCategory(),postClthReq.getSeason()};
+        this.jdbcTemplate.update(insertClth,createClth);
+
+        String lastInsertClthIdx = "select last_insert_id()";
+        return this.jdbcTemplate.queryForObject(lastInsertClthIdx,int.class);
     }
 }

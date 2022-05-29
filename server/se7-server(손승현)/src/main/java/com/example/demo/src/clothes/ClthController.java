@@ -2,9 +2,11 @@ package com.example.demo.src.clothes;
 
 import com.example.demo.config.BaseException;
 import com.example.demo.config.BaseResponse;
+import com.example.demo.config.BaseResponseStatus;
 import com.example.demo.src.clothes.model.GetClthBMRes;
 import com.example.demo.src.clothes.model.GetClthInfoRes;
 import com.example.demo.src.clothes.model.GetClthsRes;
+import com.example.demo.src.clothes.model.PostClthReq;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+
+import static com.example.demo.config.BaseResponseStatus.NULL_PHOTO_FAIL;
+import static com.example.demo.config.BaseResponseStatus.POST_USERS_EMPTY;
 
 @RestController
 @RequestMapping("/clths")
@@ -70,10 +75,25 @@ public class ClthController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
-    //
+    //옷 등록
     @ResponseBody
-    @GetMapping("/")
+    @PostMapping("")
+    public BaseResponse<String> createClth(@RequestBody PostClthReq postClthReq){
+        if(postClthReq.getClthImgUrl()==null)
+            return new BaseResponse<>(NULL_PHOTO_FAIL);
+        if(postClthReq.getSeason()==null ||postClthReq.getCategory() == null)
+            return new BaseResponse<>(POST_USERS_EMPTY);
 
+        try{
+            String result = "옷 등록에 성공히였습니다.";
+            clthService.createClth(postClthReq);
+            return new BaseResponse<>(result);
+        }catch(BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
+        }
+
+
+    }
 
 
 }

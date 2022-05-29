@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.prefs.BackingStoreException;
 
 import static com.example.demo.config.BaseResponseStatus.DATABASE_ERROR;
 import static com.example.demo.config.BaseResponseStatus.FAILED_TO_FIND_CLOTH;
@@ -47,8 +48,11 @@ public class ClthProvider {
     public GetClthInfoRes retrieveClthInfo(int userIdx,int clthIdx) throws BaseException {
         if (!checkClthExist(userIdx,clthIdx))
             throw new BaseException(FAILED_TO_FIND_CLOTH);
-
-        return clthRepository.selectClthInfo(clthIdx);
+        try {
+            return clthRepository.selectClthInfo(clthIdx);
+        }catch(Exception exception){
+            throw new BaseException(DATABASE_ERROR);
+        }
     }
     //개별 옷 조회 옷 확인
     public boolean checkClthExist(int userIdx,int clthIdx) {

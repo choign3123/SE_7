@@ -34,6 +34,7 @@ public class UserService {
         try
         {
             int userIdx = userRepository.insertUser(postSignUpReq);
+            System.out.println(userIdx);
         }catch(Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }

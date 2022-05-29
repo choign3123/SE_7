@@ -1,0 +1,16 @@
+옷등록 jason
+{
+    "userIdx" : 1,
+    "clthImgUrl" : "/img29",
+    "bookmark" : true,
+    "category" : "상의",
+    "season": "가을"
+}
+
+회원가입 jason
+{
+    "id" : "difkf24",
+    "name" : "손승현",
+    "password" : "sdkljwl3243",
+    "pwForCheck" : "sdkljwl3243"
+}
