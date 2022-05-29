@@ -46,8 +46,6 @@ public class ClthController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
-
-
     //개별 옷 조회
     @ResponseBody
     @GetMapping("/info/{userIdx}")
@@ -60,5 +58,7 @@ public class ClthController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
+    //즐겨찾기 된 옷 조회
+
 
 }
