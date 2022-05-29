@@ -57,7 +57,7 @@ public enum BaseResponseStatus {
     FAILED_TO_LOGIN(false,3014,"없는 아이디거나 비밀번호가 틀렸습니다."),
 
     MODIFY_FAIL_POST(false, 3015, "게시물 수정을 실패했습니다."),
-    DELETE_FAIL_POST(false, 3016, "게시물 삭제를 실패했습니다."),
+    DELETE_FAIL_POST(false, 3016, "옷 삭제를 실패했습니다."),
     FAILED_TO_FIND_CLOTH(false,3017,"옷을 불러오는데 실패하였습니다."),
 
     /**

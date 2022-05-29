@@ -31,4 +31,12 @@ or
 
 
 *옷 등록시 controller if문 fail이 두개로 나뉨 그거에대한 시퀀스다이어그램 수정 필요
+*옷 수정시 userIdx patchClthReq.getClthIdx필요없을ㄷㅅ 아니면 clthIdx를 requsetparam으로 받고
+patchClthReq에서 clthIdx를 뺀다면?
 
+
+
+프론트 진척이 얼마나됏는지
+구현능력이 얼마나되는지
+만드는 데드라인 어디까지설정할지
+레트로핏쪽 코드 가나님이 

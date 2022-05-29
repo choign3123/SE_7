@@ -84,4 +84,17 @@ public class ClthRepository {
         String lastInsertClthIdx = "select last_insert_id()";
         return this.jdbcTemplate.queryForObject(lastInsertClthIdx,int.class);
     }
+    //옷 삭제
+    public int deleteClth(int userIdx, int clthIdx) {
+        String deleteClth = "delete from clothes where userIdx = ? and clthIdx =?";
+        Object[] clothIdx = new Object[]{userIdx,clthIdx};
+        this.jdbcTemplate.update(deleteClth,clothIdx);
+        //삭제되었으면 0을반환한다
+        String selectDelteClth = "select exists(select userIdx from clothes where userIdx=? and clthIdx=?)";
+        Object[] clothIdx2 = new Object[]{userIdx,clthIdx};
+        return this.jdbcTemplate.queryForObject(selectDelteClth,Integer.class,clothIdx2);
+    }
+
+
+
 }

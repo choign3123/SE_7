@@ -1,14 +1,14 @@
 package com.example.demo.src.clothes;
 
 import com.example.demo.config.BaseException;
+import com.example.demo.src.clothes.model.PatchClthReq;
 import com.example.demo.src.clothes.model.PostClthReq;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import static com.example.demo.config.BaseResponseStatus.DATABASE_ERROR;
-import static com.example.demo.config.BaseResponseStatus.FAILED_TO_FIND_CLOTH;
+import static com.example.demo.config.BaseResponseStatus.*;
 
 @Service
 public class ClthService {
@@ -38,14 +38,18 @@ public class ClthService {
         }
 
     }
-
+    //옷 삭제
     public void deleteClth(int userIdx, int clthIdx) throws BaseException {
         if(!clthProvider.checkClthExist(userIdx,clthIdx))
-            throw new BaseException(FAILED_TO_FIND_CLOTH);
+            throw new BaseException(DELETE_FAIL_POST);
         try{
             int deleteclthIdx = clthRepository.deleteClth(userIdx,clthIdx);
+            System.out.println(deleteclthIdx);
         }catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }
+    }
+
+    public void modifyClthInfo(int userIdx, PatchClthReq patchClthReq) {
     }
 }

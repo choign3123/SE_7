@@ -3,10 +3,7 @@ package com.example.demo.src.clothes;
 import com.example.demo.config.BaseException;
 import com.example.demo.config.BaseResponse;
 import com.example.demo.config.BaseResponseStatus;
-import com.example.demo.src.clothes.model.GetClthBMRes;
-import com.example.demo.src.clothes.model.GetClthInfoRes;
-import com.example.demo.src.clothes.model.GetClthsRes;
-import com.example.demo.src.clothes.model.PostClthReq;
+import com.example.demo.src.clothes.model.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,14 +29,14 @@ public class ClthController {
         this.clthService = clthService;
     }
 
-    @ResponseBody
-    @GetMapping("/{userIdx}")
-    public BaseResponse<String> test(@PathVariable("userIdx") int userIdx) {
-        clthProvider.test();
-        clthService.test();
-        String str = "test success at " + userIdx;
-        return new BaseResponse<>(str);
-    }
+//    @ResponseBody
+//    @GetMapping("/{userIdx}")
+//    public BaseResponse<String> test(@PathVariable("userIdx") int userIdx) {
+//        clthProvider.test();
+//        clthService.test();
+//        String str = "test success at " + userIdx;
+//        return new BaseResponse<>(str);
+//    }
 
     //전체 옷 조회
     @ResponseBody
@@ -108,6 +105,21 @@ public class ClthController {
 
     }
 
+    //옷 수정
+    @ResponseBody
+    @GetMapping("/{userIdx}")
+    public BaseResponse<String> modifyClthInfo( PatchClthReq patchClthReq,@PathVariable int userIdx){
+        if (patchClthReq.getSeason() == null || patchClthReq.getCategory() == null)
+            return new BaseResponse<>(POST_USERS_EMPTY);
+        try{
+            String result = "옷이 수정되었습니다.";
+            clthService.modifyClthInfo(userIdx,patchClthReq);
+            return new BaseResponse<>(result);
+        } catch (BaseException exception) {
+            return new BaseResponse<>((exception.getStatus()));
+        }
+
+    }
 
 
 }
