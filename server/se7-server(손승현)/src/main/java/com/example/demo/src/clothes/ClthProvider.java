@@ -1,6 +1,7 @@
 package com.example.demo.src.clothes;
 
 import com.example.demo.config.BaseException;
+import com.example.demo.src.clothes.model.GetClthBMRes;
 import com.example.demo.src.clothes.model.GetClthInfoRes;
 import com.example.demo.src.clothes.model.GetClthsRes;
 import org.slf4j.Logger;
@@ -57,5 +58,12 @@ public class ClthProvider {
             return false;
 
     }
-
+    //즐겨찾기 된 옷 조회
+    public List<GetClthBMRes> retrieveClthBookmark(int userIdx) throws BaseException{
+        try {
+            return clthRepository.selectClthBookmark(userIdx);
+        } catch (Exception exception) {
+            throw new BaseException(DATABASE_ERROR);
+        }
+    }
 }

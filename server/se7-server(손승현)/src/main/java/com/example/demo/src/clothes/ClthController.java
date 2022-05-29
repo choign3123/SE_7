@@ -2,6 +2,7 @@ package com.example.demo.src.clothes;
 
 import com.example.demo.config.BaseException;
 import com.example.demo.config.BaseResponse;
+import com.example.demo.src.clothes.model.GetClthBMRes;
 import com.example.demo.src.clothes.model.GetClthInfoRes;
 import com.example.demo.src.clothes.model.GetClthsRes;
 import org.slf4j.Logger;
@@ -59,6 +60,20 @@ public class ClthController {
         }
     }
     //즐겨찾기 된 옷 조회
+    @ResponseBody
+    @GetMapping("/bookmark/{userIdx}")
+    public BaseResponse<List<GetClthBMRes>> getClthBookmark(@PathVariable("userIdx") int userIdx){
+        try{
+            List<GetClthBMRes> getClthBMRes = clthProvider.retrieveClthBookmark(userIdx);
+            return new BaseResponse<>(getClthBMRes);
+        }catch(BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
+        }
+    }
+    //
+    @ResponseBody
+    @GetMapping("/")
+
 
 
 }

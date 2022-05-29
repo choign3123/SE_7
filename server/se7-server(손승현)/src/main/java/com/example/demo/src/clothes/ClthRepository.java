@@ -1,5 +1,6 @@
 package com.example.demo.src.clothes;
 
+import com.example.demo.src.clothes.model.GetClthBMRes;
 import com.example.demo.src.clothes.model.GetClthInfoRes;
 import com.example.demo.src.clothes.model.GetClthsRes;
 import com.example.demo.src.user.model.GetUserInfoRes;
@@ -62,5 +63,15 @@ public class ClthRepository {
                clothIdx);
     }
 
-
+    //즐겨찾기 된 옷 조회
+    public List<GetClthBMRes> selectClthBookmark(int userIdx) {
+        String selectClthBookmark ="select clthIdx, clthImgUrl from clothes where bookmark=true and userIdx = ?";
+        int clthBookmarkIdx= userIdx;
+        return this.jdbcTemplate.query(selectClthBookmark,(rs,rownum)-> {
+                    GetClthBMRes getClthBMRes = new GetClthBMRes();
+                    getClthBMRes.setClthIdx(rs.getInt("clthIdx"));
+                    getClthBMRes.setClthImgUrl(rs.getString("clthImgUrl"));
+                    return getClthBMRes;
+                },clthBookmarkIdx);
+    }
 }
