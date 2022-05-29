@@ -4366,23 +4366,6 @@
 									"subViews": [
 										{
 											"_type": "UMLAttributeView",
-											"_id": "AAAAAAGA+80y+dntn5o=",
-											"_parent": {
-												"$ref": "AAAAAAGA+80y+dnsXU0="
-											},
-											"model": {
-												"$ref": "AAAAAAGA19qdXxfk7sw="
-											},
-											"font": "Arial;13;0",
-											"left": 2390,
-											"top": 531,
-											"width": 136.1572265625,
-											"height": 13,
-											"text": "-clthIdx: int",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLAttributeView",
 											"_id": "AAAAAAGA+80y+dnu2ZM=",
 											"_parent": {
 												"$ref": "AAAAAAGA+80y+dnsXU0="
@@ -4392,7 +4375,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 2390,
-											"top": 546,
+											"top": 531,
 											"width": 136.1572265625,
 											"height": 13,
 											"text": "-clthImgUrl: String",
@@ -4409,7 +4392,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 2390,
-											"top": 561,
+											"top": 546,
 											"width": 136.1572265625,
 											"height": 13,
 											"text": "-bookmark: Boolean",
@@ -4426,7 +4409,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 2390,
-											"top": 576,
+											"top": 561,
 											"width": 136.1572265625,
 											"height": 13,
 											"text": "-category: String",
@@ -4443,7 +4426,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 2390,
-											"top": 591,
+											"top": 576,
 											"width": 136.1572265625,
 											"height": 13,
 											"text": "-season: String",
@@ -4454,7 +4437,7 @@
 									"left": 2385,
 									"top": 526,
 									"width": 146.1572265625,
-									"height": 83
+									"height": 68
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -4467,7 +4450,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 2385,
-									"top": 609,
+									"top": 594,
 									"width": 146.1572265625,
 									"height": 10
 								},
@@ -12813,16 +12796,6 @@
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
-							"_id": "AAAAAAGA19qdXxfk7sw=",
-							"_parent": {
-								"$ref": "AAAAAAGA19qCbhe6h5k="
-							},
-							"name": "clthIdx",
-							"visibility": "private",
-							"type": "int"
-						},
-						{
-							"_type": "UMLAttribute",
 							"_id": "AAAAAAGA19q/ixfrxxI=",
 							"_parent": {
 								"$ref": "AAAAAAGA19qCbhe6h5k="
@@ -16112,7 +16085,7 @@
 												"$ref": "AAAAAAGA2h9tSx1gBQ4="
 											},
 											"font": "Arial;13;0",
-											"left": 200.72998046875,
+											"left": 200.45703125,
 											"top": 117,
 											"width": 53,
 											"height": 13,
@@ -16127,7 +16100,7 @@
 											"font": "Arial;13;1",
 											"left": 181,
 											"top": 117,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -16277,9 +16250,9 @@
 												"$ref": "AAAAAAGA9SX2k66Fa4c="
 											},
 											"font": "Arial;13;0",
-											"left": 440.72998046875,
+											"left": 441.44091796875,
 											"top": 357,
-											"width": 69.65625,
+											"width": 73.40771484375,
 											"height": 13,
 											"text": "id validation"
 										},
@@ -16292,7 +16265,7 @@
 											"font": "Arial;13;1",
 											"left": 421,
 											"top": 357,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -16325,7 +16298,7 @@
 															"font": "Arial;13;0",
 															"left": 436,
 															"top": 390,
-															"width": 142.33349609375,
+															"width": 142.5810546875,
 															"height": 13,
 															"text": "[isRegexId() return false]"
 														}
@@ -16611,9 +16584,9 @@
 												"$ref": "AAAAAAGA9SnyGa8bEoY="
 											},
 											"font": "Arial;13;0",
-											"left": 464.72998046875,
+											"left": 465.44091796875,
 											"top": 653,
-											"width": 90.5908203125,
+											"width": 91.65087890625,
 											"height": 13,
 											"text": "pw same check"
 										},
@@ -16626,7 +16599,7 @@
 											"font": "Arial;13;1",
 											"left": 445,
 											"top": 653,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -16659,7 +16632,7 @@
 															"font": "Arial;13;0",
 															"left": 460,
 															"top": 686,
-															"width": 154.25439453125,
+															"width": 156.83154296875,
 															"height": 13,
 															"text": "[password != pwForCheck]"
 														}
@@ -16829,9 +16802,9 @@
 												"$ref": "AAAAAAGA9TL9+a+fmhg="
 											},
 											"font": "Arial;13;0",
-											"left": 976.72998046875,
+											"left": 977.44091796875,
 											"top": 965,
-											"width": 94.93896484375,
+											"width": 97.87158203125,
 											"height": 13,
 											"text": "id overlap check"
 										},
@@ -16844,7 +16817,7 @@
 											"font": "Arial;13;1",
 											"left": 957,
 											"top": 965,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -16877,7 +16850,7 @@
 															"font": "Arial;13;0",
 															"left": 972,
 															"top": 998,
-															"width": 169.787109375,
+															"width": 174.2939453125,
 															"height": 13,
 															"text": "[checkIdOverlap() return true]"
 														}
@@ -17265,9 +17238,9 @@
 												"$ref": "AAAAAAGA+/k8+XIFgYU="
 											},
 											"font": "Arial;13;0",
-											"left": 464.72998046875,
+											"left": 465.44091796875,
 											"top": 533,
-											"width": 76.15625,
+											"width": 79.76171875,
 											"height": 13,
 											"text": "pw validation"
 										},
@@ -17280,7 +17253,7 @@
 											"font": "Arial;13;1",
 											"left": 445,
 											"top": 533,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -17313,7 +17286,7 @@
 															"font": "Arial;13;0",
 															"left": 460,
 															"top": 566,
-															"width": 149.55078125,
+															"width": 148.26220703125,
 															"height": 13,
 															"text": "[isRegexPw() retrun false]"
 														}
@@ -18043,9 +18016,9 @@
 												"$ref": "AAAAAAGBAAw/BwkB5LI="
 											},
 											"font": "Arial;13;0",
-											"left": 448.72998046875,
+											"left": 449.44091796875,
 											"top": 165,
-											"width": 58.80810546875,
+											"width": 60.34423828125,
 											"height": 13,
 											"text": "null check"
 										},
@@ -18058,7 +18031,7 @@
 											"font": "Arial;13;1",
 											"left": 429,
 											"top": 165,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -18091,7 +18064,7 @@
 															"font": "Arial;13;0",
 															"left": 444,
 															"top": 198,
-															"width": 136.2080078125,
+															"width": 148.52880859375,
 															"height": 13,
 															"text": "[id or pw or name = nul]"
 														}
@@ -18145,9 +18118,9 @@
 												"$ref": "AAAAAAGBABdK3CChVUU="
 											},
 											"font": "Arial;13;0",
-											"left": 952.72998046875,
+											"left": 953.44091796875,
 											"top": 1125,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -18160,7 +18133,7 @@
 											"font": "Arial;13;1",
 											"left": 933,
 											"top": 1125,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -18193,7 +18166,7 @@
 															"font": "Arial;13;0",
 															"left": 948,
 															"top": 1158,
-															"width": 159.64990234375,
+															"width": 164.82958984375,
 															"height": 13,
 															"text": "[insertUser() occur db error]"
 														}
@@ -19854,7 +19827,7 @@
 												"$ref": "AAAAAAGA2m/JAeyQmpQ="
 											},
 											"font": "Arial;13;0",
-											"left": 128.72998046875,
+											"left": 128.45703125,
 											"top": 101,
 											"width": 40,
 											"height": 13,
@@ -19869,7 +19842,7 @@
 											"font": "Arial;13;1",
 											"left": 109,
 											"top": 101,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -20584,9 +20557,9 @@
 												"$ref": "AAAAAAGA9TpKLbEYfGs="
 											},
 											"font": "Arial;13;0",
-											"left": 736.72998046875,
+											"left": 737.44091796875,
 											"top": 333,
-											"width": 115.18798828125,
+											"width": 122.03076171875,
 											"height": 13,
 											"text": "id and pw vaildation"
 										},
@@ -20599,7 +20572,7 @@
 											"font": "Arial;13;1",
 											"left": 717,
 											"top": 333,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -20632,7 +20605,7 @@
 															"font": "Arial;13;0",
 															"left": 732,
 															"top": 366,
-															"width": 170.51708984375,
+															"width": 172.6689453125,
 															"height": 13,
 															"text": "[checkIdAndPw() return false]"
 														}
@@ -21246,9 +21219,9 @@
 												"$ref": "AAAAAAGBAQGdwRjkiTM="
 											},
 											"font": "Arial;13;0",
-											"left": 752.72998046875,
+											"left": 753.44091796875,
 											"top": 469,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -21261,7 +21234,7 @@
 											"font": "Arial;13;1",
 											"left": 733,
 											"top": 469,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -21294,7 +21267,7 @@
 															"font": "Arial;13;0",
 															"left": 748,
 															"top": 502,
-															"width": 161.82080078125,
+															"width": 165.41357421875,
 															"height": 13,
 															"text": "[selectUser() occur db error]"
 														}
@@ -21312,7 +21285,7 @@
 											"font": "Arial;13;0",
 											"left": 728,
 											"top": 487,
-											"width": 201.82080078125,
+											"width": 205.41357421875,
 											"height": 43
 										}
 									],
@@ -21831,7 +21804,7 @@
 												"$ref": "AAAAAAGA9WBfoKlE/NI="
 											},
 											"font": "Arial;13;0",
-											"left": 120.72998046875,
+											"left": 120.45703125,
 											"top": 149,
 											"width": 79,
 											"height": 13,
@@ -21846,7 +21819,7 @@
 											"font": "Arial;13;1",
 											"left": 101,
 											"top": 149,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -22672,9 +22645,9 @@
 												"$ref": "AAAAAAGA+bRY98s7kps="
 											},
 											"font": "Arial;13;0",
-											"left": 552.72998046875,
+											"left": 553.44091796875,
 											"top": 365,
-											"width": 90.578125,
+											"width": 86.73779296875,
 											"height": 13,
 											"text": "checkUserExist"
 										},
@@ -22687,7 +22660,7 @@
 											"font": "Arial;13;1",
 											"left": 533,
 											"top": 365,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -22720,7 +22693,7 @@
 															"font": "Arial;13;0",
 															"left": 548,
 															"top": 398,
-															"width": 174.103515625,
+															"width": 172.833984375,
 															"height": 13,
 															"text": "[checkUserExist() return false]"
 														}
@@ -23226,9 +23199,9 @@
 												"$ref": "AAAAAAGBAQQ0XBkvJqM="
 											},
 											"font": "Arial;13;0",
-											"left": 576.72998046875,
+											"left": 577.44091796875,
 											"top": 549,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -23241,7 +23214,7 @@
 											"font": "Arial;13;1",
 											"left": 557,
 											"top": 549,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -23274,7 +23247,7 @@
 															"font": "Arial;13;0",
 															"left": 572,
 															"top": 582,
-															"width": 183.50439453125,
+															"width": 188.34130859375,
 															"height": 13,
 															"text": "[selectUserInfo() occur db error]"
 														}
@@ -23292,7 +23265,7 @@
 											"font": "Arial;13;0",
 											"left": 552,
 											"top": 567,
-											"width": 224,
+											"width": 228.34130859375,
 											"height": 43
 										}
 									],
@@ -24084,9 +24057,9 @@
 												"$ref": "AAAAAAGA+6WRhUQcf4s="
 											},
 											"font": "Arial;13;0",
-											"left": 48.72998046875,
+											"left": 48.45703125,
 											"top": 141,
-											"width": 102.83544921875,
+											"width": 105.7109375,
 											"height": 13,
 											"text": "전체 옷 정보 조회"
 										},
@@ -24099,7 +24072,7 @@
 											"font": "Arial;13;1",
 											"left": 29,
 											"top": 141,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -24934,9 +24907,9 @@
 												"$ref": "AAAAAAGBAQWbqBlg1rM="
 											},
 											"font": "Arial;13;0",
-											"left": 520.72998046875,
+											"left": 521.44091796875,
 											"top": 325,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -24949,7 +24922,7 @@
 											"font": "Arial;13;1",
 											"left": 501,
 											"top": 325,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -24982,7 +24955,7 @@
 															"font": "Arial;13;0",
 															"left": 516,
 															"top": 358,
-															"width": 163.99169921875,
+															"width": 168.18115234375,
 															"height": 13,
 															"text": "[selectClths() occur db error]"
 														}
@@ -25512,9 +25485,9 @@
 												"$ref": "AAAAAAGA+6XiIEhikDw="
 											},
 											"font": "Arial;13;0",
-											"left": 144.72998046875,
+											"left": 144.45703125,
 											"top": 173,
-											"width": 43.61181640625,
+											"width": 44.5703125,
 											"height": 13,
 											"text": "옷 등록"
 										},
@@ -25527,7 +25500,7 @@
 											"font": "Arial;13;1",
 											"left": 125,
 											"top": 173,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -26355,7 +26328,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 368.72998046875,
+											"left": 369.44091796875,
 											"top": 229,
 											"width": 1,
 											"height": 13
@@ -26369,7 +26342,7 @@
 											"font": "Arial;13;1",
 											"left": 349,
 											"top": 229,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -26402,7 +26375,7 @@
 															"font": "Arial;13;0",
 															"left": 364,
 															"top": 262,
-															"width": 258.58447265625,
+															"width": 272.21923828125,
 															"height": 13,
 															"text": "[season=null || category=null clthImgUrl=null]"
 														}
@@ -26420,7 +26393,7 @@
 											"font": "Arial;13;0",
 											"left": 344,
 											"top": 247,
-											"width": 298.58447265625,
+											"width": 312.21923828125,
 											"height": 43
 										}
 									],
@@ -26682,9 +26655,9 @@
 												"$ref": "AAAAAAGBAQyiaRqfAN4="
 											},
 											"font": "Arial;13;0",
-											"left": 672.72998046875,
+											"left": 673.44091796875,
 											"top": 453,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -26697,7 +26670,7 @@
 											"font": "Arial;13;1",
 											"left": 653,
 											"top": 453,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -26730,7 +26703,7 @@
 															"font": "Arial;13;0",
 															"left": 668,
 															"top": 486,
-															"width": 155.32080078125,
+															"width": 161.966796875,
 															"height": 13,
 															"text": "[insertClth() occur db error]"
 														}
@@ -26748,7 +26721,7 @@
 											"font": "Arial;13;0",
 											"left": 648,
 											"top": 471,
-											"width": 201,
+											"width": 201.966796875,
 											"height": 43
 										}
 									],
@@ -27282,9 +27255,9 @@
 												"$ref": "AAAAAAGA+6YRDkqmS14="
 											},
 											"font": "Arial;13;0",
-											"left": 144.72998046875,
+											"left": 144.45703125,
 											"top": 133,
-											"width": 43.61181640625,
+											"width": 44.5703125,
 											"height": 13,
 											"text": "옷 삭제"
 										},
@@ -27297,7 +27270,7 @@
 											"font": "Arial;13;1",
 											"left": 125,
 											"top": 133,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -28239,9 +28212,9 @@
 												"$ref": "AAAAAAGA+6YRD0rzKwI="
 											},
 											"font": "Arial;13;0",
-											"left": 616.72998046875,
+											"left": 617.44091796875,
 											"top": 389,
-											"width": 86.2490234375,
+											"width": 83.875,
 											"height": 13,
 											"text": "checkClthExist"
 										},
@@ -28254,7 +28227,7 @@
 											"font": "Arial;13;1",
 											"left": 597,
 											"top": 389,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -28287,7 +28260,7 @@
 															"font": "Arial;13;0",
 															"left": 612,
 															"top": 422,
-															"width": 169.7744140625,
+															"width": 169.97119140625,
 															"height": 13,
 															"text": "[checkClthExist() return false]"
 														}
@@ -28793,9 +28766,9 @@
 												"$ref": "AAAAAAGBARAEkxscA6U="
 											},
 											"font": "Arial;13;0",
-											"left": 608.72998046875,
+											"left": 609.44091796875,
 											"top": 533,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -28808,7 +28781,7 @@
 											"font": "Arial;13;1",
 											"left": 589,
 											"top": 533,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -28841,7 +28814,7 @@
 															"font": "Arial;13;0",
 															"left": 604,
 															"top": 566,
-															"width": 158.95166015625,
+															"width": 165.45166015625,
 															"height": 13,
 															"text": "[deleteClth() occur db error]"
 														}
@@ -29449,9 +29422,9 @@
 												"$ref": "AAAAAAGA+6YeCk1GbqQ="
 											},
 											"font": "Arial;13;0",
-											"left": 160.72998046875,
+											"left": 160.45703125,
 											"top": 157,
-											"width": 43.61181640625,
+											"width": 44.5703125,
 											"height": 13,
 											"text": "옷 수정"
 										},
@@ -29464,7 +29437,7 @@
 											"font": "Arial;13;1",
 											"left": 141,
 											"top": 157,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -30404,9 +30377,9 @@
 												"$ref": "AAAAAAGA+6YeCk2EnMM="
 											},
 											"font": "Arial;13;0",
-											"left": 656.72998046875,
+											"left": 657.44091796875,
 											"top": 429,
-											"width": 86.2490234375,
+											"width": 83.875,
 											"height": 13,
 											"text": "checkClthExist"
 										},
@@ -30419,7 +30392,7 @@
 											"font": "Arial;13;1",
 											"left": 637,
 											"top": 429,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -30452,7 +30425,7 @@
 															"font": "Arial;13;0",
 															"left": 652,
 															"top": 462,
-															"width": 169.7744140625,
+															"width": 169.97119140625,
 															"height": 13,
 															"text": "[checkClthExist() return false]"
 														}
@@ -30507,7 +30480,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 360.72998046875,
+											"left": 361.44091796875,
 											"top": 197,
 											"width": 1,
 											"height": 13
@@ -30521,7 +30494,7 @@
 											"font": "Arial;13;1",
 											"left": 341,
 											"top": 197,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -30554,7 +30527,7 @@
 															"font": "Arial;13;0",
 															"left": 356,
 															"top": 230,
-															"width": 168.63818359375,
+															"width": 176.05859375,
 															"height": 13,
 															"text": "[season=null || category=null]"
 														}
@@ -31171,9 +31144,9 @@
 												"$ref": "AAAAAAGBARTH+Bu7L60="
 											},
 											"font": "Arial;13;0",
-											"left": 656.72998046875,
+											"left": 657.44091796875,
 											"top": 573,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -31186,7 +31159,7 @@
 											"font": "Arial;13;1",
 											"left": 637,
 											"top": 573,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -31219,7 +31192,7 @@
 															"font": "Arial;13;0",
 															"left": 652,
 															"top": 606,
-															"width": 184.97705078125,
+															"width": 193.349609375,
 															"height": 13,
 															"text": "[updateClthInfo() occur db error]"
 														}
@@ -31237,7 +31210,7 @@
 											"font": "Arial;13;0",
 											"left": 632,
 											"top": 591,
-											"width": 224.97705078125,
+											"width": 233.349609375,
 											"height": 43
 										}
 									],
@@ -31861,9 +31834,9 @@
 												"$ref": "AAAAAAGA+6YvI09a/98="
 											},
 											"font": "Arial;13;0",
-											"left": 184.72998046875,
+											"left": 184.45703125,
 											"top": 157,
-											"width": 115.83544921875,
+											"width": 118.7109375,
 											"height": 13,
 											"text": "즐겨찾기 된 옷 조회"
 										},
@@ -31876,7 +31849,7 @@
 											"font": "Arial;13;1",
 											"left": 165,
 											"top": 157,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -32705,9 +32678,9 @@
 												"$ref": "AAAAAAGBAQpmwBomLqA="
 											},
 											"font": "Arial;13;0",
-											"left": 664.72998046875,
+											"left": 665.44091796875,
 											"top": 341,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -32720,7 +32693,7 @@
 											"font": "Arial;13;1",
 											"left": 645,
 											"top": 341,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -32753,7 +32726,7 @@
 															"font": "Arial;13;0",
 															"left": 660,
 															"top": 374,
-															"width": 216.0107421875,
+															"width": 221.66015625,
 															"height": 13,
 															"text": "[selectClthBookmark() occur db error]"
 														}
@@ -32771,7 +32744,7 @@
 											"font": "Arial;13;0",
 											"left": 640,
 											"top": 359,
-											"width": 257,
+											"width": 261.66015625,
 											"height": 43
 										}
 									],
@@ -33265,9 +33238,9 @@
 												"$ref": "AAAAAAGA+6XBEkZgX+8="
 											},
 											"font": "Arial;13;0",
-											"left": 112.72998046875,
+											"left": 112.45703125,
 											"top": 125,
-											"width": 102.83544921875,
+											"width": 105.7109375,
 											"height": 13,
 											"text": "개별 옷 정보 조회"
 										},
@@ -33280,7 +33253,7 @@
 											"font": "Arial;13;1",
 											"left": 93,
 											"top": 125,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
@@ -34106,9 +34079,9 @@
 												"$ref": "AAAAAAGA+6XBE0ahTXM="
 											},
 											"font": "Arial;13;0",
-											"left": 648.72998046875,
+											"left": 649.44091796875,
 											"top": 365,
-											"width": 86.2490234375,
+											"width": 83.875,
 											"height": 13,
 											"text": "checkClthExist"
 										},
@@ -34121,7 +34094,7 @@
 											"font": "Arial;13;1",
 											"left": 629,
 											"top": 365,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -34154,7 +34127,7 @@
 															"font": "Arial;13;0",
 															"left": 644,
 															"top": 398,
-															"width": 169.7744140625,
+															"width": 169.97119140625,
 															"height": 13,
 															"text": "[checkClthExist() return false]"
 														}
@@ -34660,9 +34633,9 @@
 												"$ref": "AAAAAAGBAQhUpxnW354="
 											},
 											"font": "Arial;13;0",
-											"left": 648.72998046875,
+											"left": 649.44091796875,
 											"top": 517,
-											"width": 85.55078125,
+											"width": 86.71875,
 											"height": 13,
 											"text": "database error"
 										},
@@ -34675,7 +34648,7 @@
 											"font": "Arial;13;1",
 											"left": 629,
 											"top": 517,
-											"width": 14.72998046875,
+											"width": 15.44091796875,
 											"height": 13,
 											"text": "alt"
 										},
@@ -34708,7 +34681,7 @@
 															"font": "Arial;13;0",
 															"left": 644,
 															"top": 550,
-															"width": 179.17529296875,
+															"width": 185.478515625,
 															"height": 13,
 															"text": "[selectClthInfo() occur db error]"
 														}
@@ -35315,9 +35288,9 @@
 												"$ref": "AAAAAAGBAwZkF3hfBBQ="
 											},
 											"font": "Arial;13;0",
-											"left": 48.72998046875,
+											"left": 48.45703125,
 											"top": 85,
-											"width": 94.71044921875,
+											"width": 94.28515625,
 											"height": 13,
 											"text": "ValidationRegex"
 										},
@@ -35330,7 +35303,7 @@
 											"font": "Arial;13;1",
 											"left": 29,
 											"top": 85,
-											"width": 14.72998046875,
+											"width": 14.45703125,
 											"height": 13,
 											"text": "sd"
 										}
