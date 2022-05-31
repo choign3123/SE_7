@@ -17,12 +17,10 @@ import static com.example.demo.utils.ValidationRegex.isRegexId;
 public class UserController {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
     private final UserProvider userProvider;
-    @Autowired
     private final UserService userService;
 
-
+    @Autowired
     public UserController(UserProvider userProvider, UserService userService) {
         this.userProvider = userProvider;
         this.userService = userService;
@@ -38,6 +36,7 @@ public class UserController {
 //    }
 
     //회원가입
+    // users/signUp
     @ResponseBody
     @PostMapping("/signUp")
     public BaseResponse<String> createUser(@RequestBody PostSignUpReq postSignUpReq){
@@ -59,14 +58,16 @@ public class UserController {
         }
 
         try{
-            String result = "회원가입에 성공하였습니다.";
             userService.createUser(postSignUpReq);
+
+            String result = "회원가입에 성공하였습니다.";
             return new BaseResponse<>(result);
         } catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }
 
     }
+
     //로그인
     @ResponseBody
     @PostMapping("/login")
@@ -80,6 +81,7 @@ public class UserController {
         }
 
     }
+
     //회원정보 조회
     @ResponseBody
     @GetMapping("/{userIdx}")
