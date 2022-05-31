@@ -51,13 +51,10 @@ public class UserProvider {
     }
     //로그인시 아이디 비번 체크 함수
     public boolean checkIdAndPw(GetLoginReq getLoginReq){
-        if(userRepository.checkIdAndPw(getLoginReq)==0) {
-            System.out.println(userRepository.checkIdAndPw(getLoginReq));
+        if(userRepository.checkIdAndPw(getLoginReq)==0)
             return false;
-        }
-        else {
+        else
             return true;
-        }
     }
 
     //회원정보조회 회원조회
@@ -79,6 +76,4 @@ public class UserProvider {
             return false;
 
     }
-
-
 }

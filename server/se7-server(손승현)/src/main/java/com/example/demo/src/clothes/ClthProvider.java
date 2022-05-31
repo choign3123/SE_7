@@ -60,7 +60,6 @@ public class ClthProvider {
             return true;
         else
             return false;
-
     }
     //즐겨찾기 된 옷 조회
     public List<GetClthBMRes> retrieveClthBookmark(int userIdx) throws BaseException{

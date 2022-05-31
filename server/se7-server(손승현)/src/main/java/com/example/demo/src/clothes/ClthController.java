@@ -9,11 +9,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-import static com.example.demo.config.BaseResponseStatus.NULL_PHOTO_FAIL;
-import static com.example.demo.config.BaseResponseStatus.POST_USERS_EMPTY;
+import static com.example.demo.config.BaseResponseStatus.*;
 
 @RestController
 @RequestMapping("/clths")
@@ -78,10 +76,20 @@ public class ClthController {
     @ResponseBody
     @PostMapping("")
     public BaseResponse<String> createClth(@RequestBody PostClthReq postClthReq) {
+        //category or season List를 바꾸려고하면     "error": "Internal Server Error" 가 나옴.
+        List<String> categoryList = Collections.unmodifiableList(Arrays.asList("상의", "하의", "아우터", "원피스/세트", "기타", "티셔츠", "니트",
+                    "셔츠", "후드", "맨투맨", "스커트", "팬츠", "코트", "패딩", "집업", "가디건", "자켓"));
+        List<String> seasonList = Collections.unmodifiableList(Arrays.asList("봄", "여름", "가을", "겨울"));
+
         if (postClthReq.getClthImgUrl() == null)
             return new BaseResponse<>(NULL_PHOTO_FAIL);
-        if (postClthReq.getSeason() == null || postClthReq.getCategory() == null)
-            return new BaseResponse<>(POST_USERS_EMPTY);
+
+        if (!categoryList.contains(postClthReq.getCategory()))
+            return new BaseResponse<>(REQUEST_ERROR);
+        if (!seasonList.contains(postClthReq.getSeason()))
+            return new BaseResponse<>(REQUEST_ERROR);
+//        if (postClthReq.getSeason() == null || postClthReq.getCategory() == null)
+//            return new BaseResponse<>(POST_USERS_EMPTY);
 
         try {
             String result = "옷 등록에 성공히였습니다.";
@@ -107,19 +115,17 @@ public class ClthController {
 
     //옷 수정
     @ResponseBody
-    @GetMapping("/{userIdx}")
-    public BaseResponse<String> modifyClthInfo( PatchClthReq patchClthReq,@PathVariable int userIdx){
+    @PatchMapping("/{userIdx}")
+    public BaseResponse<String> modifyClthInfo(@PathVariable("userIdx") int userIdx,@RequestParam("clthIdx") int clthIdx,
+     @RequestBody PatchClthReq patchClthReq){
         if (patchClthReq.getSeason() == null || patchClthReq.getCategory() == null)
             return new BaseResponse<>(POST_USERS_EMPTY);
         try{
             String result = "옷이 수정되었습니다.";
-            clthService.modifyClthInfo(userIdx,patchClthReq);
+            clthService.modifyClthInfo(userIdx,clthIdx,patchClthReq);
             return new BaseResponse<>(result);
         } catch (BaseException exception) {
             return new BaseResponse<>((exception.getStatus()));
         }
-
     }
-
-
 }

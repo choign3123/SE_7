@@ -26,7 +26,7 @@ public class ClthRepository {
 
     //전체 옷 조회
     public List<GetClthsRes> selectClths(int userIdx) {
-        String selectClthIdxImg ="select clthIdx,clthImgUrl from clothes where userIdx = ?";
+        String selectClthIdxImg ="select clthIdx,clthImgUrl from clothes where userIdx = ? order by createdAt";
         int clthUserIdx= userIdx;
         return this.jdbcTemplate.query(selectClthIdxImg,
                 (rs,rowNum) -> {
@@ -58,10 +58,9 @@ public class ClthRepository {
                ),
                clothIdx);
     }
-
     //즐겨찾기 된 옷 조회
     public List<GetClthBMRes> selectClthBookmark(int userIdx) {
-        String selectClthBookmark ="select clthIdx, clthImgUrl from clothes where bookmark=true and userIdx = ?";
+        String selectClthBookmark ="select clthIdx, clthImgUrl from clothes where bookmark=true and userIdx = ? order by createdAt";
         int clthBookmarkIdx= userIdx;
         return this.jdbcTemplate.query(selectClthBookmark,(rs,rownum)-> {
                     GetClthBMRes getClthBMRes = new GetClthBMRes();
@@ -91,12 +90,14 @@ public class ClthRepository {
         Object[] clothIdx2 = new Object[]{userIdx,clthIdx};
         return this.jdbcTemplate.queryForObject(selectDelteClth,Integer.class,clothIdx2);
     }
+    //옷 수정
+    public int updateClthInfo(int clthIdx, PatchClthReq patchClthReq) {
+        String updateClthInfo="update clothes set bookmark = ?, category=?, season=? where clthIdx=?";
+        Object[] updateInfo = new Object[]{patchClthReq.isBookmark(),patchClthReq.getCategory(),
+                                            patchClthReq.getSeason(),clthIdx};
+        this.jdbcTemplate.update(updateClthInfo,updateInfo);
 
-
-    public int updateClthInfo(int userIdx, PatchClthReq patchClthReq) {
-
-        return 0;
+        String lastInsertClthIdx = "select last_insert_id()";
+        return this.jdbcTemplate.queryForObject(lastInsertClthIdx,int.class);
     }
-
-
 }

@@ -71,7 +71,6 @@ public class UserController {
     @ResponseBody
     @PostMapping("/login")
     public BaseResponse<GetLoginRes> loginUser(@RequestBody GetLoginReq getLoginReq){
-
         try
         {
             GetLoginRes getLoginRes= userProvider.retrieveUser(getLoginReq);
@@ -93,10 +92,5 @@ public class UserController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
-
-
-
-
-
 }
 

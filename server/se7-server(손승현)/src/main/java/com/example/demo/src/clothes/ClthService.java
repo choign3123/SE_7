@@ -32,7 +32,7 @@ public class ClthService {
     //옷 등록
     public void createClth(PostClthReq postClthReq) throws BaseException{
         try{
-            int clthIdx =clthRepository.insertClth(postClthReq);
+            clthRepository.insertClth(postClthReq);
         }catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }
@@ -43,23 +43,19 @@ public class ClthService {
         if(!clthProvider.checkClthExist(userIdx,clthIdx))
             throw new BaseException(DELETE_FAIL_POST);
         try{
-            int deleteclthIdx = clthRepository.deleteClth(userIdx,clthIdx);
-            System.out.println(deleteclthIdx);
+            clthRepository.deleteClth(userIdx,clthIdx);
         }catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }
     }
-
-    public void modifyClthInfo(int userIdx, PatchClthReq patchClthReq) throws BaseException {
-        if(!clthProvider.checkClthExist(userIdx,patchClthReq.getClthIdx()))
+    //옷 수정
+    public void modifyClthInfo(int userIdx,int clthIdx, PatchClthReq patchClthReq) throws BaseException{
+        if(!clthProvider.checkClthExist(userIdx,clthIdx))
             throw new BaseException(MODIFY_FAIL_POST);
         try{
-            int modifyClth =clthRepository.updateClthInfo(userIdx,patchClthReq);
-
+            int update = clthRepository.updateClthInfo(clthIdx,patchClthReq);
         }catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }
-
-
     }
 }

@@ -20,3 +20,11 @@
     "id" : "difkf24",
     "password" : "sdkljwl3243"
 }
+
+옷수정
+{
+    "bookmark" : false,
+    "category" : "하의",
+    "season": "가을"
+}
+

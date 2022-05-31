@@ -31,10 +31,8 @@ public class UserService {
         if (userProvider.checkIdOverlap(postSignUpReq.getId())) {
             throw new BaseException(POST_USERS_EXISTS_ID);
         }
-        try
-        {
-            int userIdx = userRepository.insertUser(postSignUpReq);
-            System.out.println(userIdx);
+        try{
+            userRepository.insertUser(postSignUpReq);
         }catch(Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }
