@@ -28,39 +28,43 @@ public class ClthProvider {
         this.clthRepository = clthRepository;
     }
 
-    public void test() {
-        System.out.println("in user provider");
-    }
+//    public void test() {
+//        System.out.println("in user provider");
+//    }
 
 
     //전체 옷 조회
     public List<GetClthsRes> retrieveClths(int userIdx) throws BaseException {
-
         try {
             return clthRepository.selectClths(userIdx);
         } catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }
-
     }
 
-    //개별 옷 조회
+    //개별 옷 정보 조회
     public GetClthInfoRes retrieveClthInfo(int userIdx,int clthIdx) throws BaseException {
-        if (!checkClthExist(userIdx,clthIdx))
+        if (!checkClthExist(userIdx,clthIdx)){ //옷이 없다면
             throw new BaseException(FAILED_TO_FIND_CLOTH);
+        }
+
         try {
             return clthRepository.selectClthInfo(clthIdx);
         }catch(Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }
     }
-    //개별 옷 조회 옷 확인
+
+    //존재하는 옷인지 확인
     public boolean checkClthExist(int userIdx,int clthIdx) {
-        if (clthRepository.checkClthExist(userIdx,clthIdx) == 1)
-            return true;
-        else
+        if (clthRepository.checkClthExist(userIdx,clthIdx) == 1){
+            return true; //존재하는 옷임
+        }
+        else{
             return false;
+        }
     }
+
     //즐겨찾기 된 옷 조회
     public List<GetClthBMRes> retrieveClthBookmark(int userIdx) throws BaseException{
         try {
