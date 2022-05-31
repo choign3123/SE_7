@@ -118,7 +118,7 @@ public class ClthController {
     }
 
     //옷 삭제
-    //[delete] /clths/{userIdx}?clthIdx=""
+    //[delete] /clths/{userIdx}?clthIdx=
     @ResponseBody
     @DeleteMapping("/{userIdx}")
     public BaseResponse<String> deleteClth(@PathVariable("userIdx") int userIdx,@RequestParam("clthIdx") int clthIdx){

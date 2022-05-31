@@ -11,5 +11,5 @@
 server/se7-server/.gradle/
 server/se7-server/.idea/
 
-server/se7-server(손승현)2/src/main/resources/application.yml
+server/se7-server_ssh/src/main/resources/application.yml
 
