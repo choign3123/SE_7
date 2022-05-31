@@ -2,3 +2,5 @@
 13:26:28.209 ERROR [File:TestController.java] [Func:getAll] [Line:38] [Message:ERROR Level 테스트]- ERROR Level 테스트
 16:35:38.026 WARN  [File:TestController.java] [Func:getAll] [Line:35] [Message:Warn Level 테스트]- Warn Level 테스트
 16:35:38.029 ERROR [File:TestController.java] [Func:getAll] [Line:38] [Message:ERROR Level 테스트]- ERROR Level 테스트
+18:35:50.208 WARN  [File:TestController.java] [Func:getAll] [Line:35] [Message:Warn Level 테스트]- Warn Level 테스트
+18:35:50.210 ERROR [File:TestController.java] [Func:getAll] [Line:38] [Message:ERROR Level 테스트]- ERROR Level 테스트

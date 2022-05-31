@@ -10,6 +10,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetLoginRes {
-    private int userIdx;
+public class PostLoginReq {
+    private String id;
+    private String password;
 }
+
+
+

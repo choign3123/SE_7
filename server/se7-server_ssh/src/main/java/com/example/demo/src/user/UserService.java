@@ -14,23 +14,25 @@ import static com.example.demo.config.BaseResponseStatus.*;
 @Service
 public class UserService {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
-    @Autowired
-    private final UserRepository userRepository;
 
+    private final UserRepository userRepository;
     private final UserProvider userProvider;
 
+    @Autowired
     public UserService(UserRepository userRepository, UserProvider userProvider) {
         this.userRepository = userRepository;
         this.userProvider = userProvider;
 
     }
 
+    //회원가입
     //회원가입시 provider->repository 아이디 중복확인 후 repository가서 아이디 저장 후 반환
-    public void createUser(PostSignUpReq postSignUpReq) throws BaseException {
-
-        if (userProvider.checkIdOverlap(postSignUpReq.getId())) {
+    public void createUser(PostSignUpReq postSignUpReq) throws BaseException
+    {
+        if (userProvider.checkIdOverlap(postSignUpReq.getId())) { //아이디 중복됨.
             throw new BaseException(POST_USERS_EXISTS_ID);
         }
+
         try{
             userRepository.insertUser(postSignUpReq);
         }catch(Exception exception){
@@ -38,7 +40,4 @@ public class UserService {
         }
 
     }
-
-
-
 }

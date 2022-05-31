@@ -18,10 +18,10 @@ public class UserRepository {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public int test(){
-        String meg = "select count(*) from user";
-        return this.jdbcTemplate.queryForObject(meg, int.class);
-    }
+//    public int test(){
+//        String meg = "select count(*) from user";
+//        return this.jdbcTemplate.queryForObject(meg, int.class);
+//    }
 
     //회원가입
     public int insertUser(PostSignUpReq postSignUpReq){
@@ -41,20 +41,21 @@ public class UserRepository {
     }
 
     //로그인 아이디 비번 확인
-    public int checkIdAndPw(GetLoginReq getLoginReq){
+    public int checkIdAndPw(PostLoginReq postLoginReq){
         String checkIdAndPw = "select exists(select id, password from user where id = ? and password = ?)";
-        Object[] checkInfo =new Object[]{getLoginReq.getId(),getLoginReq.getPassword()};
+        Object[] checkInfo =new Object[]{postLoginReq.getId(), postLoginReq.getPassword()};
         return this.jdbcTemplate.queryForObject(checkIdAndPw,Integer.class,checkInfo);
 
     }
     //로그인시 userIdx반환 함수
-    public GetLoginRes selectUser(GetLoginReq getLoginReq){
+    public PostLoginRes selectUser(PostLoginReq postLoginReq){
         String getUserIdx = "select userIdx from user where id=? and password = ?";
-        Object[] checkInfo =new Object[]{getLoginReq.getId(),getLoginReq.getPassword()};
+        Object[] checkInfo =new Object[]{postLoginReq.getId(), postLoginReq.getPassword()};
         int userIdx = this.jdbcTemplate.queryForObject(getUserIdx,Integer.class,checkInfo);
-        return new GetLoginRes(userIdx);
+        return new PostLoginRes(userIdx);
 
     }
+
     //회원정보조회
     public GetUserInfoRes selectUserInfo(int userIdx){
         String getUserInfoResQuery = "select id,name, (select count(*) from clothes where userIdx=? group by userIdx) as numOfClth from user where userIdx = ?";
@@ -67,7 +68,8 @@ public class UserRepository {
                 ),
                 getUserInfoParams);
     }
-    //회원정보조회시 userIdx있는지 Exist 확인
+
+    //존재하는 유저(userIdx)인지 확인
     public int checkUserExist(int userIdx){
         String checkUserExist = "select exists(select userIdx from user where userIdx = ?)";
         return this.jdbcTemplate.queryForObject(checkUserExist,int.class,userIdx);
