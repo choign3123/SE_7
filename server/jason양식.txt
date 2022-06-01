@@ -17,8 +17,8 @@
 
 로그인 jason
 {
-    "id" : "difkf24",
-    "password" : "sdkljwl3243"
+    "id" : "gana0303",
+    "password" : "0303gana"
 }
 
 옷수정
