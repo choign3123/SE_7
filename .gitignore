@@ -11,5 +11,11 @@
 server/se7-server/.gradle/
 server/se7-server/.idea/
 
+<<<<<<< HEAD
 server/se7-server(손승현)2/src/main/resources/application.yml
+=======
+server/se7-server(손승현)/.gradle/
+server/se7-server(손승현)/.idea/
+server/se7-server(손승현)/src/main/resources/application.yml
+>>>>>>> parent of 09fe497 (cx)
 
