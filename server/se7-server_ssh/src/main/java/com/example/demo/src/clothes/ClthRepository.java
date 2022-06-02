@@ -21,7 +21,18 @@ public class ClthRepository {
     }
 
     public void test(){
-        System.out.println("test in clthDao");
+//        System.out.println("test in clthDao");
+
+        //얘는 에러 안뜸.
+        String strQuery = "delete from user where name='ssh'";
+        int a = this.jdbcTemplate.update(strQuery);
+        System.out.println("in clth repository " + a);
+        a = this.jdbcTemplate.update(strQuery);
+        System.out.println("in clth repository for error " + a);
+
+        //이건 리턴값이 없어서 에러
+        strQuery = "select clthIdx from clothes where userIdx = 50";
+        this.jdbcTemplate.queryForObject(strQuery, int.class);
     }
 
     //전체 옷 조회
@@ -38,17 +49,18 @@ public class ClthRepository {
         ,clthUserIdx);
     }
 
-    //개별옷 조회 옷 확인
+    //존재하는 옷인지 확인
     public int checkClthExist(int userIdx,int clthIdx) {
         String checkClthExist = "select exists(select userIdx from clothes where userIdx=? and clthIdx=?)";
         Object[] clothIdx = new Object[]{userIdx,clthIdx};
         return this.jdbcTemplate.queryForObject(checkClthExist,Integer.class,clothIdx);
     }
-    //개별 옷 조회
-   public GetClthInfoRes selectClthInfo(int clthIdx) {
+
+    //개별 옷 정보 조회
+    public GetClthInfoRes selectClthInfo(int clthIdx) {
         String selectClthInfo = "select clthImgUrl, bookmark, category, season from clothes where clthIdx = ?";
         int clothIdx = clthIdx;
-       return this.jdbcTemplate.queryForObject(selectClthInfo,
+        return this.jdbcTemplate.queryForObject(selectClthInfo,
                (rs, rowNum) -> new GetClthInfoRes(
 //                       rs.getInt("clthIdx"),
                        rs.getString("clthImgUrl"),
@@ -58,6 +70,7 @@ public class ClthRepository {
                ),
                clothIdx);
     }
+
     //즐겨찾기 된 옷 조회
     public List<GetClthBMRes> selectClthBookmark(int userIdx) {
         String selectClthBookmark ="select clthIdx, clthImgUrl from clothes where bookmark=true and userIdx = ? order by createdAt";
@@ -80,24 +93,29 @@ public class ClthRepository {
         String lastInsertClthIdx = "select last_insert_id()";
         return this.jdbcTemplate.queryForObject(lastInsertClthIdx,int.class);
     }
+
     //옷 삭제
     public int deleteClth(int userIdx, int clthIdx) {
         String deleteClth = "delete from clothes where userIdx = ? and clthIdx =?";
         Object[] clothIdx = new Object[]{userIdx,clthIdx};
-        this.jdbcTemplate.update(deleteClth,clothIdx);
-        //삭제되었으면 0을반환한다
-        String selectDelteClth = "select exists(select userIdx from clothes where userIdx=? and clthIdx=?)";
-        Object[] clothIdx2 = new Object[]{userIdx,clthIdx};
-        return this.jdbcTemplate.queryForObject(selectDelteClth,Integer.class,clothIdx2);
+        return this.jdbcTemplate.update(deleteClth,clothIdx);
+
+        //수정 필요해보임.
+//        //삭제되었으면 0을반환한다
+//        String selectDelteClth = "select exists(select userIdx from clothes where userIdx=? and clthIdx=?)";
+//        Object[] clothIdx2 = new Object[]{userIdx,clthIdx};
+//        return this.jdbcTemplate.queryForObject(selectDelteClth,Integer.class,clothIdx2);
     }
+
     //옷 수정
     public int updateClthInfo(int clthIdx, PatchClthReq patchClthReq) {
         String updateClthInfo="update clothes set bookmark = ?, category=?, season=? where clthIdx=?";
         Object[] updateInfo = new Object[]{patchClthReq.isBookmark(),patchClthReq.getCategory(),
                                             patchClthReq.getSeason(),clthIdx};
-        this.jdbcTemplate.update(updateClthInfo,updateInfo);
+        return this.jdbcTemplate.update(updateClthInfo,updateInfo);
 
-        String lastInsertClthIdx = "select last_insert_id()";
-        return this.jdbcTemplate.queryForObject(lastInsertClthIdx,int.class);
+        //필요 없어보임
+//        String lastInsertClthIdx = "select last_insert_id()";
+//        return this.jdbcTemplate.queryForObject(lastInsertClthIdx,int.class);
     }
 }

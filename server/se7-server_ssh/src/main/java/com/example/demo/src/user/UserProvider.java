@@ -2,8 +2,8 @@ package com.example.demo.src.user;
 
 
 import com.example.demo.config.BaseException;
-import com.example.demo.src.user.model.GetLoginReq;
-import com.example.demo.src.user.model.GetLoginRes;
+import com.example.demo.src.user.model.PostLoginReq;
+import com.example.demo.src.user.model.PostLoginRes;
 import com.example.demo.src.user.model.GetUserInfoRes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,6 @@ import static com.example.demo.config.BaseResponseStatus.*;
 //Provider : Read의 비즈니스 로직 처리
 @Service
 public class UserProvider {
-    @Autowired
     private final UserRepository userRepository;
 
     final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -25,55 +24,64 @@ public class UserProvider {
         this.userRepository = userRepository;
     }
 
-    public int test(){
-        int n = userRepository.test();
-        return n;
-//        System.out.println("in user provider");
-    }
-    //회원가입시 아이디 중복확인
-    public boolean checkIdOverlap(String id) {
-        int overLap = userRepository.checkIdOverlap(id);
-        if(overLap == 0)
-            return false;
-        else
-            return true;
-    }
-    //로그인시 회원조회
-    public GetLoginRes retrieveUser(GetLoginReq getLoginReq) throws BaseException{
-        if(!checkIdAndPw(getLoginReq))
+//    public int test(){
+//        int n = userRepository.test();
+//        return n;
+////        System.out.println("in user provider");
+//    }
+
+    //로그인
+    public PostLoginRes retrieveUser(PostLoginReq postLoginReq) throws BaseException{
+        if(!checkIdAndPw(postLoginReq)) //아이디와, 그 아이디에 해당하는 비번이 없을경우
             throw new BaseException(CHECK_ID_PW);
         try
         {
-            return userRepository.selectUser(getLoginReq);
+            return userRepository.selectUser(postLoginReq);
         }catch (Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }
     }
-    //로그인시 아이디 비번 체크 함수
-    public boolean checkIdAndPw(GetLoginReq getLoginReq){
-        if(userRepository.checkIdAndPw(getLoginReq)==0)
-            return false;
-        else
-            return true;
-    }
 
-    //회원정보조회 회원조회
+    //회원정보조회
     public GetUserInfoRes retrieveUserInfo(int userIdx) throws BaseException{
-        if(!checkUserExist(userIdx))
-            throw new BaseException(RESPONSE_ERROR);
-        try
-        {
+        if(!checkUserExist(userIdx)){ //유저 idx가 존재하지 않음
+            throw new BaseException(POST_USERS_INVALID);
+        }
+
+        try {
             return userRepository.selectUserInfo(userIdx);
         }catch (Exception exception){
             throw new BaseException(DATABASE_ERROR);
         }
     }
-    //회원정보조회시 userIdx있는지 확인
-    public boolean checkUserExist(int userIdx) {
-        if(userRepository.checkUserExist(userIdx) == 1)
-            return true;
-        else
-            return false;
 
+    //로그인시 아이디 비번 체크 함수
+    public boolean checkIdAndPw(PostLoginReq postLoginReq){
+        if(userRepository.checkIdAndPw(postLoginReq)==0) {
+            return false; //회원가입한 아이디와 비번이 없음.
+        }
+        else {
+            return true;
+        }
+    }
+
+    //아이디 중복확인
+    public boolean checkIdOverlap(String id) {
+        if(userRepository.checkIdOverlap(id) == 0){
+            return false; //id 중복 X
+        }
+        else{
+            return true; //id 중복
+        }
+    }
+
+    //존재하는 유저(userIdx)인지 확인
+    public boolean checkUserExist(int userIdx) {
+        if(userRepository.checkUserExist(userIdx) == 1){
+            return true; //존재하는 유저임
+        }
+        else{
+            return false; //존재하지 않는 유저
+        }
     }
 }

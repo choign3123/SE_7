@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import static com.example.demo.config.BaseResponseStatus.*;
-import static com.example.demo.utils.ValidationRegex.isRegexPw;
 import static com.example.demo.utils.ValidationRegex.isRegexId;
 
 @RestController
@@ -17,12 +16,10 @@ import static com.example.demo.utils.ValidationRegex.isRegexId;
 public class UserController {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
     private final UserProvider userProvider;
-    @Autowired
     private final UserService userService;
 
-
+    @Autowired
     public UserController(UserProvider userProvider, UserService userService) {
         this.userProvider = userProvider;
         this.userService = userService;
@@ -38,56 +35,69 @@ public class UserController {
 //    }
 
     //회원가입
+    //[post] users/signUp
     @ResponseBody
-    @PostMapping("/signUp")
-    public BaseResponse<String> createUser(@RequestBody PostSignUpReq postSignUpReq){
+    @PostMapping("/signup")
+    public BaseResponse<String> createUser(@RequestBody PostSignUpReq postSignUpReq)
+    {
         //빈칸 있나 확인
         if(postSignUpReq.getId()==null || postSignUpReq.getPwForCheck() ==null || postSignUpReq.getName() == null
                 || postSignUpReq.getPassword() == null) {
-            return new BaseResponse<>(POST_USERS_EMPTY);//status수정
+            return new BaseResponse<>(POST_USERS_EMPTY); //status수정
         }
-        //아이디 비번 형식 확인
+        //아이디 형식 확인
         if(!isRegexId(postSignUpReq.getId())){
             return new BaseResponse<>(POST_USERS_INVALID_ID);
         }
+        //비번 형식 확인
         if(!isRegexId(postSignUpReq.getPassword())){
             return new BaseResponse<>(POST_USERS_INVALID_PW);
         }
-        //비밀번호 비밀번호 확인
+        //비밀번호와 비밀번호확인용이 같은지 확인
         if (!postSignUpReq.getPassword().contentEquals(postSignUpReq.getPwForCheck())) {
             return new BaseResponse<>(POST_USERS_DIFF_PW_PWCHECK);
         }
 
         try{
-            String result = "회원가입에 성공하였습니다.";
             userService.createUser(postSignUpReq);
+
+            String result = "회원가입에 성공하였습니다.";
             return new BaseResponse<>(result);
         } catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }
 
     }
+
     //로그인
+    //[post] /users/login
     @ResponseBody
     @PostMapping("/login")
-    public BaseResponse<GetLoginRes> loginUser(@RequestBody GetLoginReq getLoginReq){
-        try
-        {
-            GetLoginRes getLoginRes= userProvider.retrieveUser(getLoginReq);
-            return new BaseResponse<>(getLoginRes);
+    public BaseResponse<PostLoginRes> loginUser(@RequestBody PostLoginReq postLoginReq)
+    {
+        //아이디 또는 비민번호가 빈값일경우
+        if(postLoginReq.getId()==null || postLoginReq.getPassword()==null){
+            return new BaseResponse<>(POST_USERS_EMPTY_LOGIN);
+        }
+
+        try {
+            PostLoginRes postLoginRes = userProvider.retrieveUser(postLoginReq);
+            return new BaseResponse<>(postLoginRes);
         }catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }
 
     }
+
     //회원정보 조회
+    //[get] /users/{userIdx}
     @ResponseBody
     @GetMapping("/{userIdx}")
-    public BaseResponse<GetUserInfoRes> getUserInfo(@PathVariable("userIdx") int userIdx) {
+    public BaseResponse<GetUserInfoRes> getUserInfo(@PathVariable("userIdx") int userIdx)
+    {
         try {
             GetUserInfoRes getUserInfoRes = userProvider.retrieveUserInfo(userIdx);
             return new BaseResponse<>(getUserInfoRes);
-
         }catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }

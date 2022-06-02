@@ -26,6 +26,7 @@ public class ClthService {
     }
 
     public void test(){
+        clthRepository.test();;
         System.out.println("in user provider");
     }
 
@@ -38,22 +39,28 @@ public class ClthService {
         }
 
     }
+
     //옷 삭제
     public void deleteClth(int userIdx, int clthIdx) throws BaseException {
-        if(!clthProvider.checkClthExist(userIdx,clthIdx))
-            throw new BaseException(DELETE_FAIL_POST);
+        if(!clthProvider.checkClthExist(userIdx,clthIdx)){  //옷이 존재하지 않으면
+            throw new BaseException(DELETE_FAIL_POST); //수정 필요
+        }
+
         try{
             clthRepository.deleteClth(userIdx,clthIdx);
         }catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }
     }
+
     //옷 수정
     public void modifyClthInfo(int userIdx,int clthIdx, PatchClthReq patchClthReq) throws BaseException{
-        if(!clthProvider.checkClthExist(userIdx,clthIdx))
-            throw new BaseException(MODIFY_FAIL_POST);
+        if(!clthProvider.checkClthExist(userIdx,clthIdx)){ //옷이 존재하지 않으면
+            throw new BaseException(MODIFY_FAIL_POST); //수정 필요
+        }
+
         try{
-            int update = clthRepository.updateClthInfo(clthIdx,patchClthReq);
+            clthRepository.updateClthInfo(clthIdx,patchClthReq); //int값 받는거 삭제함.
         }catch (Exception exception) {
             throw new BaseException(DATABASE_ERROR);
         }

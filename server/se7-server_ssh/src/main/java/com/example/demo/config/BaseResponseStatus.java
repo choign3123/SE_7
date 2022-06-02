@@ -26,25 +26,29 @@ public enum BaseResponseStatus {
     USERS_EMPTY_USER_ID(false, 2010, "유저 아이디 값을 확인해주세요."),
 
     // [POST] /users
-    POST_USERS_EMPTY_EMAIL(false, 2015, "이메일을 입력해주세요."),
-    POST_USERS_INVALID_EMAIL(false, 2016, "이메일 형식을 확인해주세요."),
-    POST_USERS_EXISTS_EMAIL(false,2017,"중복된 이메일입니다."),
-
-    POST_POST_INVALID_CONTENTS(false,2018,"내용의 글자수를 확인해주세요."),
-    POST_POST_EMPTY_IMGURL(false,2019,"게시글의 이미지를 입력해주세요."),
-
     CHECK_ID_PW(false, 2020, "아이디 비밀번호가 맞지 않습니다."),
-//    POST_USERS_EMPTY_ID(false, 2021, "아이디를 입력해주세요."),
+
+    POST_USERS_EXISTS_ID(false,2025,"중복된 아이디입니다."),
+    POST_USERS_INVALID_ID(false, 2026, "아이디 형식을 확인해주세요."),
+    POST_USERS_INVALID_PW(false, 2027, "비밀번호 형식을 확인해주세요."),
+    POST_USERS_DIFF_PW_PWCHECK(false,2030,"비밀번호가 일치하지 않습니다."),
+    POST_USERS_EMPTY_LOGIN(false,2031,"아이디 또는 비밀번호를 입력해주세요"),
+    POST_USERS_INVALID(false,2032,"존재하지 않는 유저입니다."),
+
+    // [POST] /clths
+    NULL_PHOTO_FAIL(false,2031,"사진을 등록하지 않았습니다."),
+    POST_CLTH_EMPTY_IMG(false,2033,"이미지가 없습니다."),
+    POST_CLTH_INVALID_CATEGORY(false,2034,"잘못된 카테고리입니다."),
+    POST_CLTH_INVALID_SEASON(false,2034,"잘못된 계절입니다."),
+    POST_CLTH_EMPTY(false,2036,"비어있는 카테고리나 계절이 있습니다"),
+    POST_USERS_EMPTY(false, 2021, "빈칸을 확인해주세요."),
+
+
+    //    POST_USERS_EMPTY_ID(false, 2021, "아이디를 입력해주세요."),
 //    POST_USERS_EMPTY_NAME(false, 2022, "이름을 입력해주세요."),
 //    POST_USERS_EMPTY_PW(false, 2023, "비밀번호를 입력해주세요."),
 //    POST_USERS_EMPTY_PWCHECK(false, 2024, "비밀번호 확인을 입력해주세요."),
 
-    POST_USERS_EMPTY(false, 2021, "빈칸을 확인해주세요."),
-    POST_USERS_EXISTS_ID(false,2025,"중복된 아이디입니다."),
-    POST_USERS_INVALID_ID(false, 2026, "아이디 형식을 확인해주세요."),
-    POST_USERS_INVALID_PW(false, 2027, "비밀번호 형식을 확인해주세요."),
-    POST_USERS_DIFF_PW_PWCHECK(false,2030,"비밀번호와 비밀번호 확인이 다릅니다."),
-    NULL_PHOTO_FAIL(false,2031,"사진을 등록하지 않았습니다."),
 
     /**
      * 3000 : Response 오류
