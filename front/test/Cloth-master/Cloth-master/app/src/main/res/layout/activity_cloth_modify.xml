@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClothModifyActivity">
+
+    <Button
+        android:id="@+id/favOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="즐겨찾기 등록/해제"
+        app:layout_constraintBottom_toTopOf="@+id/saveInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <ImageView
+        android:id="@+id/clothImage2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="image_of_cloth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/saveInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="정보 저장"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clothImage2">
+
+        <RadioButton
+            android:id="@+id/radioSpring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="봄" />
+
+        <RadioButton
+            android:id="@+id/radioSummer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="여름" />
+
+        <RadioButton
+            android:id="@+id/radioAutumn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="가을" />
+
+        <RadioButton
+            android:id="@+id/radioWinter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="겨울" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/favOnOff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" >
+
+        <RadioButton
+            android:id="@+id/radioShirt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="셔츠?" />
+
+        <RadioButton
+            android:id="@+id/radioPants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="하의?" />
+
+        <RadioButton
+            android:id="@+id/radioHat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="모자?" />
+
+        <RadioButton
+            android:id="@+id/radioBoots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="신발?" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
