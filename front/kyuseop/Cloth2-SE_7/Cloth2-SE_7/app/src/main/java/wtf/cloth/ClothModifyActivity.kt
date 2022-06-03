@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Parcel
 import android.content.Intent
 import android.os.Parcelable
+import androidx.activity.result.contract.ActivityResultContracts
 import wtf.cloth.databinding.ActivityClothModifyBinding
 
 class ClothModifyActivity : AppCompatActivity() {
@@ -37,12 +38,12 @@ class ClothModifyActivity : AppCompatActivity() {
         }
 
         var m1:Int = 2
-        var m2:Boolean = false
+        var m2:Int = 120
 
         if (intent.hasExtra("clothInfoKey")) {
             var clothInfo = intent.getParcelableExtra<ClothInfo>("clothInfoKey")
             var mdfclthIdx: Int = clothInfo!!.clthIdx
-            var mdfbookmark:Boolean = clothInfo.bookmark
+            var mdfbookmark:Int = clothInfo.bookmark
             var mdfcategory: String? = clothInfo.category
             var mdfseason: String? = clothInfo.season
             m1=mdfclthIdx;
@@ -57,34 +58,43 @@ class ClothModifyActivity : AppCompatActivity() {
         //mctgr=???
         //mss=???
         binding.favOnOff.setOnClickListener {
-            m2 = !(m2); //즐겨찾기 반대로 바꾸기만 하는 버튼
+            if (m2 >0) {m2 *= -1}
+            else if (m2 <0) {m2 *= -1}
         }
 
         var ModifiedClothInfo = MdfClothInfo(m1,m2,mctgr,mss)
+        val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        {
+
+        }
 
         binding.saveInfo.setOnClickListener {
             val backToClothActivityIntent = Intent(this,MainActivity::class.java)
             backToClothActivityIntent.putExtra("ModifiedClothInfo",ModifiedClothInfo)
             setResult(RESULT_OK,backToClothActivityIntent)
-            startActivity(backToClothActivityIntent)
+            backToClothActivityIntent.putExtra("mdfclthIdx",m1)
+            backToClothActivityIntent.putExtra("mdfbookmark",m2)
+            backToClothActivityIntent.putExtra("mctgr",mctgr)
+            backToClothActivityIntent.putExtra("mss",mss)
+            activityResult.launch(backToClothActivityIntent)
             finish()
         }
     }
 }
 
-class MdfClothInfo constructor (var mdfclthIdx: Int, var mdfbookmark:Boolean, var mdfcategory: String?,var mdfseason:String?) :
+class MdfClothInfo constructor (var mdfclthIdx:Int, var mdfbookmark:Int, var mdfcategory:String?,var mdfseason:String?) :
     Parcelable {
 
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
-        parcel.readBoolean(),
+        parcel.readInt(),
         parcel.readString(),
         parcel.readString()) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(mdfclthIdx)
-        parcel.writeBoolean(mdfbookmark)
+        parcel.writeInt(mdfbookmark)
         parcel.writeString(mdfcategory)
         parcel.writeString(mdfseason)
     }
