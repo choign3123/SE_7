@@ -134,7 +134,7 @@ public class ClthController {
      @RequestBody PatchClthReq patchClthReq){
         //계절이나 카테고리가 비어있다면
         if (patchClthReq.getSeason() == null || patchClthReq.getCategory() == null){
-            return new BaseResponse<>(POST_USERS_EMPTY);
+            return new BaseResponse<>(POST_CLTH_EMPTY);
         }
         //카테고리에 포함되지 않는 문자열이 들어오면
         if (!category.contains(patchClthReq.getCategory())){

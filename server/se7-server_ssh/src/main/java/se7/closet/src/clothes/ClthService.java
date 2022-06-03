@@ -47,7 +47,7 @@ public class ClthService {
     //옷 삭제
     public void deleteClth(int userIdx, int clthIdx) throws BaseException {
         if(!clthProvider.checkClthExist(userIdx,clthIdx)){  //옷이 존재하지 않으면
-            throw new BaseException(DELETE_FAIL_POST); //수정 필요
+            throw new BaseException(DELETE_FAIL_POST);
         }
 
         try{

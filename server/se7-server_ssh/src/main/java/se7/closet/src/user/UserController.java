@@ -43,7 +43,7 @@ public class UserController {
         //빈칸 있나 확인
         if(postSignUpReq.getId()==null || postSignUpReq.getPwForCheck() ==null || postSignUpReq.getName() == null
                 || postSignUpReq.getPassword() == null) {
-            return new BaseResponse<>(POST_USERS_EMPTY);
+            return new BaseResponse<>(EMPTY_ERROR);
         }
         //아이디 형식 확인
         if(!isRegexId(postSignUpReq.getId())){

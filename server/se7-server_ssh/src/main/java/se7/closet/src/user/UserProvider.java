@@ -33,7 +33,7 @@ public class UserProvider {
     //로그인
     public PostLoginRes retrieveUser(PostLoginReq postLoginReq) throws BaseException{
         if(!checkIdAndPw(postLoginReq)) //아이디와, 그 아이디에 해당하는 비번이 없을경우
-            throw new BaseException(CHECK_ID_PW);
+            throw new BaseException(POST_USERS_INVALID_LOGIN);
         try
         {
             return userRepository.selectUser(postLoginReq);

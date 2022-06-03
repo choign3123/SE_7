@@ -47,7 +47,7 @@ public class ClthProvider {
     //개별 옷 정보 조회
     public GetClthInfoRes retrieveClthInfo(int userIdx, int clthIdx) throws BaseException {
         if (!checkClthExist(userIdx,clthIdx)){ //옷이 없다면
-            throw new BaseException(FAILED_TO_FIND_CLOTH);
+            throw new BaseException(FAILED_TO_FIND_CLOTHES);
         }
 
         try {
