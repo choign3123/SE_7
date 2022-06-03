@@ -1,6 +1,5 @@
 옷등록 jason
 {
-    "userIdx" : 1,
     "clthImgUrl" : "/img29",
     "bookmark" : true,
     "category" : "상의",
