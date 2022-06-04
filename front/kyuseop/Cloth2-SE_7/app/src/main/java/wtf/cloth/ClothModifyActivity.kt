@@ -20,20 +20,21 @@ class ClothModifyActivity : AppCompatActivity() {
         binding.radioGroup2.setOnCheckedChangeListener {_, checkedId ->
             //1st param = widget , 2nd param = checked widget's id.
             when (checkedId) {
-                R.id.radioSpring -> mss="spring";
-                R.id.radioSummer -> mss="summer";
-                R.id.radioAutumn -> mss="autumn";
-                R.id.radioWinter -> mss="winter";
+                R.id.radioSpring -> mss="봄";
+                R.id.radioSummer -> mss="여름";
+                R.id.radioAutumn -> mss="가을";
+                R.id.radioWinter -> mss="겨울";
             }
         }
 
         var mctgr : String? = "22"
         binding.radioGroup3.setOnCheckedChangeListener {_, checkedId2 ->
             when (checkedId2) {
-                R.id.radioShirt -> mctgr = "shirt";
-                R.id.radioPants -> mctgr = "pants";
-                R.id.radioHat -> mctgr = "hat";
-                R.id.radioBoots -> mctgr = "boots";
+                R.id.radioShirt -> mctgr = "상의";
+                R.id.radioPants -> mctgr = "하의";
+                R.id.radioHat -> mctgr = "아우터";
+                R.id.radioBoots -> mctgr = "원피스/세트";
+                R.id.radioOthers->mctgr="기타";
             }
         }
 

@@ -79,28 +79,35 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="true"
-            android:text="셔츠?" />
+            android:text="상의" />
 
         <RadioButton
             android:id="@+id/radioPants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="하의?" />
+            android:text="하의" />
 
         <RadioButton
             android:id="@+id/radioHat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="모자?" />
+            android:text="아우터" />
 
         <RadioButton
             android:id="@+id/radioBoots"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="신발?" />
+            android:text="원피스/세트" />
+
+        <RadioButton
+            android:id="@+id/radioOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="기타" />
     </RadioGroup>
 
     <RadioGroup

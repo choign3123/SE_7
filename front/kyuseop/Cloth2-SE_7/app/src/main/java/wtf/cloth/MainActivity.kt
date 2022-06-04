@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding.clothImage.setImageResource(R.drawable.aaa)
         //임의로 설정함. 실제로는 이 액티비티가 실행되는 순간 밑에 있는 변수들의 값이 알맞게 조정돼야 함.
         //데이터 클래스 사용?
-        val clthInfo1 = ClothInformation(1,-120,"shirt","spring")
+        val clthInfo1 = ClothInformation(1,-120,"상의","봄")
         //이거 쓰지 말까.
         var clthIdx: Int = 1
         var bookmark:Int=120
