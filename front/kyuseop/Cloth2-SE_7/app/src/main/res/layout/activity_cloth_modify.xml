@@ -28,123 +28,52 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clothImage2">
-
-        <RadioButton
-            android:id="@+id/radioSpring"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="봄" />
-
-        <RadioButton
-            android:id="@+id/radioSummer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="여름" />
-
-        <RadioButton
-            android:id="@+id/radioAutumn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="가을" />
-
-        <RadioButton
-            android:id="@+id/radioWinter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="겨울" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
-
-        <RadioButton
-            android:id="@+id/radioShirt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="상의" />
-
-        <RadioButton
-            android:id="@+id/radioPants"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="하의" />
-
-        <RadioButton
-            android:id="@+id/radioHat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="아우터" />
-
-        <RadioButton
-            android:id="@+id/radioBoots"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="원피스/세트" />
-
-        <RadioButton
-            android:id="@+id/radioOthers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="기타" />
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="129dp"
-        app:layout_constraintBottom_toTopOf="@+id/saveInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3">
-
-        <RadioButton
-            android:id="@+id/favOn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="즐겨찾기 등록" />
-
-        <RadioButton
-            android:id="@+id/favOff"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="즐겨찾기 해제" />
-    </RadioGroup>
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="100dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/saveInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+        app:layout_constraintTop_toBottomOf="@+id/clothImage2" />
+
+    <Button
+        android:id="@+id/favOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="즐겨찾기 등록"
+        app:layout_constraintBottom_toTopOf="@+id/saveInfo"
+        app:layout_constraintEnd_toStartOf="@+id/favOff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/favOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="즐겨찾기 해제"
+        app:layout_constraintBottom_toTopOf="@+id/saveInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/favOn"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,10 +18,10 @@ class ClothModifyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        var mss:String? = "2"
 
         binding.clothImage2.setImageResource(intent.getIntExtra("img", 0))
-
-        var mss:String? = "2"
+/*
         binding.radioGroup2.setOnCheckedChangeListener {_, checkedId ->
             //1st param = widget , 2nd param = checked widget's id.
             when (checkedId) {
@@ -31,7 +31,7 @@ class ClothModifyActivity : AppCompatActivity() {
                 R.id.radioWinter -> mss="겨울";
             }
         }
-
+*/
         var mctgr : String? = "22"
         /*
         binding.radioGroup3.setOnCheckedChangeListener {_, checkedId2 ->
@@ -47,25 +47,43 @@ class ClothModifyActivity : AppCompatActivity() {
 
         var m1:Int = 2
         var m2:Int = 120
+        /*
         binding.radioGroup.setOnCheckedChangeListener {_,checkedId3 ->
             when (checkedId3) {
                 R.id.favOn -> m2 = 120;
                 R.id.favOff-> m2 =-120;
             }
         }
+        */
         var data = listOf(
             "상의","하의","아우터","원피스/세트","기타","티셔츠","니트","셔츠",
             "후드","맨투맨","스커트","팬츠","코트","패딩","집업","가디건","자켓")
+        var data2 = listOf("봄","여름","가을","겨울")
         var adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
+        var adapter2= ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data2)
         binding.spinner.adapter=adapter;
+        binding.spinner2.adapter=adapter2
+
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
         override fun onItemSelected(parent:AdapterView<*>?,view:View?,position:Int,id:Long){
-            mss = data.get(position);
+            mctgr = data.get(position);
         }
         override fun onNothingSelected(parent:AdapterView<*>?){
             var message="카테고리는 꼭 선택해주세요!"
-            //Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext,message,Toast.LENGTH_LONG).show()
         } }
+
+        binding.spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?){
+            var message2 = "계절을 꼭 고르십시오."
+            Toast.makeText(applicationContext,message2,Toast.LENGTH_LONG).show()
+            }
+        override fun onItemSelected(parent:AdapterView<*>?,view:View?,position:Int,id:Long){
+            mss = data2.get(position)
+        } }
+
+        binding.favOn.setOnClickListener{m2 = 120}
+        binding.favOff.setOnClickListener{m2 = -120}
 
         if (intent.hasExtra("clothInfoKey")) {
             var clothInfo = intent.getParcelableExtra<ClothInfo>("clothInfoKey")
