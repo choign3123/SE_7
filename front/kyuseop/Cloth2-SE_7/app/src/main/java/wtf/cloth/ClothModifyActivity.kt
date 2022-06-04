@@ -57,16 +57,10 @@ class ClothModifyActivity : AppCompatActivity() {
         //m2=???
         //mctgr=???
         //mss=???
-        binding.favOnOff.setOnClickListener {
-            if (m2 >0) {m2 *= -1}
-            else if (m2 <0) {m2 *= -1}
-        }
-
+        binding.favOn.setOnClickListener {if (m2 < 0) {m2 *= -1}}
+        binding.favOff.setOnClickListener {if (m2 > 0) {m2 *= -1}}
         var ModifiedClothInfo = MdfClothInfo(m1,m2,mctgr,mss)
-        val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
-        {
-
-        }
+        val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){}
 
         binding.saveInfo.setOnClickListener {
             val backToClothActivityIntent = Intent(this,MainActivity::class.java)

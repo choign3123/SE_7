@@ -7,12 +7,14 @@
     tools:context=".ClothModifyActivity">
 
     <Button
-        android:id="@+id/favOnOff"
+        android:id="@+id/favOn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="즐겨찾기 등록/해제"
+        android:layout_marginStart="32dp"
+        android:text="즐겨찾기 등록"
         app:layout_constraintBottom_toTopOf="@+id/saveInfo"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/favOff"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
@@ -78,10 +80,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/favOnOff"
+        app:layout_constraintBottom_toTopOf="@+id/favOn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" >
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2">
 
         <RadioButton
             android:id="@+id/radioShirt"
@@ -111,4 +113,16 @@
             android:layout_weight="1"
             android:text="신발?" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/favOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="즐겨찾기 해제"
+        app:layout_constraintBottom_toTopOf="@+id/saveInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/favOn"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
