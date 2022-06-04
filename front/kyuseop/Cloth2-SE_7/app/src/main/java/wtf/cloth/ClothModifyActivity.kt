@@ -5,8 +5,13 @@ import android.os.Bundle
 import android.os.Parcel
 import android.content.Intent
 import android.os.Parcelable
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import wtf.cloth.databinding.ActivityClothModifyBinding
+import java.util.*
 
 class ClothModifyActivity : AppCompatActivity() {
     val binding by lazy { ActivityClothModifyBinding.inflate(layoutInflater) }
@@ -28,6 +33,7 @@ class ClothModifyActivity : AppCompatActivity() {
         }
 
         var mctgr : String? = "22"
+        /*
         binding.radioGroup3.setOnCheckedChangeListener {_, checkedId2 ->
             when (checkedId2) {
                 R.id.radioShirt -> mctgr = "상의";
@@ -37,6 +43,7 @@ class ClothModifyActivity : AppCompatActivity() {
                 R.id.radioOthers->mctgr="기타";
             }
         }
+        */
 
         var m1:Int = 2
         var m2:Int = 120
@@ -46,6 +53,19 @@ class ClothModifyActivity : AppCompatActivity() {
                 R.id.favOff-> m2 =-120;
             }
         }
+        var data = listOf(
+            "상의","하의","아우터","원피스/세트","기타","티셔츠","니트","셔츠",
+            "후드","맨투맨","스커트","팬츠","코트","패딩","집업","가디건","자켓")
+        var adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
+        binding.spinner.adapter=adapter;
+        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        override fun onItemSelected(parent:AdapterView<*>?,view:View?,position:Int,id:Long){
+            mss = data.get(position);
+        }
+        override fun onNothingSelected(parent:AdapterView<*>?){
+            var message="카테고리는 꼭 선택해주세요!"
+            //Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+        } }
 
         if (intent.hasExtra("clothInfoKey")) {
             var clothInfo = intent.getParcelableExtra<ClothInfo>("clothInfoKey")
