@@ -17,7 +17,7 @@ class ClothModifyActivity : AppCompatActivity() {
         binding.clothImage2.setImageResource(intent.getIntExtra("img", 0))
 
         var mss:String? = "2"
-        binding.radioGroup2.setOnCheckedChangeListener { group, checkedId ->
+        binding.radioGroup2.setOnCheckedChangeListener {_, checkedId ->
             //1st param = widget , 2nd param = checked widget's id.
             when (checkedId) {
                 R.id.radioSpring -> mss="spring";
@@ -28,7 +28,7 @@ class ClothModifyActivity : AppCompatActivity() {
         }
 
         var mctgr : String? = "22"
-        binding.radioGroup3.setOnCheckedChangeListener { group2, checkedId2 ->
+        binding.radioGroup3.setOnCheckedChangeListener {_, checkedId2 ->
             when (checkedId2) {
                 R.id.radioShirt -> mctgr = "shirt";
                 R.id.radioPants -> mctgr = "pants";
@@ -39,6 +39,12 @@ class ClothModifyActivity : AppCompatActivity() {
 
         var m1:Int = 2
         var m2:Int = 120
+        binding.radioGroup.setOnCheckedChangeListener {_,checkedId3 ->
+            when (checkedId3) {
+                R.id.favOn -> m2 = 120;
+                R.id.favOff-> m2 =-120;
+            }
+        }
 
         if (intent.hasExtra("clothInfoKey")) {
             var clothInfo = intent.getParcelableExtra<ClothInfo>("clothInfoKey")
@@ -57,8 +63,7 @@ class ClothModifyActivity : AppCompatActivity() {
         //m2=???
         //mctgr=???
         //mss=???
-        binding.favOn.setOnClickListener {if (m2 < 0) {m2 *= -1}}
-        binding.favOff.setOnClickListener {if (m2 > 0) {m2 *= -1}}
+
         var ModifiedClothInfo = MdfClothInfo(m1,m2,mctgr,mss)
         val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){}
 
