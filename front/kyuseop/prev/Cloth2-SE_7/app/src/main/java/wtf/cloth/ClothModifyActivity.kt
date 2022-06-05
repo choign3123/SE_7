@@ -21,56 +21,69 @@ class ClothModifyActivity : AppCompatActivity() {
         var mss:String? = "2"
 
         binding.clothImage2.setImageResource(intent.getIntExtra("img", 0))
-
+/*
+        binding.radioGroup2.setOnCheckedChangeListener {_, checkedId ->
+            //1st param = widget , 2nd param = checked widget's id.
+            when (checkedId) {
+                R.id.radioSpring -> mss="봄";
+                R.id.radioSummer -> mss="여름";
+                R.id.radioAutumn -> mss="가을";
+                R.id.radioWinter -> mss="겨울";
+            }
+        }
+*/
         var mctgr : String? = "22"
+        /*
+        binding.radioGroup3.setOnCheckedChangeListener {_, checkedId2 ->
+            when (checkedId2) {
+                R.id.radioShirt -> mctgr = "상의";
+                R.id.radioPants -> mctgr = "하의";
+                R.id.radioHat -> mctgr = "아우터";
+                R.id.radioBoots -> mctgr = "원피스/세트";
+                R.id.radioOthers->mctgr="기타";
+            }
+        }
+        */
 
         var m1:Int = 2
-        var m2:Int = 120;
-
+        var m2:Int = 120
+        /*
+        binding.radioGroup.setOnCheckedChangeListener {_,checkedId3 ->
+            when (checkedId3) {
+                R.id.favOn -> m2 = 120;
+                R.id.favOff-> m2 =-120;
+            }
+        }
+        */
         var data = listOf(
-            "상의",//1
-            "하의",//2
-            "아우터",//3
-            "원피스/세트",//4
-            "기타",//5
-            "티셔츠",//6
-            "니트",//7
-            "셔츠",//8
-            "후드",//9
-            "맨투맨",//10
-            "스커트",//11
-            "팬츠",//12
-            "코트",//13
-            "패딩",//14
-            "집업",//15
-            "가디건",//16
-            "자켓")//17
+            "상의","하의","아우터","원피스/세트","기타","티셔츠","니트","셔츠",
+            "후드","맨투맨","스커트","팬츠","코트","패딩","집업","가디건","자켓")
+        var data2 = listOf("봄","여름","가을","겨울")
+        var adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
+        var adapter2= ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data2)
+        binding.spinner.adapter=adapter;
+        binding.spinner2.adapter=adapter2
+
+        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        override fun onItemSelected(parent:AdapterView<*>?,view:View?,position:Int,id:Long){
+            mctgr = data.get(position);
+        }
+        override fun onNothingSelected(parent:AdapterView<*>?){
+            var message="카테고리는 꼭 선택해주세요!"
+            Toast.makeText(applicationContext,message,Toast.LENGTH_LONG).show()
+        } }
+
+        binding.spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        override fun onNothingSelected(parent: AdapterView<*>?){
+            var message2 = "계절을 꼭 고르십시오."
+            Toast.makeText(applicationContext,message2,Toast.LENGTH_LONG).show()
+            }
+        override fun onItemSelected(parent:AdapterView<*>?,view:View?,position:Int,id:Long){
+            mss = data2.get(position)
+        } }
 
         binding.favOn.setOnClickListener{m2 = 120}
         binding.favOff.setOnClickListener{m2 = -120}
-
-        binding.btnSpring.setOnClickListener { mss="봄" }
-        binding.btnSummer.setOnClickListener { mss="여름" }
-        binding.btnFall.setOnClickListener { mss="가을" }
-        binding.btnWinter.setOnClickListener { mss="겨울" }
-
-        binding.cate1.setOnClickListener { mctgr = "상의" }
-        binding.cate2.setOnClickListener { mctgr = "하의" }
-        binding.cate3.setOnClickListener { mctgr = "아우터" }
-        binding.cate4.setOnClickListener { mctgr = "원피스/세트" }
-        binding.cate5.setOnClickListener { mctgr = "기타" }
-        binding.cate6.setOnClickListener { mctgr = "티셔츠" }
-        binding.cate7.setOnClickListener { mctgr = "니트" }
-        binding.cate8.setOnClickListener { mctgr = "셔츠" }
-        binding.cate9.setOnClickListener { mctgr = "후드" }
-        binding.cate10.setOnClickListener { mctgr = "맨투맨" }
-        binding.cate11.setOnClickListener { mctgr = "스커트" }
-        binding.cate12.setOnClickListener { mctgr = "팬츠" }
-        binding.cate13.setOnClickListener { mctgr = "코트" }
-        binding.cate14.setOnClickListener { mctgr = "패딩" }
-        binding.cate15.setOnClickListener { mctgr = "집업" }
-        binding.cate16.setOnClickListener { mctgr = "가디건" }
-        binding.cate17.setOnClickListener { mctgr = "자켓" };//
 
         if (intent.hasExtra("clothInfoKey")) {
             var clothInfo = intent.getParcelableExtra<ClothInfo>("clothInfoKey")
@@ -94,7 +107,6 @@ class ClothModifyActivity : AppCompatActivity() {
         val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){}
 
         binding.saveInfo.setOnClickListener {
-            //server에 m1,m2,mctgr,mss 저장한다.
             val backToClothActivityIntent = Intent(this,MainActivity::class.java)
             backToClothActivityIntent.putExtra("ModifiedClothInfo",ModifiedClothInfo)
             setResult(RESULT_OK,backToClothActivityIntent)

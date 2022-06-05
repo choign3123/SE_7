@@ -24,14 +24,20 @@ class MainActivity : AppCompatActivity() {
         var bookmark:Int=120
         var category: String = "셔츠"
         var season:String = "autumn"
-        // 이제 server 정보를 받아 각 변수 초기화
+        // 이제 정보를 받아 각 변수 초기화
         //clthInfo1.clthIdx = ???
         //clthInfo1.bookmark = ???
         //clthInfo1.category = ???
         //clthInfo1.season = ???
 
+        //if (clthInfo1.bookmark) {binding.favorite.text = "즐겨찾기 등록됨."}
+        //else if(clthInfo1.bookmark){binding.favorite.text = "즐겨찾기 해제됨."}
+
         var myClothInfo = ClothInfo(clthInfo1.clthIdx, clthInfo1.bookmark, clthInfo1.category,clthInfo1.season);
-        val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){}
+        val activityResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult())
+        {
+
+        }
         if (intent.hasExtra("ModifiedClothInfo")) {
             var MdfclothInfo = intent.getParcelableExtra<MdfClothInfo>("ModifiedClothInfo")
             var mdfclthIdx: Int = MdfclothInfo!!.mdfclthIdx
@@ -43,12 +49,13 @@ class MainActivity : AppCompatActivity() {
             clthInfo1.bookmark = intent.getIntExtra("mdfbookmark",-120)
             clthInfo1.category = intent.getStringExtra("mctgr")
             clthInfo1.season = intent.getStringExtra("mss")
+            //if (clthInfo1.bookmark) {binding.favorite.text = "즐겨찾기 등록됨."}
+            //else if(clthInfo1.bookmark){binding.favorite.text = "즐겨찾기 해제됨."}
         }
-        if (clthInfo1.bookmark>0) {binding.favorite.text = "즐겨찾기 등록됨."};
+        if (clthInfo1.bookmark>0) {binding.favorite.text = "즐겨찾기 등록됨."}
         else if(clthInfo1.bookmark<0){binding.favorite.text = "즐겨찾기 해제됨."}
         binding.modifybtn.setOnClickListener {
             val nextIntent = Intent(this, ClothModifyActivity::class.java)
-
             nextIntent.putExtra("clothInfoKey",myClothInfo)
             nextIntent.putExtra("img",R.drawable.aaa)
             activityResult.launch(nextIntent);
