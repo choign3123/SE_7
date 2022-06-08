@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import se7.closet.src.clothes.model.*;
+import se7.closet.src.user.clthInfo.Category;
+import se7.closet.src.user.clthInfo.Season;
+
 import java.util.*;
 import static se7.closet.config.BaseResponseStatus.*;
 
@@ -17,11 +20,6 @@ public class ClthController {
 
     private final ClthProvider clthProvider;
     private final ClthService clthService;
-
-    //category or season List를 바꾸려고하면     "error": "Internal Server Error" 가 나옴.
-    private static final List<String> category = Collections.unmodifiableList(Arrays.asList("상의", "하의", "아우터", "원피스/세트", "기타", "티셔츠", "니트",
-                    "셔츠", "후드", "맨투맨", "스커트", "팬츠", "코트", "패딩", "집업", "가디건", "자켓"));
-    private static final List<String> season = Collections.unmodifiableList(Arrays.asList("봄", "여름", "가을", "겨울"));
 
     @Autowired
     public ClthController(ClthProvider clthProvider, ClthService clthService) {
@@ -92,11 +90,11 @@ public class ClthController {
             return new BaseResponse<>(POST_CLTH_EMPTY);
         }
         //카테고리에 포함되지 않는 문자열이 들어오면
-        if (!category.contains(postClthReq.getCategory())){
+        if (!Category.findCategory(postClthReq.getCategory())){
             return new BaseResponse<>(POST_CLTH_INVALID_CATEGORY);
         }
         //계절에 포함되지 않는 문자열이 들어오면
-        if (!season.contains(postClthReq.getSeason())){
+        if (!Season.findSeason(postClthReq.getSeason())){
             return new BaseResponse<>(POST_CLTH_INVALID_SEASON);
         }
 
@@ -137,11 +135,11 @@ public class ClthController {
             return new BaseResponse<>(POST_CLTH_EMPTY);
         }
         //카테고리에 포함되지 않는 문자열이 들어오면
-        if (!category.contains(patchClthReq.getCategory())){
+        if (!Category.findCategory(patchClthReq.getCategory())){
             return new BaseResponse<>(POST_CLTH_INVALID_CATEGORY);
         }
         //계절에 포함되지 않는 문자열이 들어오면
-        if (!season.contains(patchClthReq.getSeason())){
+        if (!Season.findSeason(patchClthReq.getSeason())){
             return new BaseResponse<>(POST_CLTH_INVALID_SEASON);
         }
 
@@ -156,16 +154,29 @@ public class ClthController {
     }
 
     //옷 검색
-    //[get] /clths/search/{userIdx}?query=
+    //[get] /clths/search/{userIdx}?season=&category=
     @ResponseBody
     @GetMapping("/search/{userIdx}")
-    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("query") String query){
-        // query string으로 들오온 문자열에서 공백 -> | (후에 sql 쿼리문에서 or 검색을 위한 것임)
-        query = query.replaceAll(" ", "|");
-        //System.out.println(query);
+    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("season") String season, @RequestParam("category") String category){
+
+        if(season.equals("")){ //계절로 빈 문자열이 넘어오면
+            season = Season.getString();
+        }
+        else{
+            //계절 string으로 들오온 문자열에서 공백 -> | (후에 sql 쿼리문에서 문자열 검색을 위한 것임)
+            season = season.replaceAll(" ", "|");
+        }
+
+        if(category.equals("")){ //카테고리로 빈문자열이 넘어오면
+            category = Category.getString();
+        }
+        else{
+            //카테고리 string으로 들오온 문자열에서 '공백' -> | (후에 sql 쿼리문에서 문자열 검색을 위한 것임)
+            category = category.replaceAll(" ", "|");
+        }
 
         try{
-            List<GetClthsRes> getClthsRes = clthProvider.retrieveClthsBySearch(userIdx, query);
+            List<GetClthsRes> getClthsRes = clthProvider.retrieveClthsBySearch(userIdx, season, category);
             return new BaseResponse<>(getClthsRes);
         } catch (BaseException e){
             return new BaseResponse<>(e.getStatus());
