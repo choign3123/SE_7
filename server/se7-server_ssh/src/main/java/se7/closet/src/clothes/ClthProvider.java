@@ -70,6 +70,19 @@ public class ClthProvider {
         }
     }
 
+    //옷 검색
+    public List<GetClthsRes> retrieveClthsBySearch(int userIdx, String query) throws BaseException{
+        if(!checkUserExist(userIdx)){ //존재하지 않는 유저면
+            throw new BaseException(POST_USERS_INVALID);
+        }
+
+        try{
+            return clthRepository.selectClthsBySearch(userIdx, query);
+        } catch (Exception e){
+            throw new BaseException(DATABASE_ERROR);
+        }
+    }
+
     //존재하는 옷인지 확인
     public boolean checkClthExist(int userIdx,int clthIdx) {
         if (clthRepository.checkClthExist(userIdx,clthIdx) == 1){

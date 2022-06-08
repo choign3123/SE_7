@@ -154,4 +154,21 @@ public class ClthController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
+
+    //옷 검색
+    //[get] /clths/search/{userIdx}?query=
+    @ResponseBody
+    @GetMapping("/search/{userIdx}")
+    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("query") String query){
+        // query string으로 들오온 문자열에서 공백 -> | (후에 sql 쿼리문에서 or 검색을 위한 것임)
+        query = query.replaceAll(" ", "|");
+        //System.out.println(query);
+
+        try{
+            List<GetClthsRes> getClthsRes = clthProvider.retrieveClthsBySearch(userIdx, query);
+            return new BaseResponse<>(getClthsRes);
+        } catch (BaseException e){
+            return new BaseResponse<>(e.getStatus());
+        }
+    }
 }
