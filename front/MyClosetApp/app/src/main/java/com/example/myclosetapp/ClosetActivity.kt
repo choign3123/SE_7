@@ -78,6 +78,8 @@ class ClosetActivity : AppCompatActivity() {
             }
         }
 
+        // test checking!!!
+
         // 전체 옷 그리드 뷰 출력
         getAllCloth()
 
