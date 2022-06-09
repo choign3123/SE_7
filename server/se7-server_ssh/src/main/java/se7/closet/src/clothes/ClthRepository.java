@@ -105,15 +105,15 @@ public class ClthRepository {
     }
 
     //옷 검색
-    public List<GetClthsRes> selectClthsBySearch(int userIdx, String query){
-        String selectClthsBySearchQuery = "select clthIdx, clthImgUrl from clothes where userIdx = ? and (season REGEXP (?) or category regexp (?))";
-        Object[] selectClthsBySearchParams = new Object[]{userIdx, query, query};
+    public List<GetClthsRes> selectClthsBySearch(int userIdx, String season, String category){
+        String searchClthsQuery = "select clthIdx, clthImgUrl from clothes where userIdx = ? and season REGEXP (?) and category regexp (?)";
+        Object[] searchClthsParams = new Object[]{userIdx, season, category};
 
-        return this.jdbcTemplate.query(selectClthsBySearchQuery,
+        return this.jdbcTemplate.query(searchClthsQuery,
                 (rs, rowNum) -> new GetClthsRes(
                         rs.getInt("clthIdx"),
                         rs.getString("clthImgUrl"))
-                , selectClthsBySearchParams);
+                , searchClthsParams);
     }
 
     //존재하는 유저인지 확인
