@@ -14,16 +14,16 @@ se7/closet/src/WebSecurityConfig.java
  se7.closet.src.WebSecurityConfig
 se7/closet/utils/SHA256.java
  se7.closet.utils.SHA256
-se7/closet/src/user/clthInfo/Category.java
- se7.closet.src.user.clthInfo.Category
 se7/closet/src/clothes/model/GetClthBMRes.java
  se7.closet.src.clothes.model.GetClthBMRes
 se7/closet/DemoApplication.java
  se7.closet.DemoApplication
+se7/closet/src/clothes/clthInfo/Category.java
+ se7.closet.src.clothes.clthInfo.Category
 se7/closet/src/clothes/ClthService.java
  se7.closet.src.clothes.ClthService
-se7/closet/src/user/clthInfo/Season.java
- se7.closet.src.user.clthInfo.Season
+se7/closet/src/clothes/clthInfo/Season.java
+ se7.closet.src.clothes.clthInfo.Season
 se7/closet/src/user/model/PostLoginReq.java
  se7.closet.src.user.model.PostLoginReq
 se7/closet/src/user/UserController.java

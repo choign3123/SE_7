@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import se7.closet.src.clothes.model.*;
-import se7.closet.src.user.clthInfo.Category;
-import se7.closet.src.user.clthInfo.Season;
+import se7.closet.src.clothes.clthInfo.Category;
+import se7.closet.src.clothes.clthInfo.Season;
 
 import java.util.*;
 import static se7.closet.config.BaseResponseStatus.*;
@@ -90,11 +90,11 @@ public class ClthController {
             return new BaseResponse<>(POST_CLTH_EMPTY);
         }
         //카테고리에 포함되지 않는 문자열이 들어오면
-        if (!Category.findCategory(postClthReq.getCategory())){
+        if (!Category.checkCategory(postClthReq.getCategory())){
             return new BaseResponse<>(POST_CLTH_INVALID_CATEGORY);
         }
         //계절에 포함되지 않는 문자열이 들어오면
-        if (!Season.findSeason(postClthReq.getSeason())){
+        if (!Season.checkSeason(postClthReq.getSeason())){
             return new BaseResponse<>(POST_CLTH_INVALID_SEASON);
         }
 
@@ -135,11 +135,11 @@ public class ClthController {
             return new BaseResponse<>(POST_CLTH_EMPTY);
         }
         //카테고리에 포함되지 않는 문자열이 들어오면
-        if (!Category.findCategory(patchClthReq.getCategory())){
+        if (!Category.checkCategory(patchClthReq.getCategory())){
             return new BaseResponse<>(POST_CLTH_INVALID_CATEGORY);
         }
         //계절에 포함되지 않는 문자열이 들어오면
-        if (!Season.findSeason(patchClthReq.getSeason())){
+        if (!Season.checkSeason(patchClthReq.getSeason())){
             return new BaseResponse<>(POST_CLTH_INVALID_SEASON);
         }
 
@@ -157,7 +157,7 @@ public class ClthController {
     //[get] /clths/search/{userIdx}?season=&category=&bookmark
     @ResponseBody
     @GetMapping("/search/{userIdx}")
-    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("season") String season, @RequestParam("category") String category, @RequestParam("bookmark") boolean bm){
+    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("season") String season, @RequestParam("category") String category, @RequestParam("bm") boolean bm){
 
         if(season.equals("")){ //계절로 빈 문자열이 넘어오면
             season = Season.getString();
