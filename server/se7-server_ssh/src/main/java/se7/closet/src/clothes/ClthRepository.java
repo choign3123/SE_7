@@ -105,9 +105,9 @@ public class ClthRepository {
     }
 
     //옷 검색
-    public List<GetClthsRes> selectClthsBySearch(int userIdx, String season, String category){
-        String searchClthsQuery = "select clthIdx, clthImgUrl from clothes where userIdx = ? and season REGEXP (?) and category regexp (?)";
-        Object[] searchClthsParams = new Object[]{userIdx, season, category};
+    public List<GetClthsRes> selectClthsBySearch(int userIdx, String season, String category, boolean bm){
+        String searchClthsQuery = "select clthIdx, clthImgUrl from clothes where userIdx = ? and season REGEXP (?) and category regexp (?) and bookmark=?";
+        Object[] searchClthsParams = new Object[]{userIdx, season, category, bm};
 
         return this.jdbcTemplate.query(searchClthsQuery,
                 (rs, rowNum) -> new GetClthsRes(
