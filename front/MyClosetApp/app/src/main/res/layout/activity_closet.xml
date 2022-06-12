@@ -19,13 +19,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/diary"
             android:text="검색" />
+
 
         <Button
             android:id="@+id/buttonBookmark"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/diary"
             android:text="즐겨찾기" />
 
         <Button
@@ -33,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/diary"
             android:text="마이페이지" />
     </LinearLayout>
 
@@ -43,6 +47,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginBottom="100dp"
         android:text="옷장 최신화"
+        android:fontFamily="@font/diary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -52,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="옷장 화면"
+        android:fontFamily="@font/diary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -75,6 +81,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="100dp"
         android:text="카메라"
+        android:fontFamily="@font/diary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -85,6 +92,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="갤러리"
+        android:fontFamily="@font/diary"
         app:layout_constraintBottom_toTopOf="@+id/buttonCamera"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
