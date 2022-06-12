@@ -1,9 +1,11 @@
 package com.example.myclosetapp
 
+import android.animation.ValueAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.CompoundButton
 import android.widget.RadioGroup
 import android.widget.ToggleButton
@@ -78,7 +80,23 @@ class TestModifyActivity : AppCompatActivity() {
             myFav = intent.getBooleanExtra("bookmark", false)
             myCategory = intent.getStringExtra("category")
             mySeason = intent.getStringExtra("season")
-
+            //하트 상태 반영
+            if (myFav == false) {
+                val animator=ValueAnimator.ofFloat(0.499999999999999999f,0.5f).setDuration(1)
+                animator.addUpdateListener {
+                    binding.likeBtn.progress = it.animatedValue as Float
+                }
+                animator.start()
+                myFav = true
+            } else {
+                val animator = ValueAnimator.ofFloat(0.999999999999999999f,1f).setDuration(1)
+                animator.addUpdateListener {
+                    binding.likeBtn.progress = it.animatedValue as Float
+                }
+                animator.start()
+                myFav = false
+            }
+            //
             binding.buttonSave.setOnClickListener() {
                 modCloth.bookmark = myFav
                 modCloth.category = myCategory
@@ -96,15 +114,47 @@ class TestModifyActivity : AppCompatActivity() {
         }
 
         // 버튼 클릭 시 해당 값 변수에 저장
-        binding.buttonSpring.setOnClickListener() {mySeason = binding.buttonSpring.text.toString()}
-        binding.buttonSummer.setOnClickListener() {mySeason = binding.buttonSummer.text.toString()}
-        binding.buttonFall.setOnClickListener() {mySeason = binding.buttonFall.text.toString()}
-        binding.buttonWinter.setOnClickListener() {mySeason = binding.buttonWinter.text.toString()}
+binding.buttonSpring.setOnClickListener(){mySeason=binding.buttonSpring.text.toString();clearSeason();binding.buttonSpring.isPressed=true}
+binding.buttonSummer.setOnClickListener(){mySeason=binding.buttonSummer.text.toString();clearSeason();binding.buttonSummer.isPressed=true}
+binding.buttonFall.setOnClickListener(){mySeason=binding.buttonFall.text.toString();clearSeason();binding.buttonFall.isPressed=true}
+binding.buttonWinter.setOnClickListener(){mySeason=binding.buttonWinter.text.toString();clearSeason();binding.buttonWinter.isPressed=true}
 
-        binding.button9.setOnClickListener() {myCategory = binding.button9.text.toString()}
-        binding.button10.setOnClickListener() {myCategory = binding.button10.text.toString()}
-        binding.button11.setOnClickListener() {myCategory = binding.button11.text.toString()}
-        binding.button12.setOnClickListener() {myCategory = binding.button12.text.toString()}
+binding.button9.setOnClickListener(){myCategory=binding.button9.text.toString();clearCategory();binding.button9.isPressed=true}
+binding.button10.setOnClickListener(){myCategory=binding.button10.text.toString();clearCategory();binding.button10.isPressed=true}
+binding.button11.setOnClickListener(){myCategory=binding.button11.text.toString();clearCategory();binding.button11.isPressed=true}
+binding.button12.setOnClickListener(){myCategory=binding.button12.text.toString();clearCategory();binding.button12.isPressed=true}
+binding.button13.setOnClickListener(){myCategory=binding.button13.text.toString();clearCategory();binding.button13.isPressed=true}
+binding.button14.setOnClickListener(){myCategory=binding.button14.text.toString();clearCategory();binding.button14.isPressed=true}
+binding.button15.setOnClickListener(){myCategory=binding.button15.text.toString();clearCategory();binding.button15.isPressed=true}
+binding.button16.setOnClickListener(){myCategory=binding.button16.text.toString();clearCategory();binding.button16.isPressed=true}
+binding.button17.setOnClickListener(){myCategory=binding.button17.text.toString();clearCategory();binding.button17.isPressed=true}
+binding.button18.setOnClickListener(){myCategory=binding.button18.text.toString();clearCategory();binding.button18.isPressed=true}
+binding.button19.setOnClickListener(){myCategory=binding.button19.text.toString();clearCategory();binding.button19.isPressed=true}
+binding.button20.setOnClickListener(){myCategory=binding.button20.text.toString();clearCategory();binding.button20.isPressed=true}
+binding.button21.setOnClickListener(){myCategory=binding.button21.text.toString();clearCategory();binding.button21.isPressed=true}
+binding.button22.setOnClickListener(){myCategory=binding.button22.text.toString();clearCategory();binding.button22.isPressed=true}
+binding.button23.setOnClickListener(){myCategory=binding.button23.text.toString();clearCategory();binding.button23.isPressed=true}
+binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString();clearCategory();binding.button24.isPressed=true}
+binding.button25.setOnClickListener(){myCategory=binding.button25.text.toString();clearCategory();binding.button25.isPressed=true}
+
+        binding.likeBtn.setOnClickListener {
+            if (myFav == false) {
+                val animator=ValueAnimator.ofFloat(0f,0.5f).setDuration(500)
+                animator.addUpdateListener {
+                    binding.likeBtn.progress = it.animatedValue as Float
+                }
+                animator.start()
+                myFav = true
+            } else {
+                val animator = ValueAnimator.ofFloat(0.5f,1f).setDuration(500)
+                animator.addUpdateListener {
+                    binding.likeBtn.progress = it.animatedValue as Float
+                }
+                animator.start()
+                myFav = false
+            }
+        }
+        //하트 버튼 클릭
 
         // 즐겨찾기
         val toggle: ToggleButton = binding.toggleButtonFAV
@@ -113,15 +163,9 @@ class TestModifyActivity : AppCompatActivity() {
         else toggle.isChecked = false
 
         toggle.setOnCheckedChangeListener() { _, isChecked ->
-            if(isChecked) {
-                myFav = true
-            }
-            else {
-                myFav = false
-            }
-
-            Log.d("MYTAG",myFav.toString())
-        }
+            if(isChecked) {                myFav = true            }
+            else {                myFav = false            }
+            Log.d("MYTAG",myFav.toString())        }
 //        binding.toggleButtonFAV.setOnCheckedChangeListener(MyToggleListener())
 //
 //        Log.d("MYTAG", "기존" + m.toString())
@@ -147,6 +191,52 @@ class TestModifyActivity : AppCompatActivity() {
                 Log.d("MYTAG","FAIL")
             }
         })
+    }
+    /*
+    fun onClickButton(view: View) {
+        if (myFav == false) {
+            val animator=ValueAnimator.ofFloat(0f,0.5f).setDuration(500)
+            animator.addUpdateListener {
+                binding.likeBtn.progress = it.animatedValue as Float
+            }
+            animator.start()
+            myFav = true
+        } else {
+            val animator = ValueAnimator.ofFloat(0.5f,1f).setDuration(500)
+            animator.addUpdateListener {
+                binding.likeBtn.progress = it.animatedValue as Float
+            }
+            animator.start()
+            myFav = false
+        }
+    }
+    */
+
+    fun clearSeason () {
+        binding.buttonSpring.isPressed=false
+        binding.buttonSummer.isPressed=false
+        binding.buttonFall.isPressed=false
+        binding.buttonWinter.isPressed=false
+    }
+
+    fun clearCategory() {
+        binding.button9.isPressed=false
+        binding.button10.isPressed=false
+        binding.button11.isPressed=false
+        binding.button12.isPressed=false
+        binding.button13.isPressed=false
+        binding.button14.isPressed=false
+        binding.button15.isPressed=false
+        binding.button16.isPressed=false
+        binding.button17.isPressed=false
+        binding.button18.isPressed=false
+        binding.button19.isPressed=false
+        binding.button20.isPressed=false
+        binding.button21.isPressed=false
+        binding.button22.isPressed=false
+        binding.button23.isPressed=false
+        binding.button24.isPressed=false
+        binding.button25.isPressed=false
     }
 
     fun modifyCloth() {

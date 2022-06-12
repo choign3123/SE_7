@@ -56,6 +56,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
 
     // 즐겨찾기 애니메이션 추가
-    implementation "com.airbnb.android:lottie:3.7.0"
+    implementation "com.airbnb.android:lottie:5.2.0"
 
 }

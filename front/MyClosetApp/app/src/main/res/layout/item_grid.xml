@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/gridViewImg"
-        android:layout_width="344dp"
-        android:layout_height="428dp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
         android:layout_gravity="center"
         tools:srcCompat="@tools:sample/avatars" />
 </LinearLayout>

@@ -16,7 +16,6 @@ import retrofit2.Response
 
 class ClothActivity : AppCompatActivity() {
 
-
     val binding by lazy { ActivityClothBinding.inflate(layoutInflater)}
 
     val retro = RetrofitService.create()
