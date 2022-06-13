@@ -59,4 +59,12 @@
         android:text="회원가입"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동 로그인"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="424dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

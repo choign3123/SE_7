@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+    // SharedPreference 사용 위함
+    id 'kotlin-android-extensions'
 }
 
 android {
