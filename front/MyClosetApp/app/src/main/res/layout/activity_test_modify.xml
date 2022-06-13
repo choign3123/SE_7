@@ -259,16 +259,4 @@
             android:text="겨울" />
     </LinearLayout>
 
-    <ToggleButton
-        android:id="@+id/toggleButtonFAV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="false"
-        android:textOff="즐겨찾기 해제"
-        android:textOn="즐겨찾기설정"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/clothImage"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
