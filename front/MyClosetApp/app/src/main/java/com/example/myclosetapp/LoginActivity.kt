@@ -1,5 +1,6 @@
 package com.example.myclosetapp
 
+import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,8 +23,8 @@ class LoginActivity : AppCompatActivity() {
     val retro = RetrofitService.create()
 
     // 로그인 데이터 선언
-    var id: String? = null
-    var pw: String? = null
+    var id: String? = AppData.prefs.getString("id", null)
+    var pw: String? = AppData.prefs.getString("pw", null)
     var loginData: LoginInfo = LoginInfo(id,pw)
 
 
@@ -31,6 +32,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(binding.root)
+
+        // SharedPreferences에 자동 로그인 정보가 있다면 바로 로그인
+        if(id != null && pw != null) { loginFunc(loginData) }
 
         // 비밀번호 입력 중 키보드에서 완료 버튼을 눌렀을 경우
         binding.loginPW.setOnEditorActionListener(MyEnterListener())
@@ -76,6 +80,13 @@ class LoginActivity : AppCompatActivity() {
 
 
     fun loginFunc(loginData: LoginInfo) {
+        // 자동 로그인을 선택했다면 해당 정보 SharedPreferences에 저장
+        if(binding.switchAutoLogin.isChecked) {
+            AppData.editor.putString("id", id)
+            AppData.editor.putString("pw", pw)
+            AppData.editor.apply()
+        }
+
 
         retro.postLoginInfo(loginData).enqueue(object: Callback<LoginResult> {
             override fun onResponse(call: Call<LoginResult>, response: Response<LoginResult>) {

@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+
+// ? SharedPreferences 관련 plugins 필요 없음??
 }
 
 android {

@@ -1,5 +1,6 @@
 package com.example.myclosetapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -36,5 +37,18 @@ class MypageActivity : AppCompatActivity() {
             }
 
         })
+
+        // 로그아웃 버튼 터치 시
+        // ? 자동 로그인이 아닌 그냥 로그인 시에는 ??? 일단 정상실행은 됨
+        binding.buttonLogout.setOnClickListener {
+            // 기존 SharedPreferences 내 정보 삭제
+            AppData.editor.remove("id")
+            AppData.editor.remove("pw")
+            AppData.editor.apply()
+
+            // 현재 모든 액티비티 종료 후 로그인 화면 이동
+            finishAffinity()
+            startActivity(Intent(this@MypageActivity, LoginActivity::class.java))
+        }
     }
 }
