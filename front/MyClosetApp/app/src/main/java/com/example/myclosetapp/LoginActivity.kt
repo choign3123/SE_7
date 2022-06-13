@@ -22,9 +22,9 @@ class LoginActivity : AppCompatActivity() {
     val retro = RetrofitService.create()
 
     // 로그인 데이터 선언
-    lateinit var loginData: LoginInfo
     var id: String? = null
     var pw: String? = null
+    var loginData: LoginInfo = LoginInfo(id,pw)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +36,10 @@ class LoginActivity : AppCompatActivity() {
         binding.loginPW.setOnEditorActionListener(MyEnterListener())
         // 로그인 버튼 클릭 시
         binding.loginLogin.setOnClickListener() {
-            loginFunc()
+            bindingFunc()
+            loginFunc(loginData)
         }
+
         // 회원가입 버튼 클릭 시
         binding.loginSignUp.setOnClickListener() {
             val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
@@ -52,24 +54,28 @@ class LoginActivity : AppCompatActivity() {
             var keyboard = false
 
             // 비밀번호 입력 중 키보드에서 완료 버튼을 눌렀을 경우
-            if (p1 == EditorInfo.IME_ACTION_DONE)   loginFunc()
+            if (p1 == EditorInfo.IME_ACTION_DONE)   {
+                bindingFunc()
+                loginFunc(loginData)
+            }
             return keyboard
         }
     }
 
-
-    fun loginFunc() {
+    fun bindingFunc() {
         // 아이디 바인딩
         id = binding.loginID.text.toString()
+        if(id!!.isEmpty()) id = null
         // 비밀번호 바인딩
         pw = binding.loginPW.text.toString()
-
-        // 입력이 없다면 null 처리
-        if(id!!.isEmpty()) id = null
         if(pw!!.isEmpty()) pw = null
 
         // 로그인 정보 초기화
         loginData = LoginInfo(id,pw)
+    }
+
+
+    fun loginFunc(loginData: LoginInfo) {
 
         retro.postLoginInfo(loginData).enqueue(object: Callback<LoginResult> {
             override fun onResponse(call: Call<LoginResult>, response: Response<LoginResult>) {
