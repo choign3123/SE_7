@@ -81,20 +81,20 @@ class TestModifyActivity : AppCompatActivity() {
             myCategory = intent.getStringExtra("category")
             mySeason = intent.getStringExtra("season")
             //하트 상태 반영
-            if (myFav == false) {
-                val animator=ValueAnimator.ofFloat(0.499999999999999999f,0.5f).setDuration(1)
+            if (myFav != true) {
+                val animator=ValueAnimator.ofFloat(0.9f,1f).setDuration(100)
                 animator.addUpdateListener {
                     binding.likeBtn.progress = it.animatedValue as Float
                 }
                 animator.start()
-                myFav = true
+                //myFav = true
             } else {
-                val animator = ValueAnimator.ofFloat(0.999999999999999999f,1f).setDuration(1)
+                val animator = ValueAnimator.ofFloat(0.4f,0.5f).setDuration(100)
                 animator.addUpdateListener {
                     binding.likeBtn.progress = it.animatedValue as Float
                 }
                 animator.start()
-                myFav = false
+                //myFav = false
             }
             //
             binding.buttonSave.setOnClickListener() {
