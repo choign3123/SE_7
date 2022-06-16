@@ -3,7 +3,19 @@ package se7.closet.src.test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+import org.springframework.data.repository.query.Param;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import se7.closet.config.BaseResponse;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @CrossOrigin(origins = "http://localhost:9000")
 @RestController
@@ -38,5 +50,33 @@ public class TestController {
 //        logger.error("ERROR Level 테스트");
 
         return "Success Test but no";
+    }
+
+    @ResponseBody
+    @GetMapping("display")
+    public ResponseEntity<Resource> showImg(@RequestParam("img") String imgName){
+        System.out.println("이미지 출력 테스트");
+
+        String path = "C:\\Users\\Choi ga na\\Desktop\\SE_7\\server\\";
+        String folder = "";
+
+        Resource resource = new FileSystemResource(path + imgName);
+        //이미지가 존재하지 않으면
+        if(!resource.exists()){
+            //HttpStatus.NOT_FOUND = 404 에러
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        HttpHeaders headers = new HttpHeaders();
+        Path imgPath;
+
+        try{
+            imgPath = Paths.get(path + imgName);
+            headers.add("Content-Type", Files.probeContentType(imgPath));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return new ResponseEntity<>(resource, headers, HttpStatus.OK);
     }
 }
