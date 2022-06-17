@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.example.myclosetapp.data.UserInfoResult
 import com.example.myclosetapp.databinding.ActivityMypageBinding
 import retrofit2.Call
@@ -42,9 +43,13 @@ class MypageActivity : AppCompatActivity() {
         // ? 자동 로그인이 아닌 그냥 로그인 시에는 ??? 일단 정상실행은 됨
         binding.buttonLogout.setOnClickListener {
             // 기존 SharedPreferences 내 정보 삭제
-            AppData.editor.remove("id")
-            AppData.editor.remove("pw")
+//            AppData.editor.remove("id")
+//            AppData.editor.remove("pw")
+            AppData.editor.clear()
             AppData.editor.apply()
+
+            Log.d("MYTAG", AppData.prefs.getString("id", null).toString())
+            Log.d("MYTAG", AppData.prefs.getString("pw", null).toString())
 
             // 현재 모든 액티비티 종료 후 로그인 화면 이동
             finishAffinity()

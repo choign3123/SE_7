@@ -33,6 +33,9 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        Log.d("MYTAG", AppData.prefs.getString("id", null).toString())
+        Log.d("MYTAG", AppData.prefs.getString("pw", null).toString())
+
         // SharedPreferences에 자동 로그인 정보가 있다면 바로 로그인
         if(id != null && pw != null) { loginFunc(loginData) }
 

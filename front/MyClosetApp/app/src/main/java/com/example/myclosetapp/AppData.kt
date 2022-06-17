@@ -14,6 +14,8 @@ class AppData: Application() {
     override fun onCreate() {
         prefs = getSharedPreferences("autoLogin", MODE_PRIVATE)
         editor = prefs.edit()
+        editor.clear()
+        editor.apply()
         super.onCreate()
     }
 }
