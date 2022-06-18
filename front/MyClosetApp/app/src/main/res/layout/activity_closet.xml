@@ -7,6 +7,7 @@
     tools:context=".ClosetActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="horizontal"
@@ -45,8 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="100dp"
-        android:text="옷장 최신화"
         android:fontFamily="@font/diary"
+        android:text="옷장 최신화"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,13 +66,15 @@
     <GridView
         android:id="@+id/gridView"
         android:layout_width="394dp"
-        android:layout_height="427dp"
-        android:layout_marginTop="76dp"
-        android:numColumns="2"
+        android:layout_height="0dp"
+        android:horizontalSpacing="1dp"
+        android:numColumns="3"
+        android:verticalSpacing="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:listitem="@layout/item_grid" />
 
     <Button
@@ -80,8 +83,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="100dp"
-        android:text="카메라"
         android:fontFamily="@font/diary"
+        android:text="카메라"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
