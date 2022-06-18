@@ -44,6 +44,11 @@ class ClothActivity : AppCompatActivity() {
                 binding.textBookmark.text = cloth.bookmark.toString()
                 binding.textCategory.text = cloth.category
                 binding.textSeason.text = cloth.season
+                if (cloth.bookmark == true) {
+                    binding.textBookmark.text = "즐겨찾기 등록됨"
+                } else {
+                    binding.textBookmark.text = "즐겨찾기 해제됨"
+                }
             }
 
             override fun onFailure(call: Call<ClothResult>, t: Throwable) {
