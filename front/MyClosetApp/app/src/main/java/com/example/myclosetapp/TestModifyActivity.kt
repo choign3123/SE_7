@@ -130,7 +130,7 @@ binding.button21.setOnClickListener(){myCategory=binding.button21.text.toString(
 binding.button22.setOnClickListener(){myCategory=binding.button22.text.toString();clearCategory();binding.button22.isEnabled=false}
 binding.button23.setOnClickListener(){myCategory=binding.button23.text.toString();clearCategory();binding.button23.isEnabled=false}
 binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString();clearCategory();binding.button24.isEnabled=false}
-binding.button25.setOnClickListener(){myCategory=binding.button25.text.toString();clearCategory();binding.button25.isEnabled=false}
+
 
         binding.likeBtn.setOnClickListener {
             if (myFav == false) {
@@ -192,7 +192,7 @@ binding.button25.setOnClickListener(){myCategory=binding.button25.text.toString(
         binding.button22.isEnabled=true
         binding.button23.isEnabled=true
         binding.button24.isEnabled=true
-        binding.button25.isEnabled=true
+
     }
 
     fun modifyCloth() {
