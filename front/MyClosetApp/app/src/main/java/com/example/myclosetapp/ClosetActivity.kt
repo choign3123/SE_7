@@ -46,6 +46,8 @@ class ClosetActivity : AppCompatActivity() {
 
     val retro = RetrofitService.create()
 
+    var waitTime = 0L
+
     // !!! 뒤로가기하면 바로 로그인 화면으로 넘어감! 경고 메세지 출력?
     // ??? userIdx 0번 존재?
     // ??? 기존 clthUrl 다 안 됨? 특정 앱에서 된 것만 됨? // 밑과 같은 경로는 앱이 달라서 안되는거임!(cameraandgallery)
@@ -175,6 +177,15 @@ class ClosetActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    override fun onBackPressed() {
+        if(System.currentTimeMillis() - waitTime >=1500 ) {
+            waitTime = System.currentTimeMillis()
+            Toast.makeText(this,"뒤로가기 버튼을 한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show()
+        } else {
+            finish() // 액티비티 종료
+        }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
