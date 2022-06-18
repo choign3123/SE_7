@@ -6,27 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".TestModifyActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/likeBtn"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/clothImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="false"
-        app:lottie_fileName="heart.json"
-        app:lottie_loop="false" />
-
     <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="350dp"
+        android:layout_width="373dp"
+        android:layout_height="194dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
 
 
         <TableRow
@@ -34,27 +20,30 @@
             android:layout_height="match_parent">
 
             <Button
-                android:clickable="true"
-                android:background="@drawable/selector_button"
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/selector_button"
+                android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="상의" />
 
             <Button
-                android:clickable="true"
-                android:background="@drawable/selector_button"
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/selector_button"
+                android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="하의" />
 
             <Button
-                android:clickable="true"
-                android:background="@drawable/selector_button"
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/selector_button"
+                android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="아우터" />
 
             <Button
@@ -63,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="원피스/세트" />
         </TableRow>
 
@@ -76,7 +66,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
-                android:text="기타" />
+                android:fontFamily="@font/diary"
+                android:text="자켓" />
 
             <Button
                 android:id="@+id/button14"
@@ -84,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="티셔츠" />
 
             <Button
@@ -92,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="니트" />
 
             <Button
@@ -100,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="셔츠" />
         </TableRow>
 
@@ -113,14 +107,16 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="후드" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="맨투맨" />
 
             <Button
@@ -129,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="스커트" />
 
             <Button
@@ -137,6 +134,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="팬츠" />
         </TableRow>
 
@@ -150,6 +148,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="코트" />
 
             <Button
@@ -158,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="패딩" />
 
             <Button
@@ -166,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="집업" />
 
             <Button
@@ -174,40 +175,34 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="가디건" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:text="자켓" />
-        </TableRow>
+            android:layout_height="match_parent" />
     </TableLayout>
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="@font/diary"
         android:text="저장"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/clothImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="32dp"
-        android:scaleType="centerCrop"
+        android:layout_width="253dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="36dp"
         android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -231,7 +226,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="봄" />
+            android:text="봄"
+            android:fontFamily="@font/diary"/>
 
         <Button
             android:clickable="true"
@@ -240,7 +236,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="여름" />
+            android:text="여름"
+            android:fontFamily="@font/diary"/>
 
         <Button
             android:clickable="true"
@@ -249,7 +246,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="가을" />
+            android:text="가을"
+            android:fontFamily="@font/diary"/>
 
         <Button
             android:clickable="true"
@@ -258,7 +256,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="겨울" />
+            android:text="겨울"
+            android:fontFamily="@font/diary"/>
     </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/likeBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        android:layout_marginTop="116dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="heart.json"
+        app:lottie_loop="false" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
