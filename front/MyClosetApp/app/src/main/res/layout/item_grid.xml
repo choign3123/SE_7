@@ -5,7 +5,9 @@
     android:id="@+id/gridViewLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@drawable/border_layout"
+    android:orientation="vertical"
+    android:padding="0.1dp">
 
     <ImageView
         android:id="@+id/gridViewImg"

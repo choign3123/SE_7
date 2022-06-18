@@ -65,11 +65,11 @@
 
     <GridView
         android:id="@+id/gridView"
-        android:layout_width="394dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:horizontalSpacing="1dp"
+        android:background="@drawable/border_layout"
         android:numColumns="3"
-        android:verticalSpacing="1dp"
+        android:padding="1dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
