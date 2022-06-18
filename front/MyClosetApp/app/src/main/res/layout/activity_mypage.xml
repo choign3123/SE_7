@@ -10,12 +10,12 @@
         android:id="@+id/textID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:text="TextView"
+        android:layout_marginTop="360dp"
         android:fontFamily="@font/diary"
+        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,25 +23,27 @@
         android:id="@+id/textNumOfCloth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/diary"
+        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textID" />
+        app:layout_constraintTop_toBottomOf="@+id/textName" />
 
     <TextView
         android:id="@+id/textName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/diary"
+        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNumOfCloth" />
+        app:layout_constraintTop_toBottomOf="@+id/textID" />
 
     <TextView
         android:id="@+id/textView4"
@@ -59,12 +61,12 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginTop="364dp"
         android:fontFamily="@font/diary"
         android:text="아이디"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,29 +74,27 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
-        android:text="이름"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/diary"
+        android:text="이름"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textName"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
-        android:text="옷 개수"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/diary"
+        android:text="옷 개수"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/textNumOfCloth"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
         android:id="@+id/buttonLogout"
