@@ -11,11 +11,8 @@
 
     <uses-feature android:name="android.hardware.camera" />
 
-    <!--
-    AppData class 이름 등록???
-    android:name=".AppData"
-    -->
     <application
+        android:name=".AppData"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,10 +21,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyClosetApp"
-        tools:targetApi="31"
-
-        android:name=".AppData"
-        >
+        tools:targetApi="31">
+        <activity
+            android:name=".SearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
         <activity
             android:name=".BookmarkActivity"
             android:exported="false" />

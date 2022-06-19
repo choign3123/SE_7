@@ -37,7 +37,6 @@ import java.io.File
 class ClosetActivity : AppCompatActivity() {
 
     val binding by lazy { ActivityClosetBinding.inflate(layoutInflater)}
-    val binding_item by lazy {ItemGridBinding.inflate(layoutInflater)}
 
     var photoUri:Uri? = null
 
@@ -48,16 +47,11 @@ class ClosetActivity : AppCompatActivity() {
 
     var waitTime = 0L
 
-    // !!! 뒤로가기하면 바로 로그인 화면으로 넘어감! 경고 메세지 출력?
-    // ??? userIdx 0번 존재?
-    // ??? 기존 clthUrl 다 안 됨? 특정 앱에서 된 것만 됨? // 밑과 같은 경로는 앱이 달라서 안되는거임!(cameraandgallery)
-    // content://com.example.cameraandgallery.provider/my_images/IMG_1147091379265117107.jpg
-
     // !!! 옷 등록 시 바로 갤러리로 들어가게끔해야됨 파일관리자의 최근 이미지 선택 시 이미지 불러올 때 런타임에러 뜸!!
     // !!! baseAdapter -> recyclerView로 변경 스크롤 시 렉 걸림
 
     lateinit var cameraPermission: ActivityResultLauncher<String>
-    lateinit var storagePermission: ActivityResultLauncher<String>
+    //lateinit var storagePermission: ActivityResultLauncher<String>
 
     lateinit var cameraLauncher: ActivityResultLauncher<Uri>
     lateinit var galleryLauncher: ActivityResultLauncher<String>
@@ -173,6 +167,12 @@ class ClosetActivity : AppCompatActivity() {
 
         binding.buttonBookmark.setOnClickListener() {
             val intent = Intent(this@ClosetActivity, BookmarkActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+        }
+
+        binding.buttonSearch.setOnClickListener() {
+            val intent = Intent(this@ClosetActivity, SearchActivity::class.java)
             intent.putExtra("userIdx", userIdx)
             startActivity(intent)
         }

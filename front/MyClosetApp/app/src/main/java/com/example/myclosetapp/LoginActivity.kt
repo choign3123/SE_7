@@ -36,6 +36,14 @@ class LoginActivity : AppCompatActivity() {
         Log.d("MYTAG", AppData.prefs.getString("id", null).toString())
         Log.d("MYTAG", AppData.prefs.getString("pw", null).toString())
 
+        /*-----------------------------------------------------------------*/
+        // !!테스트용!! 로그인 생략
+        loginData = LoginInfo("test0101", "0101test")
+        loginFunc(loginData)
+        /* -----------------------------------------------------------------*/
+
+
+
         // SharedPreferences에 자동 로그인 정보가 있다면 바로 로그인
         if(id != null && pw != null) { loginFunc(loginData) }
 

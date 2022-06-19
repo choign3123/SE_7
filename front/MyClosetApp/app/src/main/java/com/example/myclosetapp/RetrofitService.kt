@@ -48,6 +48,7 @@ interface RetrofitService {
         @Query("clthIdx") clthIdx: Int?
     ): Call<ClothResult>
 
+    // response body 변경?
     // 즐겨찾기 조회
     @GET("/clths/bookmark/{userIdx}")
     fun getBookmark(
@@ -68,6 +69,15 @@ interface RetrofitService {
         @Query("clthIdx") clthIdx: Int?,
         @Body jsonparams: ModifyInfo
     ): Call<ModifyResult>
+
+    // 옷 검색
+    @GET ("/clths/search/{userIdx}")
+    fun searchCloth(
+        @Path("userIdx") userIdx: Int?,
+        @Query("season") season: String?,
+        @Query("category") category: String?,
+        @Query("bm") bm: Boolean?
+    ): Call<AllClothResult>
 
 
     // 싱글톤
