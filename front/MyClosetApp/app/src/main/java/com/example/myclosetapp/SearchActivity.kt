@@ -3,7 +3,7 @@ package com.example.myclosetapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+//import android.util.Log
 import com.example.myclosetapp.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
@@ -22,33 +22,29 @@ class SearchActivity : AppCompatActivity() {
 
         userIdx = intent.getIntExtra("userIdx", 0)
 
-        binding.buttonSpring.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.buttonSummer.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.buttonFall.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.buttonWinter.setOnCheckedChangeListener { _, isChecked ->  }
+        binding.buttonSpring.setOnClickListener(){clearSeason();binding.buttonSpring.isEnabled=false}
+        binding.buttonSummer.setOnClickListener(){clearSeason();binding.buttonSummer.isEnabled=false}
+        binding.buttonFall.setOnClickListener(){clearSeason();binding.buttonFall.isEnabled=false}
+        binding.buttonWinter.setOnClickListener(){clearSeason();binding.buttonWinter.isEnabled=false}
 
-        binding.button9.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button10.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button11.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button12.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button13.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button14.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button15.setOnCheckedChangeListener { _, isChecked ->  }
-        binding.button16.setOnClickListener(){binding.button16.isEnabled=false}
-        binding.button17.setOnClickListener(){binding.button17.isEnabled=false}
-        binding.button18.setOnClickListener(){binding.button18.isEnabled=false}
-        binding.button19.setOnClickListener(){binding.button19.isEnabled=false}
-        binding.button20.setOnClickListener(){binding.button20.isEnabled=false}
-        binding.button21.setOnClickListener(){binding.button21.isEnabled=false}
-        binding.button22.setOnClickListener(){binding.button22.isEnabled=false}
-        binding.button23.setOnClickListener(){binding.button23.isEnabled=false}
-        binding.button24.setOnClickListener(){binding.button24.isEnabled=false}
-        binding.button25.setOnClickListener(){binding.button25.isEnabled=false}
+        binding.button9.setOnClickListener(){clearCategory();binding.button9.isEnabled=false}
+        binding.button10.setOnClickListener(){clearCategory();binding.button10.isEnabled=false}
+        binding.button11.setOnClickListener(){clearCategory();binding.button11.isEnabled=false}
+        binding.button12.setOnClickListener(){clearCategory();binding.button12.isEnabled=false}
+        binding.button13.setOnClickListener(){clearCategory();binding.button13.isEnabled=false}
+        binding.button14.setOnClickListener(){clearCategory();binding.button14.isEnabled=false}
+        binding.button15.setOnClickListener(){clearCategory();binding.button15.isEnabled=false}
+        binding.button16.setOnClickListener(){clearCategory();binding.button16.isEnabled=false}
+        binding.button17.setOnClickListener(){clearCategory();binding.button17.isEnabled=false}
+        binding.button18.setOnClickListener(){clearCategory();binding.button18.isEnabled=false}
+        binding.button19.setOnClickListener(){clearCategory();binding.button19.isEnabled=false}
+        binding.button20.setOnClickListener(){clearCategory();binding.button20.isEnabled=false}
+        binding.button21.setOnClickListener(){clearCategory();binding.button21.isEnabled=false}
+        binding.button22.setOnClickListener(){clearCategory();binding.button22.isEnabled=false}
+        binding.button23.setOnClickListener(){clearCategory();binding.button23.isEnabled=false}
+        binding.button24.setOnClickListener(){clearCategory();binding.button24.isEnabled=false}
 
         binding.switchBM.setOnCheckedChangeListener { _, isChecked ->  }
-
-
-
 
         binding.buttonGo.setOnClickListener() {
             // 초기화 // 검색결과에서 다시 검색 시
@@ -70,14 +66,23 @@ class SearchActivity : AppCompatActivity() {
             if(binding.button13.isChecked == true) myCategory = myCategory +" "+binding.button13.textOn
             if(binding.button14.isChecked == true) myCategory = myCategory +" "+binding.button14.textOn
             if(binding.button15.isChecked == true) myCategory = myCategory +" "+binding.button15.textOn
+            if(binding.button16.isChecked == true) myCategory = myCategory +" "+binding.button16.textOn
+            if(binding.button17.isChecked == true) myCategory = myCategory +" "+binding.button17.textOn
+            if(binding.button18.isChecked == true) myCategory = myCategory +" "+binding.button18.textOn
+            if(binding.button19.isChecked == true) myCategory = myCategory +" "+binding.button19.textOn
+            if(binding.button20.isChecked == true) myCategory = myCategory +" "+binding.button20.textOn
+            if(binding.button21.isChecked == true) myCategory = myCategory +" "+binding.button21.textOn
+            if(binding.button22.isChecked == true) myCategory = myCategory +" "+binding.button22.textOn
+            if(binding.button23.isChecked == true) myCategory = myCategory +" "+binding.button23.textOn
+            if(binding.button24.isChecked == true) myCategory = myCategory +" "+binding.button24.textOn
 
             // favorite
-            if(binding.switchBM.isChecked == true) myFav =true
+            if(binding.switchBM.isChecked == true) myFav = true
             else myFav = false
 
             // 선택이 없다면 공백 보내기 선택이 있다면 공백 지우기
             if(mySeason != " ") mySeason = mySeason!!.trim()
-            if(myCategory != " ") myCategory =myCategory!!.trim()
+            if(myCategory != " ") myCategory = myCategory!!.trim()
 
             val intent = Intent(this@SearchActivity, SearchResultActivity::class.java)
             intent.putExtra("userIdx", userIdx)
@@ -90,6 +95,31 @@ class SearchActivity : AppCompatActivity() {
 
     }
 
+    fun clearSeason() {
+        binding.buttonSpring.isEnabled=true
+        binding.buttonSummer.isEnabled=true
+        binding.buttonFall.isEnabled=true
+        binding.buttonWinter.isEnabled=true
+    }
 
+    fun clearCategory() {
+        binding.button9.isEnabled=true
+        binding.button10.isEnabled=true
+        binding.button11.isEnabled=true
+        binding.button12.isEnabled=true
+        binding.button13.isEnabled=true
+        binding.button14.isEnabled=true
+        binding.button15.isEnabled=true
+        binding.button16.isEnabled=true
+        binding.button17.isEnabled=true
+        binding.button18.isEnabled=true
+        binding.button19.isEnabled=true
+        binding.button20.isEnabled=true
+        binding.button21.isEnabled=true
+        binding.button22.isEnabled=true
+        binding.button23.isEnabled=true
+        binding.button24.isEnabled=true
+
+    }
 
 }
