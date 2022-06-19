@@ -17,7 +17,7 @@
 
         <ImageButton
             android:id="@+id/buttonSearch"
-            android:layout_width="139dp"
+            android:layout_width="133dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/search"
@@ -25,7 +25,7 @@
 
         <ImageButton
             android:id="@+id/buttonBookmark"
-            android:layout_width="144dp"
+            android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/heart"
@@ -69,13 +69,16 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/border_layout"
-        android:numColumns="3"
+        android:horizontalSpacing="15dp"
+        android:numColumns="2"
         android:padding="1dp"
+        android:verticalSpacing="15dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_grid" />
 
     <Button

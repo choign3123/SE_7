@@ -11,7 +11,7 @@
 
     <ImageView
         android:id="@+id/gridViewImg"
-        android:layout_width="232dp"
+        android:layout_width="233dp"
         android:layout_height="229dp"
         android:layout_gravity="center"
         android:adjustViewBounds="true"

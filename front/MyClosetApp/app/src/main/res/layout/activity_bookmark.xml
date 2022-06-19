@@ -8,12 +8,12 @@
 
     <GridView
         android:id="@+id/gridViewFav"
-        android:layout_width="408dp"
-        android:layout_height="583dp"
+        android:layout_width="411dp"
+        android:layout_height="562dp"
         android:layout_marginTop="32dp"
-        android:horizontalSpacing="1dp"
-        android:numColumns="3"
-        android:verticalSpacing="1dp"
+        android:horizontalSpacing="15dp"
+        android:numColumns="2"
+        android:verticalSpacing="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
