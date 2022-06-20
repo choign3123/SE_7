@@ -36,11 +36,11 @@ class LoginActivity : AppCompatActivity() {
         Log.d("MYTAG", AppData.prefs.getString("id", null).toString())
         Log.d("MYTAG", AppData.prefs.getString("pw", null).toString())
 
-        /*-----------------------------------------------------------------*/
-        // !!테스트용!! 로그인 생략
-        loginData = LoginInfo("test0101", "0101test")
-        loginFunc(loginData)
-        /* -----------------------------------------------------------------*/
+//        /*-----------------------------------------------------------------*/
+//        // !!테스트용!! 로그인 생략
+//        loginData = LoginInfo("test0101", "0101test")
+//        loginFunc(loginData)
+//        /* -----------------------------------------------------------------*/
 
 
 
