@@ -31,9 +31,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/diary"
+            android:text="홈 버튼\n아이콘으로 변경" />
+
         <ImageButton
             android:id="@+id/buttonSearch"
-            android:layout_width="133dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/search"
@@ -41,7 +50,7 @@
 
         <ImageButton
             android:id="@+id/buttonBookmark"
-            android:layout_width="137dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/heart"
@@ -49,24 +58,14 @@
 
         <ImageButton
             android:id="@+id/buttonMypage"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/mypage"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/buttonUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="100dp"
-        android:fontFamily="@font/diary"
-        android:text="옷장 최신화"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"

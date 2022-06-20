@@ -55,5 +55,37 @@ class MypageActivity : AppCompatActivity() {
             finishAffinity()
             startActivity(Intent(this@MypageActivity, LoginActivity::class.java))
         }
+
+        binding.buttonUpdate.setOnClickListener {
+//            getAllCloth()
+//            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
+            // 홈 화면으로 이동
+            // 아니면 새로운 홈 화면 생성?
+            val intent = Intent(this, ClosetActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.buttonMypage.setOnClickListener() {
+//            val intent = Intent(this, MypageActivity::class.java)
+//            intent.putExtra("userIdx", userIdx)
+//            startActivity(intent)
+            Toast.makeText(this,"이미 마이페이지입니다!!!",Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonBookmark.setOnClickListener() {
+            val intent = Intent(this, BookmarkActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.buttonSearch.setOnClickListener() {
+            val intent = Intent(this, SearchActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+        }
     }
 }

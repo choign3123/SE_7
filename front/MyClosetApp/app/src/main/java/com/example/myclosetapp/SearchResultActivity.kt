@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myclosetapp.data.AllClothObject
@@ -65,5 +66,40 @@ class SearchResultActivity : AppCompatActivity() {
             }
 
         })
+
+        binding.buttonUpdate.setOnClickListener {
+//            getAllCloth()
+//            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
+            // 홈 화면으로 이동
+            // 아니면 새로운 홈 화면 생성?
+            val intent = Intent(this, ClosetActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.buttonMypage.setOnClickListener() {
+            val intent = Intent(this, MypageActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.buttonBookmark.setOnClickListener() {
+            val intent = Intent(this, BookmarkActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+        }
+
+        binding.buttonSearch.setOnClickListener() {
+//            val intent = Intent(this, SearchActivity::class.java)
+//            intent.putExtra("userIdx", userIdx)
+//            startActivity(intent)
+//            finish()
+            // 고려
+            Toast.makeText(this,"이미 검색 화면입니다!!!",Toast.LENGTH_SHORT).show()
+
+        }
     }
 }

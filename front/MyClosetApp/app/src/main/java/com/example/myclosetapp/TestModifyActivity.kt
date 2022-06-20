@@ -60,6 +60,7 @@ class TestModifyActivity : AppCompatActivity() {
                 // 화면 전환 // ??? 옷장 화면으로? 개별 옷 화면으로?
                 val intent = Intent(this, ClosetActivity::class.java)
                 startActivity(intent)
+                finish()
             }
         }
 

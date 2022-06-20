@@ -55,6 +55,7 @@ class SignUpActivity : AppCompatActivity() {
                         .show()
                     val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
                 else {
                     Toast.makeText(this@SignUpActivity, response.body()?.message, Toast.LENGTH_SHORT)
