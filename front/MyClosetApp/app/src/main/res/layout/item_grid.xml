@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gridViewLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
     android:background="@drawable/border_layout"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="0.1dp">
+    android:padding="0.5dp">
 
     <ImageView
         android:id="@+id/gridViewImg"
-        android:layout_width="233dp"
-        android:layout_height="229dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
 

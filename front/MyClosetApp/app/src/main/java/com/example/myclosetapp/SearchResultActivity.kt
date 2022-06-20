@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import androidx.core.net.toUri
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myclosetapp.data.AllClothObject
 import com.example.myclosetapp.data.AllClothResult
 import com.example.myclosetapp.databinding.ActivitySearchResultBinding
@@ -47,12 +48,15 @@ class SearchResultActivity : AppCompatActivity() {
 
         retro.searchCloth(userIdx, season, category, bm).enqueue(object : Callback<AllClothResult> {
             override fun onResponse(call: Call<AllClothResult>, response: Response<AllClothResult>) {
-                binding.gridViewSearch.adapter =
-                    GridViewAdapter(this@SearchResultActivity, userIdx ,response.body()!!.result)
+                val listManager = GridLayoutManager(this@SearchResultActivity, 2)
+                var listAdapter =
+                    ListAdapterGrid(this@SearchResultActivity, userIdx, response.body()!!.result)
 
-                Log.d("MYTAG", response.body()!!.result.toString())
-                if(response.body()?.result == null)
-                    Log.d("MYTAG", "yeah null it is")
+                var recyclerList = binding.gridViewSearch.apply {
+                    setHasFixedSize(true)
+                    layoutManager = listManager
+                    adapter = listAdapter
+                }
             }
 
             override fun onFailure(call: Call<AllClothResult>, t: Throwable) {

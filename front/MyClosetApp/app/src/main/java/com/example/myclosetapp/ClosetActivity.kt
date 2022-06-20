@@ -23,6 +23,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.core.net.toUri
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myclosetapp.data.AllClothObject
 import com.example.myclosetapp.data.AllClothResult
 import com.example.myclosetapp.data.ClothInfo
@@ -65,6 +66,7 @@ class ClosetActivity : AppCompatActivity() {
 
         userIdx = intent.getIntExtra("userIdx", 0)
         Log.d("MYTAG", userIdx.toString())
+
 
 
 //        storagePermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
@@ -248,8 +250,17 @@ class ClosetActivity : AppCompatActivity() {
         // 전체 옷 조회
         retro.getAllCloth(userIdx).enqueue(object: Callback<AllClothResult>{
             override fun onResponse(call: Call<AllClothResult>, response: Response<AllClothResult>) {
-                binding.gridView.adapter =
-                    GridViewAdapter(this@ClosetActivity, userIdx, response.body()!!.result)
+                val listManager = GridLayoutManager(this@ClosetActivity,2)
+                var listAdapter = ListAdapterGrid(this@ClosetActivity, userIdx, response.body()!!.result)
+
+                var recyclerList = binding.gridView.apply {
+                    setHasFixedSize(true)
+                    layoutManager = listManager
+                    adapter = listAdapter
+                }
+
+//                binding.gridView.adapter =
+//                    GridViewAdapter(this@ClosetActivity, userIdx, response.body()!!.result)
 
                 Log.d("MYTAG", response.body()!!.result.toString())
             }

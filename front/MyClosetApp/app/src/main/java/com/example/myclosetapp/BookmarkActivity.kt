@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import androidx.core.net.toUri
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.myclosetapp.data.AllClothObject
 import com.example.myclosetapp.data.AllClothResult
 
@@ -34,8 +35,14 @@ class BookmarkActivity : AppCompatActivity() {
         userIdx = intent.getIntExtra("userIdx", 0)
         retro.getBookmark(userIdx).enqueue(object: Callback<AllClothResult>{
             override fun onResponse(call: Call<AllClothResult>, response: Response<AllClothResult>) {
-                binding.gridViewFav.adapter =
-                    GridViewAdapter(this@BookmarkActivity, userIdx, response.body()!!.result)
+                val listManager = GridLayoutManager(this@BookmarkActivity,2)
+                var listAdapter = ListAdapterGrid(this@BookmarkActivity, userIdx, response.body()!!.result)
+
+                var recyclerList = binding.gridViewFav.apply {
+                    setHasFixedSize(true)
+                    layoutManager = listManager
+                    adapter = listAdapter
+                }
             }
 
             override fun onFailure(call: Call<AllClothResult>, t: Throwable) {
