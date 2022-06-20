@@ -77,19 +77,32 @@ class TestModifyActivity : AppCompatActivity() {
 
             //하트 상태 반영
             if (myFav != true) {
-                val animator=ValueAnimator.ofFloat(0.9f,1f).setDuration(100)
+                val animator=ValueAnimator.ofFloat(0.99f,1f).setDuration(10)
                 animator.addUpdateListener {
                     binding.likeBtn.progress = it.animatedValue as Float
                 }
                 animator.start()
             }
             else {
-                val animator = ValueAnimator.ofFloat(0.4f,0.5f).setDuration(100)
+                val animator = ValueAnimator.ofFloat(0.49f,0.5f).setDuration(10)
                 animator.addUpdateListener {
                     binding.likeBtn.progress = it.animatedValue as Float
                 }
                 animator.start()
             }
+
+            //선택된 계절,카테고리에 해당하는 버튼 눌러놓기
+            if (mySeason == binding.buttonSpring.text) {
+                clearSeason();binding.buttonSpring.isEnabled=false
+            } else if (mySeason == binding.buttonSummer.text) {
+                clearSeason();binding.buttonSummer.isEnabled=false
+            } else if (mySeason == binding.buttonFall.text) {
+                clearSeason();binding.buttonFall.isEnabled=false
+            } else if (mySeason == binding.buttonWinter.text) {
+                clearSeason();binding.buttonWinter.isEnabled=false
+            }
+
+            whichCategory(myCategory)
 
             //저장 버튼 클릭 시
             binding.buttonSave.setOnClickListener() {
@@ -192,7 +205,42 @@ binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString(
         binding.button22.isEnabled=true
         binding.button23.isEnabled=true
         binding.button24.isEnabled=true
+    }
 
+    fun whichCategory(myCate: String?) {
+        if (myCate == binding.button9.text) {
+            clearCategory();binding.button9.isEnabled = false
+        } else if (myCate == binding.button10.text) {
+            clearCategory();binding.button10.isEnabled = false
+        } else if (myCate == binding.button11.text) {
+            clearCategory();binding.button11.isEnabled = false
+        } else if (myCate == binding.button12.text) {
+            clearCategory();binding.button12.isEnabled = false
+        } else if (myCate == binding.button13.text) {
+            clearCategory();binding.button13.isEnabled = false
+        } else if (myCate == binding.button14.text) {
+            clearCategory();binding.button14.isEnabled = false
+        } else if (myCate == binding.button15.text) {
+            clearCategory();binding.button15.isEnabled = false
+        } else if (myCate == binding.button16.text) {
+            clearCategory();binding.button16.isEnabled = false
+        } else if (myCate == binding.button17.text) {
+            clearCategory();binding.button17.isEnabled = false
+        } else if (myCate == binding.button18.text) {
+            clearCategory();binding.button18.isEnabled = false
+        } else if (myCate == binding.button19.text) {
+            clearCategory();binding.button19.isEnabled = false
+        } else if (myCate == binding.button20.text) {
+            clearCategory();binding.button20.isEnabled = false
+        } else if (myCate == binding.button21.text) {
+            clearCategory();binding.button21.isEnabled = false
+        } else if (myCate == binding.button22.text) {
+            clearCategory();binding.button22.isEnabled = false
+        } else if (myCate == binding.button23.text) {
+            clearCategory();binding.button23.isEnabled = false
+        } else if (myCate == binding.button24.text) {
+            clearCategory();binding.button24.isEnabled = false
+        }
     }
 
     fun modifyCloth() {
