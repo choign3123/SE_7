@@ -24,7 +24,7 @@ class SearchResultActivity : AppCompatActivity() {
 
     val retro = RetrofitService.create()
 
-    var userIdx : Int? = 6
+    var userIdx : Int? = null
     var season : String? = null
     var category : String? = null
     var bm : Boolean? = null

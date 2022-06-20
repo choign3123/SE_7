@@ -12,8 +12,8 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import androidx.core.net.toUri
 import com.example.myclosetapp.data.AllClothObject
-import com.example.myclosetapp.data.BookmarkObject
-import com.example.myclosetapp.data.BookmarkResult
+import com.example.myclosetapp.data.AllClothResult
+
 import com.example.myclosetapp.databinding.ActivityBookmarkBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -32,20 +32,20 @@ class BookmarkActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         userIdx = intent.getIntExtra("userIdx", 0)
-        retro.getBookmark(userIdx).enqueue(object: Callback<BookmarkResult>{
-            override fun onResponse(call: Call<BookmarkResult>, response: Response<BookmarkResult>) {
+        retro.getBookmark(userIdx).enqueue(object: Callback<AllClothResult>{
+            override fun onResponse(call: Call<AllClothResult>, response: Response<AllClothResult>) {
                 binding.gridViewFav.adapter =
                     GridViewAdapter(this@BookmarkActivity, response.body()!!.result)
             }
 
-            override fun onFailure(call: Call<BookmarkResult>, t: Throwable) {
+            override fun onFailure(call: Call<AllClothResult>, t: Throwable) {
                 Log.d("MYTAG",t.message.toString())
                 Log.d("MYTAG","FAIL")            }
 
         })
     }
 
-    inner class GridViewAdapter(val context: Context, val img_list: ArrayList<BookmarkObject>): BaseAdapter() {
+    inner class GridViewAdapter(val context: Context, val img_list: ArrayList<AllClothObject>): BaseAdapter() {
 
 
         override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
@@ -55,7 +55,6 @@ class BookmarkActivity : AppCompatActivity() {
             // binding_item.gridViewImg.setImageURI(img_list[p0]!!.clthImgUrl.toUri())
             val img = grid_View.findViewById<ImageView>(R.id.gridViewImg)
             img.setImageURI(img_list[p0].clthImgUrl.toUri())
-
             // 그리드뷰에서 개별 옷 클릭 시
             img.setOnClickListener() {
                 val intent = Intent( context ,ClothActivity::class.java)

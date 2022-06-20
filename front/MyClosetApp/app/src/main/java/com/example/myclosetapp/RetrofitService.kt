@@ -53,7 +53,7 @@ interface RetrofitService {
     @GET("/clths/bookmark/{userIdx}")
     fun getBookmark(
         @Path("userIdx") userIdx: Int?
-    ): Call<BookmarkResult>
+    ): Call<AllClothResult>
 
     // 옷 삭제
     @DELETE("/clths/{userIdx}")
