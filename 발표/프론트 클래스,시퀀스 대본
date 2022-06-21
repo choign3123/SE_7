@@ -1,0 +1,17 @@
+프론트의 전체적인 클래스 구조를 보겠습니다.
+먼저 옷이나 사용자 정보 등 앱에서 다루는 데이터들을 대부분 백과의 통신에서 받아오고 지우고 수정하기때문에 이에 대한 통신 인터페이스 retrofit이 있습니다.
+그리고 앱 시작 시 나오는 loginActivity
+로그인을 할 아이디가 없다면 이를 만들 수 있는 signupActivity
+
+로그인 이후 사용자의 옷장을 보여줄 closetAct
+옷장에서 옷을 클릭 시 이에 대한 정보를 보여줄 clothAct
+해당 정보를 수정할 시 보여지는 modifyAct
+그리고 옷에 대한 데이터를 이용해 검색할 수 있는 searchAct
+해당 결과를 보여주는 searchResultAct
+즐겨찾기된 옷을 보여주는 bookmarkAct
+마지막으로 mypageAct가 있습니다.
+클래스에 Actvitiy가 붙지 않은 것들은 데이터 클래스로 해당 화면에서 통신 시 필요한 데이터 클래스들입니다.
+
+구석에 있는 AllClothResult 와 ListAdapterGrid는
+AllClothResult는 closetAct, bookmarkAct, SearchResultAct에서 통신 결과값으로 똑같기에 하나로 통일했고
+ListAdapterGrid는 옷장을 그리드뷰로 표현하기 위한 클래스로 이 역시 위 3개의 act와 동일하므로 하나로 통일했습니다.
