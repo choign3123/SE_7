@@ -15,14 +15,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonUpdate"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="0dp"
-            android:fontFamily="@font/diary"
-            android:text="홈 버튼\n아이콘으로 변경" />
+            android:layout_width="114dp"
+            android:layout_height="112dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/buttonSearch"
@@ -42,8 +41,8 @@
 
         <ImageButton
             android:id="@+id/buttonMypage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="98dp"
+            android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/mypage"
@@ -58,8 +57,11 @@
         android:padding="1dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck"
         tools:listitem="@layout/item_grid" />
 
     <TextView
@@ -73,4 +75,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
