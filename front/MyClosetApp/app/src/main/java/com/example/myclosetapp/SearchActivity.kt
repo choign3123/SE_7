@@ -21,7 +21,7 @@ class SearchActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         userIdx = intent.getIntExtra("userIdx", 0)
-        
+
         var springSel : Boolean = false
         var summerSel : Boolean = false
         var fallSel : Boolean = false
