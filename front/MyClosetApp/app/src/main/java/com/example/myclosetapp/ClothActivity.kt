@@ -40,6 +40,8 @@ class ClothActivity : AppCompatActivity() {
                 cloth.category = response.body()?.result?.category
                 cloth.season = response.body()?.result?.season
 
+                Log.d("MYTAG","in create"+cloth.clthImgUrl.toString())
+
                 binding.imageCloth.setImageURI(cloth.clthImgUrl?.toUri())
                 binding.textBookmark.text = cloth.bookmark.toString()
                 binding.textCategory.text = cloth.category
@@ -57,7 +59,7 @@ class ClothActivity : AppCompatActivity() {
             }
         })
 
-        Log.d("MYTAG","in create"+cloth.clthImgUrl.toString())
+
 
 
 
@@ -65,12 +67,15 @@ class ClothActivity : AppCompatActivity() {
         binding.buttonDel.setOnClickListener() {
             retro.deleteCloth(userIdx,clothIdx).enqueue(object: Callback<DeleteResult>{
                 override fun onResponse(call: Call<DeleteResult>, response: Response<DeleteResult>) {
-                    Log.d("MYTAG",response.body()?.message!!)
-                    Toast.makeText(this@ClothActivity, response.body()?.message,Toast.LENGTH_SHORT)
+                    Log.d("MYTAG",response.body()?.result!!)
+                    Toast.makeText(this@ClothActivity, response.body()?.result,Toast.LENGTH_SHORT).show()
 
                     // 삭제 후 옷장 화면으로 이동
                     var intent = Intent(this@ClothActivity,ClosetActivity::class.java)
+                    intent.putExtra("userIdx", userIdx)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
+                    finish()
                 }
 
                 override fun onFailure(call: Call<DeleteResult>, t: Throwable) {

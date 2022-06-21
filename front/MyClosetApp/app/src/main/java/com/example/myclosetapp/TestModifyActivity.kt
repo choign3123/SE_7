@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.core.net.toUri
 import com.example.myclosetapp.data.ClothInfo
 import com.example.myclosetapp.data.ModifyInfo
@@ -58,7 +59,8 @@ class TestModifyActivity : AppCompatActivity() {
                 postCloth()
 
                 // 화면 전환 // ??? 옷장 화면으로? 개별 옷 화면으로?
-                val intent = Intent(this, ClosetActivity::class.java)
+                val intent = Intent(this@TestModifyActivity, ClosetActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
                 startActivity(intent)
                 finish()
             }
@@ -101,7 +103,7 @@ class TestModifyActivity : AppCompatActivity() {
                 modifyCloth()
 
                 // 화면 전환 , 여기서 인텐트로 값 2개 주거나..
-                val intent = Intent(this, ClothActivity::class.java)
+                val intent = Intent(this@TestModifyActivity, ClothActivity::class.java)
                 intent.putExtra("userIdx", userIdx)
                 intent.putExtra("clothIdx", clothIdx)
                 startActivity(intent)
@@ -159,7 +161,9 @@ binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString(
             override fun onResponse(call: Call<PostClothResult>, response: Response<PostClothResult>) {
                 Log.d("MYTAG", response.body()?.isSuccess.toString())
                 Log.d("MYTAG", response.body()?.message!!)
-                Log.d("MYTAG", response.body()?.result.toString())
+                Log.d("MYTAG", response.body()?.result!!)
+
+                Toast.makeText(this@TestModifyActivity, response.body()?.result, Toast.LENGTH_SHORT).show()
             }
 
             override fun onFailure(call: Call<PostClothResult>, t: Throwable) {

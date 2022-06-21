@@ -49,7 +49,6 @@ class ClosetActivity : AppCompatActivity() {
     var waitTime = 0L
 
     // !!! 옷 등록 시 바로 갤러리로 들어가게끔해야됨 파일관리자의 최근 이미지 선택 시 이미지 불러올 때 런타임에러 뜸!!
-    // !!! baseAdapter -> recyclerView로 변경 스크롤 시 렉 걸림
 
     lateinit var cameraPermission: ActivityResultLauncher<String>
     //lateinit var storagePermission: ActivityResultLauncher<String>
@@ -58,6 +57,13 @@ class ClosetActivity : AppCompatActivity() {
     lateinit var galleryLauncher: ActivityResultLauncher<String>
 
     var PERMISSION_REQUEST_CODE = 99
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+
+        Log.d("MYTAG", "화면 점프 성공!!!")
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
