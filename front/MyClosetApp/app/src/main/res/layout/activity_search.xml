@@ -121,9 +121,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="원피스/세트"
-                android:textOff="원피스/세트"
-                android:textOn="원피스/세트" />
+                android:text="세트"
+                android:textOff="세트"
+                android:textOn="세트" />
         </TableRow>
 
         <TableRow
@@ -135,27 +135,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="기타"
-                android:textOff="기타"
-                android:textOn="기타" />
+                android:text="자켓"
+                android:textOff="자켓"
+                android:textOn="자켓" />
 
             <ToggleButton
                 android:id="@+id/button14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="티셔츠"
-                android:textOff="티셔츠"
-                android:textOn="티셔츠" />
+                android:text="니트"
+                android:textOff="니트"
+                android:textOn="니트" />
 
             <ToggleButton
                 android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="니트"
-                android:textOff="니트"
-                android:textOn="니트" />
+                android:text="티셔츠"
+                android:textOff="티셔츠"
+                android:textOn="티셔츠" />
 
             <Button
                 android:id="@+id/button16"
@@ -174,21 +174,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="후드" />
+                android:text="패딩" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="맨투맨" />
+                android:text="코트" />
 
             <Button
                 android:id="@+id/button19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="스커트" />
+                android:text="맨투맨" />
 
             <Button
                 android:id="@+id/button20"
@@ -207,14 +207,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="코트" />
+                android:text="스커트" />
 
             <Button
                 android:id="@+id/button22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="패딩" />
+                android:text="후드" />
 
             <Button
                 android:id="@+id/button23"
@@ -231,17 +231,6 @@
                 android:text="가디건" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:text="자켓" />
-        </TableRow>
     </TableLayout>
 
     <Button

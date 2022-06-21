@@ -3,7 +3,6 @@ package com.example.myclosetapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.myclosetapp.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
