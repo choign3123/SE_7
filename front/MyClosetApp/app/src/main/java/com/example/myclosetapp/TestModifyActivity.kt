@@ -47,11 +47,41 @@ class TestModifyActivity : AppCompatActivity() {
             Log.d("MYTAG",imgUrl!!)
             // 이미지 출력
             binding.clothImage.setImageURI(imgUrl.toUri())
-
+            var heartClickCnt : ULong = 0u
+            val uLong1 : ULong = 1u
             // clothInfo 변수 초기화
             cloth.clthImgUrl = imgUrl
+            //하트
+            var tempFav : Boolean? = false
+            if (tempFav != true) {
+                val animator=ValueAnimator.ofFloat(0f,0.5f).setDuration(1)
+                animator.addUpdateListener {
+                    binding.likeBtn.progress = it.animatedValue as Float
+                }
+                animator.start();tempFav=true;myFav=true
+            }
+            binding.likeBtn.setOnClickListener {
+                heartClickCnt += 1u
+                if (tempFav == false) {
+                    val animator=ValueAnimator.ofFloat(0f,0.5f).setDuration(500)
+                    animator.addUpdateListener {
+                        binding.likeBtn.progress = it.animatedValue as Float
+                    }
+                animator.start()
+                tempFav = true;myFav = tempFav
+                }
+                else {
+                    val animator = ValueAnimator.ofFloat(0.5f,1f).setDuration(500)
+                    animator.addUpdateListener {
+                        binding.likeBtn.progress = it.animatedValue as Float
+                    }
+                animator.start()
+                tempFav = false;myFav = tempFav
+                }
+            }
             // 저장 버튼 클릭 시
             binding.buttonSave.setOnClickListener() {
+                if (heartClickCnt == uLong1) {myFav=false}
                 cloth.bookmark = myFav
                 cloth.category = myCategory
                 cloth.season = mySeason
