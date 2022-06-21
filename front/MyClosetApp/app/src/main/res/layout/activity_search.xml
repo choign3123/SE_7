@@ -31,47 +31,47 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-        <ToggleButton
+        <Button
             android:id="@+id/buttonSpring"
             style="@style/Theme.MyClosetApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="false"
-            android:clickable="true"
             android:text="봄"
-            android:textOff="봄"
-            android:textOn="봄" />
+            android:background="@drawable/custom_ripple_effect"
+            android:clickable="true"
+            android:fontFamily="@font/diary" />
 
-        <ToggleButton
+        <Button
             android:id="@+id/buttonSummer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/custom_ripple_effect"
             android:clickable="true"
-            android:text="여름"
-            android:textOff="여름"
-            android:textOn="여름" />
+            android:fontFamily="@font/diary"
+            android:text="여름" />
 
-        <ToggleButton
+        <Button
             android:id="@+id/buttonFall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/custom_ripple_effect"
             android:clickable="true"
-            android:text="가을"
-            android:textOff="가을"
-            android:textOn="가을" />
+            android:fontFamily="@font/diary"
+            android:text="가을" />
 
-        <ToggleButton
+        <Button
             android:id="@+id/buttonWinter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/custom_ripple_effect"
             android:clickable="true"
-            android:text="겨울"
-            android:textOff="겨울"
-            android:textOn="겨울" />
+            android:fontFamily="@font/diary"
+            android:text="겨울" />
     </LinearLayout>
 
     <TableLayout
@@ -89,79 +89,81 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="상의"
-                android:textOff="상의"
-                android:textOn="상의" />
+                android:fontFamily="@font/diary"
+                android:text="상의" />
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="하의"
-                android:textOff="하의"
-                android:textOn="하의" />
+                android:fontFamily="@font/diary"
+                android:text="하의" />
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="아우터"
-                android:textOff="아우터"
-                android:textOn="아우터" />
+                android:fontFamily="@font/diary"
+                android:text="아우터" />
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="세트"
-                android:textOff="세트"
-                android:textOn="세트" />
+                android:fontFamily="@font/diary"
+                android:text="세트" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="자켓"
-                android:textOff="자켓"
-                android:textOn="자켓" />
+                android:fontFamily="@font/diary"
+                android:text="자켓" />
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="니트"
-                android:textOff="니트"
-                android:textOn="니트" />
+                android:fontFamily="@font/diary"
+                android:text="니트" />
 
-            <ToggleButton
+            <Button
                 android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
-                android:text="티셔츠"
-                android:textOff="티셔츠"
-                android:textOn="티셔츠" />
+                android:fontFamily="@font/diary"
+                android:text="티셔츠" />
 
             <Button
                 android:id="@+id/button16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="셔츠" />
         </TableRow>
 
@@ -173,28 +175,36 @@
                 android:id="@+id/button17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="패딩" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="코트" />
 
             <Button
                 android:id="@+id/button19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="맨투맨" />
 
             <Button
                 android:id="@+id/button20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="팬츠" />
         </TableRow>
 
@@ -206,28 +216,36 @@
                 android:id="@+id/button21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="스커트" />
 
             <Button
                 android:id="@+id/button22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="후드" />
 
             <Button
                 android:id="@+id/button23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="집업" />
 
             <Button
                 android:id="@+id/button24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/custom_ripple_effect"
                 android:clickable="true"
+                android:fontFamily="@font/diary"
                 android:text="가디건" />
         </TableRow>
 
@@ -239,6 +257,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:text="검색"
+        android:background="@drawable/custom_ripple_effect"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -253,5 +274,6 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonGo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        tools:ignore="TouchTargetSizeCheck"
+        android:fontFamily="@font/diary" />
 </androidx.constraintlayout.widget.ConstraintLayout>
