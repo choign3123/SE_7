@@ -60,3 +60,21 @@ closetAct는 로그인 이후 바로 진입하는 화면으로 사용자의 전�
 저희 앱의 홈 화면이기도 하기에 뒤로 가기 버튼을 2번 눌러야 종료할 수 있도록 하는 onBackPressed
 전체 옷을 보여줄 getAllCloth
 하단에 버튼들을 터치 시 화면 이동을 해주는 bottonBar
+
+bookmarkAct는 getBookmark 메소드를 통해 즐겨찾기된 옷만 가져오는 통신을 하고
+
+SearchAct에서 사용자가 화면에 있는 계절과 카테고리를 선택하면 이를 변수로서 바인딩하고
+SearchResultAct에서 해당 값을 받아들여 searchClothResult 메소드를 통해 해당 조건으로 서버와 통신합니다. 
+
+앞서 말씀드린 closet, bookmark, searchresult에서 반환받는 데이터가 같으므로 같은 allclothResult를 사용하고 옷에 대한 출력 역시 같은 그리드뷰를 사용함으로 ListAdapterGrid 클래스를 사용합니다.
+ListAdapterGrid의 경우 변수로서 어느 액티비티인지 알려주는 context useridx 그리고 전체 옷에 대한 배열을 가지고 있고
+메소드로는 해당 옷에 대해 그리드뷰를 만들어주는 createViewHolder 그리고 해당 그리드뷰에 바인딩해주는 bindviewHolder 이 때 인자로 gridadter를 그리고 출력할 옷의 배열인덱스를 position으로 받습니다.
+getitemCount는 ListAdapterGrid가 받은 list가 몇 개인지에 대한 메소드입니다.
+
+개별 옷을 클릭했을  때 나오는 화면은 clothAct로 홈 화면 또는 특정 화면에서 옷을 클릭했을 때 해당 옷의 clothIdx를 전달받습니다. 따라서 clothAct는 시작과 동시에 clothIdx를 받게 되고 이를 이용해 getCloth 메소드를 통해 서버에서 해당 옷에 대한 정보를 받아오고 이를 cloth: ClothInfo에 저장합니다.
+해당 화면에서는 옷에 대한 수정과 삭제를 할 수 있으며
+수정은 단순히 버튼을 누르면 수정화면 modifyAct로 넘어가도록 설계하였고 삭제는 버튼을 누르면 deleteCloth를 이용해 서버와 통신하여 옷을 서버에서 삭제하도록 하였습니다.
+
+modifyAct는 카메라/갤러리에서 옷을 등록하는 경우와 개별 옷 터치 후 수정화면 진입 시에 실행됩니다.
+변수로서 옷에 대한 정보를 받고
+메소드 역시 두 경우에 따라서 분리해서 설계했습니다.
