@@ -39,7 +39,7 @@
             android:layout_weight="1"
             android:checked="false"
             android:text="봄"
-            android:background="@drawable/custom_ripple_effect"
+            android:background="@drawable/selector_button"
             android:clickable="true"
             android:fontFamily="@font/diary" />
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/custom_ripple_effect"
+            android:background="@drawable/selector_button"
             android:clickable="true"
             android:fontFamily="@font/diary"
             android:text="여름" />
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/custom_ripple_effect"
+            android:background="@drawable/selector_button"
             android:clickable="true"
             android:fontFamily="@font/diary"
             android:text="가을" />
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/custom_ripple_effect"
+            android:background="@drawable/selector_button"
             android:clickable="true"
             android:fontFamily="@font/diary"
             android:text="겨울" />
@@ -93,7 +93,7 @@
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="상의" />
@@ -102,7 +102,7 @@
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="하의" />
@@ -111,7 +111,7 @@
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="아우터" />
@@ -120,7 +120,7 @@
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="세트" />
@@ -134,7 +134,7 @@
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="자켓" />
@@ -143,7 +143,7 @@
                 android:id="@+id/button14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="니트" />
@@ -152,7 +152,7 @@
                 android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="티셔츠" />
@@ -161,7 +161,7 @@
                 android:id="@+id/button16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="셔츠" />
@@ -175,7 +175,7 @@
                 android:id="@+id/button17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="패딩" />
@@ -184,7 +184,7 @@
                 android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="코트" />
@@ -193,7 +193,7 @@
                 android:id="@+id/button19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="맨투맨" />
@@ -202,7 +202,7 @@
                 android:id="@+id/button20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="팬츠" />
@@ -216,7 +216,7 @@
                 android:id="@+id/button21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="스커트" />
@@ -225,7 +225,7 @@
                 android:id="@+id/button22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="후드" />
@@ -234,7 +234,7 @@
                 android:id="@+id/button23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="집업" />
@@ -243,7 +243,7 @@
                 android:id="@+id/button24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_ripple_effect"
+                android:background="@drawable/selector_button"
                 android:clickable="true"
                 android:fontFamily="@font/diary"
                 android:text="가디건" />
@@ -257,7 +257,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:text="검색"
-        android:background="@drawable/custom_ripple_effect"
+        android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
         app:layout_constraintEnd_toEndOf="parent"
