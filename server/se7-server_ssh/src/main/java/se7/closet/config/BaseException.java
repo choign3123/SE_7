@@ -13,5 +13,5 @@ public class BaseException extends Exception {
         this.status = status;
     }
 
-    public BaseException getStatus;
+    //public BaseException getStatus;
 }

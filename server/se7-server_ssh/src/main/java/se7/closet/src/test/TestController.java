@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Date;
+import java.util.Locale;
 
 @CrossOrigin(origins = {"http://localhost:9000"})
 @RestController
@@ -26,15 +27,42 @@ import java.util.Date;
 public class TestController {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    //이미지 저장 경로
+    private String path = "";
+    private String folder;
+
     @Autowired
-    public TestController() {}
+    public TestController() {
+        String[] paths;
+        String tempPath = System.getProperty("user.dir");
+
+        String osName = System.getProperty("os.name").toLowerCase();
+
+        if(osName.contains("win")){
+            paths = tempPath.split("\\\\");
+            for(int i=0; i< paths.length-1; i++){
+                path += paths[i];
+                path += "\\";
+            }
+            folder = "img\\";
+        }
+        else {
+            paths = tempPath.split("/");
+            for(int i=0; i< paths.length-1; i++){
+                path += paths[i];
+                path += "/";
+            }
+            folder = "img/";
+        }
+
+        System.out.println("최종 경로: " + this.path + this.folder);
+    }
 
     /**
      * 로그 테스트 API
      * [GET] /test/log
      * @return String
      */
-
 
     @ResponseBody
     @GetMapping("/log")
@@ -62,14 +90,12 @@ public class TestController {
     public ResponseEntity<Resource> showImg(@PathVariable("img") String imgName){
         System.out.println("이미지 출력 테스트");
 
-        //저장된 이미지의 경로
-        String path = "C:\\Users\\Choi ga na\\Desktop\\SE_7\\server\\";
-        String folder = "img\\";
         //이미지 리소스
-        Resource resource = new FileSystemResource(path + folder + imgName);
+        Resource resource = new FileSystemResource(this.path + this.folder + imgName);
 
         //이미지가 존재하지 않으면
         if(!resource.exists()){
+            System.out.println("이미지 출력 테스트3");
             //HttpStatus.NOT_FOUND = 404 에러
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -78,11 +104,12 @@ public class TestController {
         Path imgPath; //이미지 경로
 
         try{
-            //이미지 경로 설정
-            imgPath = Paths.get(path + imgName);
+            //이미지 경로
+            imgPath = Paths.get(this.path + this.folder + imgName);
             //헤더에 이미지 확장자 넣기
             headers.add("Content-Type", Files.probeContentType(imgPath));
         } catch (IOException e){
+            System.out.println("이미지 출력 테스트3");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
@@ -100,6 +127,7 @@ public class TestController {
 
         // file image 가 없을 경우
         if (file.isEmpty()) {
+            System.out.println("이미지 저장 테스트1");
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
@@ -107,16 +135,20 @@ public class TestController {
         sb.append(date.getTime());
         sb.append(file.getOriginalFilename());
         //이미지가 저장될 경로 설정
-        File dest = new File("C:\\Users\\Choi ga na\\Desktop\\SE_7\\server\\img\\" + sb.toString());
+        File dest = new File(this.path + this.folder + sb.toString());
 
         try {
             file.transferTo(dest); //해당 경로로 이미지 옮기기
         } catch (IllegalStateException e) {
+            System.out.println("이미지 저장 테스트2");
             e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (IOException e) {
+            System.out.println("이미지 저장 테스트3");
             e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        return new ResponseEntity<String>("성공", HttpStatus.OK);
+        return new ResponseEntity<String>("성공 " + sb.toString(), HttpStatus.OK);
     }
 }

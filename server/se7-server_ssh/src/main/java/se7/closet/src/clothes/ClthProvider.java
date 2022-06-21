@@ -71,13 +71,13 @@ public class ClthProvider {
     }
 
     //옷 검색
-    public List<GetClthsRes> retrieveClthsBySearch(int userIdx, String season, String category, boolean bm) throws BaseException{
+    public List<GetClthsRes> retrieveClthsBySearch(int userIdx, String season, String category) throws BaseException{
         if(!checkUserExist(userIdx)){ //존재하지 않는 유저면
             throw new BaseException(POST_USERS_INVALID);
         }
 
         try{
-            return clthRepository.selectClthsBySearch(userIdx, season, category, bm);
+            return clthRepository.selectClthsBySearch(userIdx, season, category);
         } catch (Exception e){
             throw new BaseException(DATABASE_ERROR);
         }

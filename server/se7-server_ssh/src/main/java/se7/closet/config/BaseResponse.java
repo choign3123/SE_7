@@ -16,7 +16,7 @@ public class BaseResponse<T> {
     private final Boolean isSuccess;
     private final String message;
     private final int code;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonInclude(JsonInclude.Include.NON_NULL) //resutl가 null 필드면 json 최종 결과에 포함되지 않음.
     private T result;
 
     // 요청에 성공한 경우

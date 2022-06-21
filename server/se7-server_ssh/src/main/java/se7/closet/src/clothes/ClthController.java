@@ -157,7 +157,7 @@ public class ClthController {
     //[get] /clths/search/{userIdx}?season=&category=&bookmark
     @ResponseBody
     @GetMapping("/search/{userIdx}")
-    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("season") String season, @RequestParam("category") String category, @RequestParam("bm") boolean bm){
+    public BaseResponse<List<GetClthsRes>> searchClths(@PathVariable("userIdx") int userIdx, @RequestParam("season") String season, @RequestParam("category") String category){
 
         if(season.equals("")){ //계절로 빈 문자열이 넘어오면
             season = Season.getString();
@@ -176,7 +176,7 @@ public class ClthController {
         }
 
         try{
-            List<GetClthsRes> getClthsRes = clthProvider.retrieveClthsBySearch(userIdx, season, category, bm);
+            List<GetClthsRes> getClthsRes = clthProvider.retrieveClthsBySearch(userIdx, season, category);
             return new BaseResponse<>(getClthsRes);
         } catch (BaseException e){
             return new BaseResponse<>(e.getStatus());
