@@ -15,14 +15,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/buttonUpdate"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="0dp"
-            android:fontFamily="@font/diary"
-            android:text="홈 버튼\n아이콘으로 변경" />
+            android:layout_width="111dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/home" />
 
         <ImageButton
             android:id="@+id/buttonSearch"
