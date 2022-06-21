@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/clothImage"
-        android:layout_width="253dp"
-        android:layout_height="238dp"
+        android:layout_width="323dp"
+        android:layout_height="294dp"
         android:layout_marginTop="16dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
@@ -18,24 +18,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/likeBtn"
-        android:layout_width="131dp"
-        android:layout_height="119dp"
-
-        android:layout_marginTop="236dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="false"
-        app:lottie_fileName="heart.json"
-        app:lottie_loop="false" />
-
     <Button
         android:id="@+id/buttonSpring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="404dp"
         android:layout_weight="1"
         android:background="@drawable/selector_button"
         android:clickable="true"
@@ -47,24 +34,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/selector_button"
-        android:clickable="true"
-        android:fontFamily="@font/diary"
-        android:text="#집업"
-        app:layout_constraintEnd_toStartOf="@+id/button24"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button17"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
-
-    <Button
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -78,7 +51,7 @@
         android:id="@+id/button12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -92,7 +65,7 @@
         android:id="@+id/button16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -106,7 +79,7 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -120,7 +93,7 @@
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -134,7 +107,7 @@
         android:id="@+id/button24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -148,7 +121,7 @@
         android:id="@+id/buttonWinter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="404dp"
         android:layout_weight="1"
         android:background="@drawable/selector_button"
         android:clickable="true"
@@ -163,7 +136,7 @@
         android:id="@+id/button20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -177,7 +150,7 @@
         android:id="@+id/button22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -191,7 +164,7 @@
         android:id="@+id/button19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -202,10 +175,24 @@
         app:layout_constraintTop_toBottomOf="@+id/button22" />
 
     <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#후드"
+        app:layout_constraintEnd_toStartOf="@+id/button23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/button21" />
+
+    <Button
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -216,39 +203,10 @@
         app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <Button
-        android:id="@+id/buttonFall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:layout_weight="1"
-        android:background="@drawable/selector_button"
-        android:clickable="true"
-        android:fontFamily="@font/diary"
-        android:text="#가을"
-        app:layout_constraintEnd_toStartOf="@+id/buttonWinter"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/buttonSummer"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/selector_button"
-        android:clickable="true"
-        android:fontFamily="@font/diary"
-        android:text="#맨투맨"
-        app:layout_constraintEnd_toStartOf="@+id/button20"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button21"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
-
-    <Button
         android:id="@+id/buttonSummer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="404dp"
         android:layout_weight="1"
         android:background="@drawable/selector_button"
         android:clickable="true"
@@ -260,24 +218,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/buttonFall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="404dp"
+        android:layout_weight="1"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
-        android:text="#후드"
-        app:layout_constraintEnd_toStartOf="@+id/button23"
+        android:text="#가을"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWinter"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button19"
-        app:layout_constraintTop_toBottomOf="@+id/button21" />
+        app:layout_constraintStart_toEndOf="@+id/buttonSummer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/likeBtn"
+        android:layout_width="131dp"
+        android:layout_height="119dp"
+
+        android:layout_marginTop="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="heart.json"
+        app:lottie_loop="false" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -291,7 +263,7 @@
         android:id="@+id/button21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -302,10 +274,24 @@
         app:layout_constraintTop_toBottomOf="@+id/button15" />
 
     <Button
+        android:id="@+id/button18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#맨투맨"
+        app:layout_constraintEnd_toStartOf="@+id/button20"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button21"
+        app:layout_constraintTop_toBottomOf="@+id/button14" />
+
+    <Button
         android:id="@+id/button15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/selector_button"
         android:clickable="true"
         android:fontFamily="@font/diary"
@@ -316,10 +302,24 @@
         app:layout_constraintTop_toBottomOf="@+id/button10" />
 
     <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#집업"
+        app:layout_constraintEnd_toStartOf="@+id/button24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/button18" />
+
+    <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/diary"
         android:text="저장"
         app:layout_constraintBottom_toBottomOf="parent"
