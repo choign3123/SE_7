@@ -42,12 +42,8 @@ class SearchActivity : AppCompatActivity() {
         binding.button22.setOnClickListener(){binding.button22.isEnabled=false}
         binding.button23.setOnClickListener(){binding.button23.isEnabled=false}
         binding.button24.setOnClickListener(){binding.button24.isEnabled=false}
-        binding.button25.setOnClickListener(){binding.button25.isEnabled=false}
 
         binding.switchBM.setOnCheckedChangeListener { _, isChecked ->  }
-
-
-
 
         binding.buttonGo.setOnClickListener() {
             // 초기화 // 검색결과에서 다시 검색 시
