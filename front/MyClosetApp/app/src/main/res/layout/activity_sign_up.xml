@@ -85,6 +85,7 @@
         android:layout_marginBottom="200dp"
         android:fontFamily="@font/diary"
         android:text="회원가입"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

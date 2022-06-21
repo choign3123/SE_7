@@ -18,262 +18,316 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-        <Button
-            android:id="@+id/buttonSpring"
-            style="@style/Theme.MyClosetApp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="봄"
-            android:background="@drawable/selector_button"
-            android:clickable="true"
-            android:fontFamily="@font/diary" />
-
-        <Button
-            android:id="@+id/buttonSummer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/selector_button"
-            android:clickable="true"
-            android:fontFamily="@font/diary"
-            android:text="여름" />
-
-        <Button
-            android:id="@+id/buttonFall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/selector_button"
-            android:clickable="true"
-            android:fontFamily="@font/diary"
-            android:text="가을" />
-
-        <Button
-            android:id="@+id/buttonWinter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/selector_button"
-            android:clickable="true"
-            android:fontFamily="@font/diary"
-            android:text="겨울" />
-    </LinearLayout>
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="상의" />
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="하의" />
-
-            <Button
-                android:id="@+id/button11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="아우터" />
-
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="세트" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="자켓" />
-
-            <Button
-                android:id="@+id/button14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="니트" />
-
-            <Button
-                android:id="@+id/button15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="티셔츠" />
-
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="셔츠" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="패딩" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="코트" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="맨투맨" />
-
-            <Button
-                android:id="@+id/button20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="팬츠" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/button21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="스커트" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="후드" />
-
-            <Button
-                android:id="@+id/button23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="집업" />
-
-            <Button
-                android:id="@+id/button24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_button"
-                android:clickable="true"
-                android:fontFamily="@font/diary"
-                android:text="가디건" />
-        </TableRow>
-
-    </TableLayout>
-
     <Button
         android:id="@+id/buttonGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="검색"
-        android:background="@drawable/selector_button"
+        android:layout_marginBottom="160dp"
+
         android:clickable="true"
         android:fontFamily="@font/diary"
+        android:text="검색"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Switch
         android:id="@+id/switchBM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+        android:fontFamily="@font/diary"
         android:text="즐겨찾기만?"
         app:layout_constraintBottom_toTopOf="@+id/buttonGo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        android:fontFamily="@font/diary" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#스커트"
+        app:layout_constraintEnd_toStartOf="@+id/button22"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button17" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#후드"
+        app:layout_constraintEnd_toStartOf="@+id/button23"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button21"
+        app:layout_constraintTop_toBottomOf="@+id/button18" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#집업"
+        app:layout_constraintEnd_toStartOf="@+id/button24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button22"
+        app:layout_constraintTop_toBottomOf="@+id/button19" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#가디건"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button23"
+        app:layout_constraintTop_toBottomOf="@+id/button20" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#패딩"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button13" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#코트"
+        app:layout_constraintEnd_toStartOf="@+id/button19"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintTop_toBottomOf="@+id/button14" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#맨투맨"
+        app:layout_constraintEnd_toStartOf="@+id/button20"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button18"
+        app:layout_constraintTop_toBottomOf="@+id/button15" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#팬츠"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button19"
+        app:layout_constraintTop_toBottomOf="@+id/button16" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#자켓"
+        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#니트"
+        app:layout_constraintEnd_toStartOf="@+id/button15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button13"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#티셔츠"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button14"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#셔츠"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button15"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#상의"
+        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#하의"
+        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#아우터"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="288dp"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#세트"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSpring"
+        style="@style/Theme.MyClosetApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_button"
+        android:checked="false"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#봄"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSummer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSummer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#여름"
+        app:layout_constraintEnd_toStartOf="@+id/buttonFall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSpring"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#가을"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWinter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSummer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonWinter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_button"
+        android:clickable="true"
+        android:fontFamily="@font/diary"
+        android:text="#겨울"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFall"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
