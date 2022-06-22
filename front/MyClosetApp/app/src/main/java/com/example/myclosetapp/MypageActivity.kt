@@ -63,7 +63,6 @@ class MypageActivity : AppCompatActivity() {
             // 아니면 새로운 홈 화면 생성?
             val intent = Intent(this, ClosetActivity::class.java)
             intent.putExtra("userIdx", userIdx)
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
             finish()
         }

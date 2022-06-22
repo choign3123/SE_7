@@ -61,7 +61,6 @@ class BookmarkActivity : AppCompatActivity() {
             // 여기 그냥 홈 화면 생성이 아닌 이동하게끔!!!
             val intent = Intent(this, ClosetActivity::class.java)
             intent.putExtra("userIdx", userIdx)
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
             finish()
         }

@@ -111,7 +111,6 @@ class SearchActivity : AppCompatActivity() {
 //            intent.putExtra("bookmark", myFav)
 
             startActivity(intent)
-            finish()
         }
     }
 }
