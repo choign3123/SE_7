@@ -86,10 +86,9 @@ class TestModifyActivity : AppCompatActivity() {
                 if (heartClickCnt == uLong1) {myFav=false}
                 cloth.bookmark = myFav
                 cloth.category = myCategory
-                cloth.season = mySeason 
+                cloth.season = mySeason
 
                 postCloth()
-
 
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this@TestModifyActivity, ClosetActivity::class.java)
@@ -97,7 +96,7 @@ class TestModifyActivity : AppCompatActivity() {
 
                     startActivity(intent)
                     finish()
-                },2000)
+                },200)
 
 
             }

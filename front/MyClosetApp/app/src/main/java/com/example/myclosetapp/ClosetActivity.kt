@@ -62,7 +62,7 @@ class ClosetActivity : AppCompatActivity() {
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
 
-//        getAllCloth()
+        getAllCloth()
         Log.d("MYTAG", "화면 점프 성공!!!"+userIdx.toString())
 
     }
@@ -187,7 +187,9 @@ class ClosetActivity : AppCompatActivity() {
 //            val intent = Intent(this, ClosetActivity::class.java)
 //            intent.putExtra("userIdx", userIdx)
 //            startActivity(intent)
-            Toast.makeText(this,"이미 홈 화면입니다!!",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,"이미 홈 화면입니다!!",Toast.LENGTH_SHORT).show()
+            getAllCloth()
+            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
         }
 
         binding.buttonMypage.setOnClickListener() {
