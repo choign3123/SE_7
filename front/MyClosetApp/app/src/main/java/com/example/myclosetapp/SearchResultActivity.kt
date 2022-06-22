@@ -29,7 +29,7 @@ class SearchResultActivity : AppCompatActivity() {
     var userIdx : Int? = null
     var season : String? = null
     var category : String? = null
-    var bm : Boolean? = null
+//    var bm : Boolean? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,15 +39,15 @@ class SearchResultActivity : AppCompatActivity() {
         userIdx = intent.getIntExtra("userIdx", 0)
         season = intent.getStringExtra("season")
         category = intent.getStringExtra("category")
-        bm = intent.getBooleanExtra("bookmark", false)
+//        bm = intent.getBooleanExtra("bookmark", false)
 
         Log.d("MYTAG","진입 완료")
         Log.d("MYTAG",season!!)
         Log.d("MYTAG",category!!)
-        Log.d("MYTAG",bm.toString())
+//        Log.d("MYTAG",bm.toString())
 
 
-        retro.searchCloth(userIdx, season, category, bm).enqueue(object : Callback<AllClothResult> {
+        retro.searchCloth(userIdx, season, category).enqueue(object : Callback<AllClothResult> {
             override fun onResponse(call: Call<AllClothResult>, response: Response<AllClothResult>) {
                 val listManager = GridLayoutManager(this@SearchResultActivity, 2)
                 var listAdapter =
@@ -58,6 +58,8 @@ class SearchResultActivity : AppCompatActivity() {
                     layoutManager = listManager
                     adapter = listAdapter
                 }
+
+                Log.d("MYTAG",response.body()?.result.toString())
             }
 
             override fun onFailure(call: Call<AllClothResult>, t: Throwable) {

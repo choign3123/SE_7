@@ -76,7 +76,7 @@ interface RetrofitService {
         @Path("userIdx") userIdx: Int?,
         @Query("season") season: String?,
         @Query("category") category: String?,
-        @Query("bm") bm: Boolean?
+//        @Query("bm") bm: Boolean?
     ): Call<AllClothResult>
 
 

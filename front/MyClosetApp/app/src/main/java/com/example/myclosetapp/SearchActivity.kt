@@ -12,7 +12,7 @@ class SearchActivity : AppCompatActivity() {
 
     var userIdx: Int? = null
 
-    var myFav: Boolean? = null
+//    var myFav: Boolean? = null
     var myCategory: String? = " "
     var mySeason: String? = " "
 
@@ -64,41 +64,41 @@ class SearchActivity : AppCompatActivity() {
         binding.button23.setOnClickListener(){btn23Sel=true;binding.button23.isEnabled=false}
         binding.button24.setOnClickListener(){btn24Sel=true;binding.button24.isEnabled=false}
 
-        binding.switchBM.setOnCheckedChangeListener{_,isChecked -> }
+//        binding.switchBM.setOnCheckedChangeListener{_,isChecked -> }
 
         binding.buttonGo.setOnClickListener(){
             // 초기화 // 검색결과에서 다시 검색 시
-            myFav = null
+//            myFav = null
             myCategory = " "
             mySeason = " "
 
             // season
-            if(springSel) mySeason = mySeason + " " + binding.buttonSpring.text
-            if(summerSel) mySeason = mySeason + " " + binding.buttonSummer.text
-            if(fallSel) mySeason = mySeason + " " + binding.buttonFall.text
-            if(winterSel) mySeason = mySeason + " " + binding.buttonWinter.text
+            if(springSel) mySeason = mySeason + " " + binding.buttonSpring.text.substring(1)
+            if(summerSel) mySeason = mySeason + " " + binding.buttonSummer.text.substring(1)
+            if(fallSel) mySeason = mySeason + " " + binding.buttonFall.text.substring(1)
+            if(winterSel) mySeason = mySeason + " " + binding.buttonWinter.text.substring(1)
 
             // category
-            if(btn9Sel) myCategory = myCategory + " " + binding.button9.text
-            if(btn10Sel) myCategory = myCategory + " " + binding.button10.text
-            if(btn11Sel) myCategory = myCategory + " " + binding.button11.text
-            if(btn12Sel) myCategory = myCategory + " " + binding.button12.text
-            if(btn13Sel) myCategory = myCategory + " " + binding.button13.text
-            if(btn14Sel) myCategory = myCategory + " " + binding.button14.text
-            if(btn15Sel) myCategory = myCategory + " " + binding.button15.text
-            if(btn16Sel) myCategory = myCategory + " " + binding.button16.text
-            if(btn17Sel) myCategory = myCategory + " " + binding.button17.text
-            if(btn18Sel) myCategory = myCategory + " " + binding.button18.text
-            if(btn19Sel) myCategory = myCategory + " " + binding.button19.text
-            if(btn20Sel) myCategory = myCategory + " " + binding.button20.text
-            if(btn21Sel) myCategory = myCategory + " " + binding.button21.text
-            if(btn22Sel) myCategory = myCategory + " " + binding.button22.text
-            if(btn23Sel) myCategory = myCategory + " " + binding.button23.text
-            if(btn24Sel) myCategory = myCategory + " " + binding.button24.text
+            if(btn9Sel) myCategory = myCategory + " " + binding.button9.text.substring(1)
+            if(btn10Sel) myCategory = myCategory + " " + binding.button10.text.substring(1)
+            if(btn11Sel) myCategory = myCategory + " " + binding.button11.text.substring(1)
+            if(btn12Sel) myCategory = myCategory + " " + binding.button12.text.substring(1)
+            if(btn13Sel) myCategory = myCategory + " " + binding.button13.text.substring(1)
+            if(btn14Sel) myCategory = myCategory + " " + binding.button14.text.substring(1)
+            if(btn15Sel) myCategory = myCategory + " " + binding.button15.text.substring(1)
+            if(btn16Sel) myCategory = myCategory + " " + binding.button16.text.substring(1)
+            if(btn17Sel) myCategory = myCategory + " " + binding.button17.text.substring(1)
+            if(btn18Sel) myCategory = myCategory + " " + binding.button18.text.substring(1)
+            if(btn19Sel) myCategory = myCategory + " " + binding.button19.text.substring(1)
+            if(btn20Sel) myCategory = myCategory + " " + binding.button20.text.substring(1)
+            if(btn21Sel) myCategory = myCategory + " " + binding.button21.text.substring(1)
+            if(btn22Sel) myCategory = myCategory + " " + binding.button22.text.substring(1)
+            if(btn23Sel) myCategory = myCategory + " " + binding.button23.text.substring(1)
+            if(btn24Sel) myCategory = myCategory + " " + binding.button24.text.substring(1)
 
             // favorite
-            if(binding.switchBM.isChecked == true) myFav = true
-            else myFav = false
+//            if(binding.switchBM.isChecked == true) myFav = true
+//            else myFav = false
 
             // 선택이 없다면 공백 보내기 선택이 있다면 공백 지우기
             if(mySeason != " ") mySeason = mySeason!!.trim()
@@ -108,7 +108,7 @@ class SearchActivity : AppCompatActivity() {
             intent.putExtra("userIdx", userIdx)
             intent.putExtra("season", mySeason)
             intent.putExtra("category", myCategory)
-            intent.putExtra("bookmark", myFav)
+//            intent.putExtra("bookmark", myFav)
 
             startActivity(intent)
         }
