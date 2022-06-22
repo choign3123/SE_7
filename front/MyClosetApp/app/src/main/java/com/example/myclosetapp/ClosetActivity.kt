@@ -180,16 +180,15 @@ class ClosetActivity : AppCompatActivity() {
 
         // 가끔식 새 옷 추가 시 해당 옷이 반영이 늦게 되는 경우가 있어서 버튼 추가함
         binding.buttonUpdate.setOnClickListener {
-//            getAllCloth()
-//            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
+
             // 홈 화면으로 이동
             // 아니면 새로운 홈 화면 생성?
 //            val intent = Intent(this, ClosetActivity::class.java)
 //            intent.putExtra("userIdx", userIdx)
 //            startActivity(intent)
-//            Toast.makeText(this,"이미 홈 화면입니다!!",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"이미 홈 화면입니다!!",Toast.LENGTH_SHORT).show()
             getAllCloth()
-            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
         }
 
         binding.buttonMypage.setOnClickListener() {

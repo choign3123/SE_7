@@ -27,7 +27,7 @@
             android:exported="false" />
         <activity
             android:name=".SearchActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".BookmarkActivity"
             android:exported="false" />

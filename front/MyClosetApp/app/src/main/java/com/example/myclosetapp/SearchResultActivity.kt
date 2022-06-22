@@ -32,6 +32,7 @@ class SearchResultActivity : AppCompatActivity() {
 //    var bm : Boolean? = null
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -95,12 +96,12 @@ class SearchResultActivity : AppCompatActivity() {
         }
 
         binding.buttonSearch.setOnClickListener() {
-//            val intent = Intent(this, SearchActivity::class.java)
-//            intent.putExtra("userIdx", userIdx)
-//            startActivity(intent)
-//            finish()
-            // 고려
-            Toast.makeText(this,"이미 검색 화면입니다!!!",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SearchActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
+            finish()
+
+//            Toast.makeText(this,"이미 검색 화면입니다!!!",Toast.LENGTH_SHORT).show()
 
         }
     }

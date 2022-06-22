@@ -27,11 +27,13 @@ class BookmarkActivity : AppCompatActivity() {
 
     var userIdx: Int? = null
 
+
     val retro = RetrofitService.create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
 
         userIdx = intent.getIntExtra("userIdx", 0)
         retro.getBookmark(userIdx).enqueue(object: Callback<AllClothResult>{
@@ -77,6 +79,7 @@ class BookmarkActivity : AppCompatActivity() {
 //            intent.putExtra("userIdx", userIdx)
 //            startActivity(intent)
             Toast.makeText(this,"이미 즐겨찾기 화면입니다!!!", Toast.LENGTH_SHORT).show()
+//            getBookmark()
 
         }
 
