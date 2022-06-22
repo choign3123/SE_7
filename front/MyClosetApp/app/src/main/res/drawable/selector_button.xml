@@ -3,8 +3,8 @@
     <!-- 버튼이 눌렸을 때 -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <solid android:color="#FF018786" />
-            <stroke android:width="2dp" android:color="#FF6200EE" />
+            <solid android:color="#C5C8CC" />
+
             <corners
                 android:topRightRadius="40dp"
                 android:topLeftRadius="40dp"
@@ -16,7 +16,7 @@
     <!-- 버튼이 안 눌렸을 때(디폴트) -->
     <item android:state_pressed="false">
         <shape android:shape="rectangle">
-            <solid android:color="#FF03DAC5" />
+            <solid android:color="#76C6EA" />
 
             <corners
                 android:topRightRadius="40dp"
