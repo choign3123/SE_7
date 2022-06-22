@@ -71,7 +71,7 @@ class ClosetActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         userIdx = intent.getIntExtra("userIdx", 0)
-        Log.d("MYTAG", userIdx.toString())
+        Log.d("MYTAG", "userIdx : "+userIdx.toString())
 
 
 

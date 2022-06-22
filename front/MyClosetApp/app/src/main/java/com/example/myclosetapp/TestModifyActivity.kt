@@ -83,8 +83,8 @@ class TestModifyActivity : AppCompatActivity() {
             binding.buttonSave.setOnClickListener() {
                 if (heartClickCnt == uLong1) {myFav=false}
                 cloth.bookmark = myFav
-                cloth.category = myCategory?.substring(1)
-                cloth.season = mySeason?.substring(1)
+                cloth.category = myCategory
+                cloth.season = mySeason
 
                 postCloth()
 
@@ -140,9 +140,9 @@ class TestModifyActivity : AppCompatActivity() {
             //저장 버튼 클릭 시
             binding.buttonSave.setOnClickListener() {
                 modCloth.bookmark = myFav
-                myCategory=myCategory?.substring(1)
+                myCategory=myCategory
                 modCloth.category = myCategory
-                mySeason=mySeason?.substring(1)
+                mySeason=mySeason
                 modCloth.season = mySeason
 
                 modifyCloth()
@@ -157,27 +157,27 @@ class TestModifyActivity : AppCompatActivity() {
         }
 
 // 버튼 클릭 시 해당 값 변수에 저장
-binding.buttonSpring.setOnClickListener(){mySeason=binding.buttonSpring.text.toString();clearSeason();binding.buttonSpring.isEnabled=false}
-binding.buttonSummer.setOnClickListener(){mySeason=binding.buttonSummer.text.toString();clearSeason();binding.buttonSummer.isEnabled=false}
-binding.buttonFall.setOnClickListener(){mySeason=binding.buttonFall.text.toString();clearSeason();binding.buttonFall.isEnabled=false}
-binding.buttonWinter.setOnClickListener(){mySeason=binding.buttonWinter.text.toString();clearSeason();binding.buttonWinter.isEnabled=false}
+binding.buttonSpring.setOnClickListener(){mySeason=binding.buttonSpring.text.toString().substring(1);clearSeason();binding.buttonSpring.isEnabled=false}
+binding.buttonSummer.setOnClickListener(){mySeason=binding.buttonSummer.text.toString().substring(1);clearSeason();binding.buttonSummer.isEnabled=false}
+binding.buttonFall.setOnClickListener(){mySeason=binding.buttonFall.text.toString().substring(1);clearSeason();binding.buttonFall.isEnabled=false}
+binding.buttonWinter.setOnClickListener(){mySeason=binding.buttonWinter.text.toString().substring(1);clearSeason();binding.buttonWinter.isEnabled=false}
 
-binding.button9.setOnClickListener(){myCategory=binding.button9.text.toString();clearCategory();binding.button9.isEnabled=false}
-binding.button10.setOnClickListener(){myCategory=binding.button10.text.toString();clearCategory();binding.button10.isEnabled=false}
-binding.button11.setOnClickListener(){myCategory=binding.button11.text.toString();clearCategory();binding.button11.isEnabled=false}
-binding.button12.setOnClickListener(){myCategory=binding.button12.text.toString();clearCategory();binding.button12.isEnabled=false}
-binding.button13.setOnClickListener(){myCategory=binding.button13.text.toString();clearCategory();binding.button13.isEnabled=false}
-binding.button14.setOnClickListener(){myCategory=binding.button14.text.toString();clearCategory();binding.button14.isEnabled=false}
-binding.button15.setOnClickListener(){myCategory=binding.button15.text.toString();clearCategory();binding.button15.isEnabled=false}
-binding.button16.setOnClickListener(){myCategory=binding.button16.text.toString();clearCategory();binding.button16.isEnabled=false}
-binding.button17.setOnClickListener(){myCategory=binding.button17.text.toString();clearCategory();binding.button17.isEnabled=false}
-binding.button18.setOnClickListener(){myCategory=binding.button18.text.toString();clearCategory();binding.button18.isEnabled=false}
-binding.button19.setOnClickListener(){myCategory=binding.button19.text.toString();clearCategory();binding.button19.isEnabled=false}
-binding.button20.setOnClickListener(){myCategory=binding.button20.text.toString();clearCategory();binding.button20.isEnabled=false}
-binding.button21.setOnClickListener(){myCategory=binding.button21.text.toString();clearCategory();binding.button21.isEnabled=false}
-binding.button22.setOnClickListener(){myCategory=binding.button22.text.toString();clearCategory();binding.button22.isEnabled=false}
-binding.button23.setOnClickListener(){myCategory=binding.button23.text.toString();clearCategory();binding.button23.isEnabled=false}
-binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString();clearCategory();binding.button24.isEnabled=false}
+binding.button9.setOnClickListener(){myCategory=binding.button9.text.toString().substring(1);clearCategory();binding.button9.isEnabled=false}
+binding.button10.setOnClickListener(){myCategory=binding.button10.text.toString().substring(1);clearCategory();binding.button10.isEnabled=false}
+binding.button11.setOnClickListener(){myCategory=binding.button11.text.toString().substring(1);clearCategory();binding.button11.isEnabled=false}
+binding.button12.setOnClickListener(){myCategory=binding.button12.text.toString().substring(1);clearCategory();binding.button12.isEnabled=false}
+binding.button13.setOnClickListener(){myCategory=binding.button13.text.toString().substring(1);clearCategory();binding.button13.isEnabled=false}
+binding.button14.setOnClickListener(){myCategory=binding.button14.text.toString().substring(1);clearCategory();binding.button14.isEnabled=false}
+binding.button15.setOnClickListener(){myCategory=binding.button15.text.toString().substring(1);clearCategory();binding.button15.isEnabled=false}
+binding.button16.setOnClickListener(){myCategory=binding.button16.text.toString().substring(1);clearCategory();binding.button16.isEnabled=false}
+binding.button17.setOnClickListener(){myCategory=binding.button17.text.toString().substring(1);clearCategory();binding.button17.isEnabled=false}
+binding.button18.setOnClickListener(){myCategory=binding.button18.text.toString().substring(1);clearCategory();binding.button18.isEnabled=false}
+binding.button19.setOnClickListener(){myCategory=binding.button19.text.toString().substring(1);clearCategory();binding.button19.isEnabled=false}
+binding.button20.setOnClickListener(){myCategory=binding.button20.text.toString().substring(1);clearCategory();binding.button20.isEnabled=false}
+binding.button21.setOnClickListener(){myCategory=binding.button21.text.toString().substring(1);clearCategory();binding.button21.isEnabled=false}
+binding.button22.setOnClickListener(){myCategory=binding.button22.text.toString().substring(1);clearCategory();binding.button22.isEnabled=false}
+binding.button23.setOnClickListener(){myCategory=binding.button23.text.toString().substring(1);clearCategory();binding.button23.isEnabled=false}
+binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString().substring(1);clearCategory();binding.button24.isEnabled=false}
 
 
         binding.likeBtn.setOnClickListener {
