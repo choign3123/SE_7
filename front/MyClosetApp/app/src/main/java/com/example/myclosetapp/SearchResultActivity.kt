@@ -83,6 +83,7 @@ class SearchResultActivity : AppCompatActivity() {
         binding.buttonMypage.setOnClickListener() {
             val intent = Intent(this, MypageActivity::class.java)
             intent.putExtra("userIdx", userIdx)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
             startActivity(intent)
             finish()
         }
@@ -95,12 +96,12 @@ class SearchResultActivity : AppCompatActivity() {
         }
 
         binding.buttonSearch.setOnClickListener() {
-//            val intent = Intent(this, SearchActivity::class.java)
-//            intent.putExtra("userIdx", userIdx)
-//            startActivity(intent)
+            val intent = Intent(this, SearchActivity::class.java)
+            intent.putExtra("userIdx", userIdx)
+            startActivity(intent)
 //            finish()
             // 고려
-            Toast.makeText(this,"이미 검색 화면입니다!!!",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,"이미 검색 화면입니다!!!",Toast.LENGTH_SHORT).show()
 
         }
     }

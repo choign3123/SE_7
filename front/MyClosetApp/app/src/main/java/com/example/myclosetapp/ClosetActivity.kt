@@ -74,18 +74,6 @@ class ClosetActivity : AppCompatActivity() {
         Log.d("MYTAG", "userIdx : "+userIdx.toString())
 
 
-
-//        storagePermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-//            if(isGranted) {
-//                setViews()
-//            } else {
-//                // 초기라면 그냥 넘어가고 2번째 이상이라면 다시 권한 확인 창 출력 !!!! 여기 다시해야대애애애
-//                storagePermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//                Toast.makeText(baseContext, "외부저장소 권한을 승인해야 앱을 사용할 수 있습니다.", Toast.LENGTH_LONG).show()
-////                finish()
-//            }
-//        }
-
         cameraPermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
             if(isGranted) {
                 openCamera()
@@ -134,34 +122,7 @@ class ClosetActivity : AppCompatActivity() {
             Log.d("MYTAG", "권한 취득 시도")
         }
 
-//        if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//            == PackageManager.PERMISSION_GRANTED) {
-//            Log.d("MYTAG", "권한 취득 완료")
-//            setViews()
-//        } else {
-//            requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
-//                PERMISSION_REQUEST_CODE)
-//            Log.d("MYTAG", "권한 취득 시도")
-//        }
 
-
-
-//        storagePermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-
-//        if (
-//            ContextCompat.checkSelfPermission(this@ClosetActivity, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//            ==
-//            PackageManager.PERMISSION_GRANTED
-//        ) {
-//            storagePermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//            Log.d("MYTAG", "granted로 진입")
-//        } else {
-////            requestPermissions(arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 99)
-//            Log.d("MYTAG", "else 진입")
-////            storagePermission.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-//            ActivityResultLauncher
-//
-//        }
 
         // 가끔식 새 옷 추가 시 해당 옷이 반영이 늦게 되는 경우가 있어서 버튼 추가함
         binding.buttonUpdate.setOnClickListener {
@@ -261,6 +222,7 @@ class ClosetActivity : AppCompatActivity() {
 
 
     fun getAllCloth() {
+        Log.d("gana", "getAllCloth: 옷 정보 레트로핏")
         // 전체 옷 조회
         retro.getAllCloth(userIdx).enqueue(object: Callback<AllClothResult>{
             override fun onResponse(call: Call<AllClothResult>, response: Response<AllClothResult>) {
