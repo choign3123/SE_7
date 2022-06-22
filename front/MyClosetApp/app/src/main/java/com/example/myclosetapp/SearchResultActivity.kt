@@ -32,6 +32,7 @@ class SearchResultActivity : AppCompatActivity() {
 //    var bm : Boolean? = null
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -99,7 +100,7 @@ class SearchResultActivity : AppCompatActivity() {
             intent.putExtra("userIdx", userIdx)
             startActivity(intent)
             finish()
-            // 고려
+
 //            Toast.makeText(this,"이미 검색 화면입니다!!!",Toast.LENGTH_SHORT).show()
 
         }

@@ -1,7 +1,9 @@
 package com.example.myclosetapp
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
@@ -25,6 +27,7 @@ class ListAdapterGrid(val context: Context, var userIdx: Int?, val img_list: Arr
     override fun onBindViewHolder(holder: GridAdapter, position: Int) {
         val img = holder.binding.gridViewImg
         img.setImageURI(img_list[position].clthImgUrl.toUri())
+
 
         // 그리드 뷰에서 개별 옷 클릭 시
         img.setOnClickListener() {
