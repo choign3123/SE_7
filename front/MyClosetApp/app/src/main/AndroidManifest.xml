@@ -51,7 +51,9 @@
             android:exported="false" />
         <activity
             android:name=".ClosetActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTask"/>
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">

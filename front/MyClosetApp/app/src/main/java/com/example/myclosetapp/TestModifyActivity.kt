@@ -4,6 +4,8 @@ import android.animation.ValueAnimator
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.widget.Toast
 import androidx.core.net.toUri
@@ -44,7 +46,7 @@ class TestModifyActivity : AppCompatActivity() {
         // 카메라 또는 갤러리에서 진입 시
         if (intent.hasExtra("imgURL")) {
             val imgUrl = intent.getStringExtra("imgURL")
-            Log.d("MYTAG",imgUrl!!)
+            Log.d("MYTAG","카메라/갤러리 진입"+imgUrl!!)
             // 이미지 출력
             binding.clothImage.setImageURI(imgUrl.toUri())
             var heartClickCnt : ULong = 0u
@@ -84,15 +86,20 @@ class TestModifyActivity : AppCompatActivity() {
                 if (heartClickCnt == uLong1) {myFav=false}
                 cloth.bookmark = myFav
                 cloth.category = myCategory
-                cloth.season = mySeason
+                cloth.season = mySeason 
 
                 postCloth()
 
-                // 화면 전환 // ??? 옷장 화면으로? 개별 옷 화면으로?
-                val intent = Intent(this@TestModifyActivity, ClosetActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
-                startActivity(intent)
-                finish()
+
+                Handler(Looper.getMainLooper()).postDelayed({
+                    val intent = Intent(this@TestModifyActivity, ClosetActivity::class.java)
+                    intent.putExtra("userIdx", userIdx)
+
+                    startActivity(intent)
+                    finish()
+                },2000)
+
+
             }
         }
 
@@ -208,7 +215,7 @@ binding.button24.setOnClickListener(){myCategory=binding.button24.text.toString(
                 Log.d("MYTAG", response.body()?.message!!)
                 Log.d("MYTAG", response.body()?.result!!)
 
-                Toast.makeText(this@TestModifyActivity, response.body()?.result, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(, response.body()?.result, Toast.LENGTH_SHORT).show()
             }
 
             override fun onFailure(call: Call<PostClothResult>, t: Throwable) {
