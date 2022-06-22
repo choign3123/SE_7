@@ -4882,7 +4882,7 @@
 											"top": 1525,
 											"width": 635.85107421875,
 											"height": 13,
-											"text": "+searchClths(userIdx: int, season: String, category: String, bm: boolean): BaseResponse<List<GetClthsRes>>",
+											"text": "+searchClths(userIdx: int, season: String, category: String): BaseResponse<List<GetClthsRes>>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -5480,7 +5480,7 @@
 											"top": 1359,
 											"width": 593.9248046875,
 											"height": 13,
-											"text": "+retreiveClthsBySearch(userIdx: int, season: String, category: String, bm: boolean): List<GetClthsRes>",
+											"text": "+retreiveClthsBySearch(userIdx: int, season: String, category: String): List<GetClthsRes>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -5847,7 +5847,7 @@
 											"top": 1556,
 											"width": 583.6669921875,
 											"height": 13,
-											"text": "+selectClthsBySearch(userIdx: int, season: String, category: String, bm: boolean): List<GetClthsRes>",
+											"text": "+selectClthsBySearch(userIdx: int, season: String, category: String): List<GetClthsRes>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -14465,15 +14465,6 @@
 									},
 									"name": "category",
 									"type": "String"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAGBTjI/TruBWLg=",
-									"_parent": {
-										"$ref": "AAAAAAGBQOr88qVDeiM="
-									},
-									"name": "bm",
-									"type": "boolean"
 								}
 							]
 						}
@@ -14997,15 +14988,6 @@
 									},
 									"name": "category",
 									"type": "String"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAGBTjKUYdDatO0=",
-									"_parent": {
-										"$ref": "AAAAAAGBQOvCBr3I22k="
-									},
-									"name": "bm",
-									"type": "boolean"
 								}
 							]
 						}
@@ -15463,15 +15445,6 @@
 									},
 									"name": "category",
 									"type": "String"
-								},
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAGBTjLapvgt9Lw=",
-									"_parent": {
-										"$ref": "AAAAAAGBQO1aWNGFpXA="
-									},
-									"name": "bm",
-									"type": "boolean"
 								}
 							]
 						}
