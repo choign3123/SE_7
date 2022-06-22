@@ -83,10 +83,8 @@ class TestModifyActivity : AppCompatActivity() {
             binding.buttonSave.setOnClickListener() {
                 if (heartClickCnt == uLong1) {myFav=false}
                 cloth.bookmark = myFav
-                myCategory=myCategory!!.substring(1)
-                cloth.category = myCategory
-                mySeason= mySeason!!.substring(1)
-                cloth.season = mySeason
+                cloth.category = myCategory?.substring(1)
+                cloth.season = mySeason?.substring(1)
 
                 postCloth()
 

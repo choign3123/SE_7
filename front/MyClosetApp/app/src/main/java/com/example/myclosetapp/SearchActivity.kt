@@ -26,10 +26,10 @@ class SearchActivity : AppCompatActivity() {
         var summerSel : Boolean = false
         var fallSel : Boolean = false
         var winterSel : Boolean = false
-        binding.buttonSpring.setOnClickListener(){springSel= !springSel}
-        binding.buttonSummer.setOnClickListener(){summerSel= !summerSel}
-        binding.buttonFall.setOnClickListener(){fallSel= !fallSel}
-        binding.buttonWinter.setOnClickListener(){winterSel= !winterSel}
+        binding.buttonSpring.setOnClickListener(){springSel=true;binding.buttonSpring.isEnabled=false}
+        binding.buttonSummer.setOnClickListener(){summerSel=true;binding.buttonSummer.isEnabled=false}
+        binding.buttonFall.setOnClickListener(){fallSel=true;binding.buttonFall.isEnabled=false}
+        binding.buttonWinter.setOnClickListener(){winterSel=true;binding.buttonWinter.isEnabled=false}
 
         var btn9Sel : Boolean = false
         var btn10Sel : Boolean = false
@@ -47,22 +47,22 @@ class SearchActivity : AppCompatActivity() {
         var btn22Sel : Boolean = false
         var btn23Sel : Boolean = false
         var btn24Sel : Boolean = false
-        binding.button9.setOnClickListener(){btn9Sel= !btn9Sel}
-        binding.button10.setOnClickListener(){btn10Sel= !btn10Sel}
-        binding.button11.setOnClickListener(){btn11Sel= !btn11Sel}
-        binding.button12.setOnClickListener(){btn12Sel= !btn12Sel}
-        binding.button13.setOnClickListener(){btn13Sel= !btn13Sel}
-        binding.button14.setOnClickListener(){btn14Sel= !btn14Sel}
-        binding.button15.setOnClickListener(){btn15Sel= !btn15Sel}
-        binding.button16.setOnClickListener(){btn16Sel= !btn16Sel}
-        binding.button17.setOnClickListener(){btn17Sel= !btn17Sel}
-        binding.button18.setOnClickListener(){btn18Sel= !btn18Sel}
-        binding.button19.setOnClickListener(){btn19Sel= !btn19Sel}
-        binding.button20.setOnClickListener(){btn20Sel= !btn20Sel}
-        binding.button21.setOnClickListener(){btn21Sel= !btn21Sel}
-        binding.button22.setOnClickListener(){btn22Sel= !btn22Sel}
-        binding.button23.setOnClickListener(){btn23Sel= !btn23Sel}
-        binding.button24.setOnClickListener(){btn24Sel= !btn24Sel}
+        binding.button9.setOnClickListener(){btn9Sel=true;binding.button9.isEnabled=false}
+        binding.button10.setOnClickListener(){btn10Sel=true;binding.button10.isEnabled=false}
+        binding.button11.setOnClickListener(){btn11Sel=true;binding.button11.isEnabled=false}
+        binding.button12.setOnClickListener(){btn12Sel=true;binding.button12.isEnabled=false}
+        binding.button13.setOnClickListener(){btn13Sel=true;binding.button13.isEnabled=false}
+        binding.button14.setOnClickListener(){btn14Sel=true;binding.button14.isEnabled=false}
+        binding.button15.setOnClickListener(){btn15Sel=true;binding.button15.isEnabled=false}
+        binding.button16.setOnClickListener(){btn16Sel=true;binding.button16.isEnabled=false}
+        binding.button17.setOnClickListener(){btn17Sel=true;binding.button17.isEnabled=false}
+        binding.button18.setOnClickListener(){btn18Sel=true;binding.button18.isEnabled=false}
+        binding.button19.setOnClickListener(){btn19Sel=true;binding.button19.isEnabled=false}
+        binding.button20.setOnClickListener(){btn20Sel=true;binding.button20.isEnabled=false}
+        binding.button21.setOnClickListener(){btn21Sel=true;binding.button21.isEnabled=false}
+        binding.button22.setOnClickListener(){btn22Sel=true;binding.button22.isEnabled=false}
+        binding.button23.setOnClickListener(){btn23Sel=true;binding.button23.isEnabled=false}
+        binding.button24.setOnClickListener(){btn24Sel=true;binding.button24.isEnabled=false}
 
 //        binding.switchBM.setOnCheckedChangeListener{_,isChecked -> }
 
