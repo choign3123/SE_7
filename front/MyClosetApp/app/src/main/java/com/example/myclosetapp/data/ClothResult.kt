@@ -1,5 +1,6 @@
 package com.example.myclosetapp.data
 
+// 개별 옷 조회 시 데이터 클래스
 data class ClothResult(
     val code: Int,
     val isSuccess: Boolean,

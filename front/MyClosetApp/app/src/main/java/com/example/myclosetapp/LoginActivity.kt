@@ -1,6 +1,5 @@
 package com.example.myclosetapp
 
-import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,7 +18,6 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
 
     val binding by lazy {ActivityLoginBinding.inflate(layoutInflater)}
-
     val retro = RetrofitService.create()
 
     // 로그인 데이터 선언
@@ -33,26 +31,18 @@ class LoginActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        Log.d("MYTAG", AppData.prefs.getString("id", null).toString())
-        Log.d("MYTAG", AppData.prefs.getString("pw", null).toString())
+        Log.d("MYTAG", "자동 로그인 ID : "+AppData.prefs.getString("id", null).toString())
+        Log.d("MYTAG", "자동 로그인 PW : "+AppData.prefs.getString("pw", null).toString())
 
-//        /*-----------------------------------------------------------------*/
-//        // !!테스트용!! 로그인 생략
-//        loginData = LoginInfo("test0101", "0101test")
-//        loginFunc(loginData)
-//        /* -----------------------------------------------------------------*/
+        // 자동 로그인 관련 메소드
+        autoLoginFun()
 
-
-
-        // SharedPreferences에 자동 로그인 정보가 있다면 바로 로그인
-        if(id != null && pw != null) { loginFunc(loginData) }
-
-        // 비밀번호 입력 중 키보드에서 완료 버튼을 눌렀을 경우
+        // 비밀번호 입력 중 키보드에서 완료 버튼을 누른 경우
         binding.loginPW.setOnEditorActionListener(MyEnterListener())
-        // 로그인 버튼 클릭 시
+        // 비밀번호 입력 후 로그인 버튼 클릭 시
         binding.loginLogin.setOnClickListener() {
-            bindingFunc()
-            loginFunc(loginData)
+            bindingFun()
+            loginFun(loginData)
         }
 
         // 회원가입 버튼 클릭 시
@@ -63,21 +53,25 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+
+
+    // 키보드에서 완료 버튼을 누른 경우
     inner class MyEnterListener : TextView.OnEditorActionListener {
         override fun onEditorAction(p0: TextView?, p1: Int, p2: KeyEvent?): Boolean {
-            // 리턴 값에 따라 키보드가 숨겨지거나 계속 있거나 함
+            // keyboard 변수의 리턴 값에 따라 키보드가 숨겨지거나 계속 있거나 함
             var keyboard = false
 
             // 비밀번호 입력 중 키보드에서 완료 버튼을 눌렀을 경우
             if (p1 == EditorInfo.IME_ACTION_DONE)   {
-                bindingFunc()
-                loginFunc(loginData)
+                bindingFun()
+                loginFun(loginData)
             }
             return keyboard
         }
     }
 
-    fun bindingFunc() {
+    // 바인딩 메소드
+    fun bindingFun() {
         // 아이디 바인딩
         id = binding.loginID.text.toString()
         if(id!!.isEmpty()) id = null
@@ -89,8 +83,12 @@ class LoginActivity : AppCompatActivity() {
         loginData = LoginInfo(id,pw)
     }
 
+    fun autoLoginFun() {
+        if(id != null && pw != null) { loginFun(loginData) }
+    }
 
-    fun loginFunc(loginData: LoginInfo) {
+
+    fun loginFun(loginData: LoginInfo) {
         // 자동 로그인을 선택했다면 해당 정보 SharedPreferences에 저장
         if(binding.switchAutoLogin.isChecked) {
             AppData.editor.putString("id", id)
@@ -98,11 +96,11 @@ class LoginActivity : AppCompatActivity() {
             AppData.editor.apply()
         }
 
-
+        // 로그인 통신
         retro.postLoginInfo(loginData).enqueue(object: Callback<LoginResult> {
             override fun onResponse(call: Call<LoginResult>, response: Response<LoginResult>) {
-                // 로그
-                Log.d("MYTAG", response.body().toString())
+
+                Log.d("MYTAG", "로그인 통신 "+response.body()?.isSuccess.toString())
 
                 // 성공 여부에 따른 간단한 메세지 출력 및 옷장 화면 진입
                 if(response.body()?.isSuccess == true) {
@@ -111,15 +109,16 @@ class LoginActivity : AppCompatActivity() {
                     val intent = Intent(this@LoginActivity, ClosetActivity::class.java)
                     intent.putExtra("userIdx", response.body()?.result?.userIdx)
                     startActivity(intent)
-                    // 추가?
                     finish()
                 }
                 else {
                     Toast.makeText(this@LoginActivity, response.body()?.message, Toast.LENGTH_SHORT)
                         .show()
+
+                    // 화면 초기화
+                    clearUI()
                 }
 
-                clearUI()
             }
 
             override fun onFailure(call: Call<LoginResult>, t: Throwable) {

@@ -3,9 +3,10 @@ package com.example.myclosetapp
 import android.app.Application
 import android.content.SharedPreferences
 
-// 이 부분 다시
-// SharedPreferences의 전역적인 사용을 위해 새로운 클래스 싱글톤으로 생성
+// 자동 로그인 관련 클래스
+
 class AppData: Application() {
+    // SharedPreferences의 전역적인 사용을 위해 싱글톤 패턴으로 클래스 객체 생성
     companion object {
         lateinit var prefs: SharedPreferences
         lateinit var editor: SharedPreferences.Editor

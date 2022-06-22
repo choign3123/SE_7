@@ -36,11 +36,13 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun signUpFunc() {
+        // 사용자 입력값과 바인딩
         id = binding.signUpID.text.toString()
         pw = binding.signUpPW.text.toString()
         pwChk = binding.signUpPWCHK.text.toString()
         name = binding.signUpName.text.toString()
 
+        // 값이 없다면 null 처리
         if(id!!.isEmpty()) id = null
         if(pw!!.isEmpty()) pw = null
         if(pwChk!!.isEmpty()) pwChk = null
@@ -48,17 +50,30 @@ class SignUpActivity : AppCompatActivity() {
 
         signUpData = SignUpInfo(id,name,pw,pwChk)
 
+        // 회원가입 통신
         retro.postSignUpInfo(signUpData).enqueue(object: Callback<SignUpResult> {
             override fun onResponse(call: Call<SignUpResult>, response: Response<SignUpResult>) {
                 if(response.body()?.isSuccess == true) {
-                    Toast.makeText(this@SignUpActivity, response.body()?.message, Toast.LENGTH_SHORT)
+
+                    // 로그
+                    Log.d("MYTAG","회원가입 : "+response.body()?.isSuccess.toString())
+
+                    // 메세지 출력
+                    Toast.makeText(this@SignUpActivity, response.body()?.message, Toast.LENGTH_LONG)
                         .show()
+
+                    // LoginActivity로 이동
                     val intent = Intent(this@SignUpActivity, LoginActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
                 else {
-                    Toast.makeText(this@SignUpActivity, response.body()?.message, Toast.LENGTH_SHORT)
+
+                    // 로그
+                    Log.d("MYTAG","회원가입 실패 : "+response.body()?.message)
+
+                    // 메세지 출력
+                    Toast.makeText(this@SignUpActivity, response.body()?.message, Toast.LENGTH_LONG)
                         .show()
                 }
                 clearUI()
@@ -72,6 +87,7 @@ class SignUpActivity : AppCompatActivity() {
         })
     }
 
+    // 화면 초기화
     fun clearUI() {
         binding.signUpID.text = null
         binding.signUpPW.text = null

@@ -38,12 +38,6 @@
             android:name=".ClothActivity"
             android:exported="false" />
         <activity
-            android:name=".TestModifyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TestActivity"
-            android:exported="false" />
-        <activity
             android:name=".ModifyActivity"
             android:exported="false" />
         <activity

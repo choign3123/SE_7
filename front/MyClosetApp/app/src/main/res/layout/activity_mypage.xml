@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
-            android:id="@+id/buttonUpdate"
+            android:id="@+id/buttonHome"
             android:layout_width="111dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
