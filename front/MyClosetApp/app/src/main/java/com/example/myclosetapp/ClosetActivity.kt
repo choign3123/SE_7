@@ -129,8 +129,8 @@ class ClosetActivity : AppCompatActivity() {
         binding.buttonHome.setOnClickListener {
 
             Toast.makeText(this,"이미 홈 화면입니다!!",Toast.LENGTH_SHORT).show()
-//            getAllCloth()
-//            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
+            getAllCloth()
+            Toast.makeText(this,"옷장 최신화 중!!",Toast.LENGTH_SHORT).show()
         }
 
         // 마이페이지 버튼

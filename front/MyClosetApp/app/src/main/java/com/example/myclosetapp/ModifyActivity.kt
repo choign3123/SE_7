@@ -81,14 +81,14 @@ class ModifyActivity : AppCompatActivity() {
                 // 옷 등록
                 postCloth()
 
-                // 옷 등록 이후 0.2초 이후 화면 전환 // 바로 전환 시 옷장 출력 이후 옷 등록이 되는 경우 발생
+                // 옷 등록 이후 0.3초 이후 화면 전환 // 바로 전환 시 옷장 출력 이후 옷 등록이 되는 경우 발생
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this@ModifyActivity, ClosetActivity::class.java)
                     intent.putExtra("userIdx", userIdx)
 
                     startActivity(intent)
                     finish()
-                },200)
+                },300)
             }
         }
 
