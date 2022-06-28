@@ -93,7 +93,6 @@ public class ClthRepository {
         String deleteClth = "delete from clothes where userIdx = ? and clthIdx =?";
         Object[] clothIdx = new Object[]{userIdx,clthIdx};
         return this.jdbcTemplate.update(deleteClth,clothIdx);
-
     }
 
     //옷 수정

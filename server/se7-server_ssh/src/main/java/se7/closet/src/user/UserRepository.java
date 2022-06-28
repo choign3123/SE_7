@@ -69,6 +69,12 @@ public class UserRepository {
                 ),
                 getUserInfoParams);
     }
+    //회원탈퇴
+    public int deleteUser(int userIdx) {
+        String deleteUser = "delete from user where userIdx = ?";
+        return this.jdbcTemplate.update(deleteUser,userIdx);
+    }
+
 
     //존재하는 유저(userIdx)인지 확인
     public int checkUserExist(int userIdx){

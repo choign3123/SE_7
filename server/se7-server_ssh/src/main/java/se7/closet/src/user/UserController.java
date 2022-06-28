@@ -102,5 +102,22 @@ public class UserController {
             return new BaseResponse<>((exception.getStatus()));
         }
     }
+
+    //회원탈퇴
+    //[delete] /users/deleteUser/{userIdx}
+    @ResponseBody
+    @DeleteMapping("/deleteUser/{userIdx}")
+    public BaseResponse<String> deleteUser(@PathVariable("userIdx") int userIdx){
+        try{
+            userService.deleteUser(userIdx);
+
+            String result = "회원탈퇴가 완료되었습니다.";
+            return new BaseResponse<>(result);
+        }catch (BaseException exception){
+            return new BaseResponse<>((exception.getStatus()));
+        }
+
+    }
+
 }
 

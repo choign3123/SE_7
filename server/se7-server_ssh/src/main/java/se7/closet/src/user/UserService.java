@@ -2,6 +2,7 @@ package se7.closet.src.user;
 
 
 import se7.closet.config.BaseException;
+import se7.closet.config.BaseResponse;
 import se7.closet.src.user.model.PostSignUpReq;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,4 +41,20 @@ public class UserService {
         }
 
     }
+    //회원탈퇴
+    //회원탈퇴시 provider->repository User존재하는지 호가인 후 repository가서 회원탈퇴
+    public void deleteUser(int userIdx) throws BaseException {
+        if(!userProvider.checkUserExist(userIdx)){
+            throw new BaseException(POST_USERS_INVALID);
+        }
+        try{
+            userRepository.deleteUser(userIdx);
+        }catch(Exception exception){
+            throw new BaseException(DATABASE_ERROR);
+        }
+
+    }
+
+
+
 }
