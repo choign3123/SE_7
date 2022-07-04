@@ -28,6 +28,12 @@ interface RetrofitService {
         @Path("userIdx") userIdx : Int?
     ): Call<UserInfoResult>
 
+    // 회원탈퇴
+    @DELETE("/users/deleteUser/{userIdx}")
+    fun deleteUser(
+        @Path("userIdx") userIdx: Int?
+    ): Call<DeleteUserResult>
+
     // 옷 등록
     @POST("/clths/{userIdx}")
     fun postCloth(
